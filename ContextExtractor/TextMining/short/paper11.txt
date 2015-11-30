@@ -1,0 +1,109 @@
+Lowering Numbers; Why It's Still a Buy
+Conclusions on 4Q update: Surprises in both directions; net: Lowering ests
+Despite a 10% beat on 4Q EPS and the upside surprise of a new $15bn share buyback
+and Gilead's first-ever dividend, the focus of Gilead's 4Q was on the downside surprise
+of guiding to a 46% gross-to-net adjustment for HCV sales in 2015 (vs. 22% at YE14).
+Clearly this negatively affects sales and market size forecasts, both of which we move
+lower in our model. We further think the discounting will impact not only GILD shares,
+but also represents a headline negative for the sector (though several names are less
+exposed to price erosion). That said, it's really not the end of the world for GILD
+numbers, since [1] we ultimately got to that level of HCV discounting (just not until the
+outer years), and [2] this level of discounting occurs in other large segments as well,
+such as HIV and multiple sclerosis. The offset to the lower value of the HCV market is
+the value creation from capital allocation. Although we expect a hit to the stock, we
+maintain our Buy rating, as our DCF is still supportive; the multiple is already cheaper
+than all other biotechs / pharma, and pipeline and M&A could drive multiple expansion.
+Impact of wider gross-to-net
+[1] Lower HCV market value. The 46% gross-to-net is about twice as wide as we
+expected, and lowers our sales and market size estimates (peak global HCV market size:
+$24bn, from $28bn). [2] Volumes are going higher… As expected the volumes
+compensate for lower pricing near term. Arguably the market penetration will be
+higher over time because it will be more affordable to treat patients. [3] …but the
+patients are being treated sooner. This is good: more patients are captured by
+Gilead ahead of further competition, and the time value of money says sooner is better
+than later. However, out year ests go lower as the patient pool is depleted faster.
+Impact to our model: Lowering 2015e EPS by 4%, but numbers more concrete
+We increased the gross-to-net in HCV to 46% in 2015e, and increasing thereafter. This
+lowers our sales and EPS estimates, though the new $15bn repo and dividend helps
+offset.
+Valuation: Buy; Lowering PT to $120 (from $125) based on 11.4x our 2016e EPS
+GILD currently trades at 9.7x our 2016 EPS estimate, vs. next lowest biotech (14x) and
+pharma (12x).
+ 
+Investment Thesis 12-month rating Buy
+Gilead Sciences 12m price target US$120.00
+Investment case
+We rate GILD shares BUY, on the basis of 1) several pipeline
+catalysts over the next 12 months, 2) potential upside to 2015-
+16 estimates, which have been reset lower, and 3) the lowest P/E
+multiple on 2016E EPS. Key to upside to 2015 numbers is the
+launch of Harvoni in hepatitis C, which should drive share
+outperformance as we expect GILD's HCV regimens to be both
+the first- and best in a very large market with double-digit-billion
+dollar potential. Additionally, we see significant pipeline
+opportunities with simtuzumab in fibrosis, and in the TAF
+program in HIV that provides opportunities to extend the life of
+the franchise beyond the core tenofovir patents expire in 2018.
+Further, we view oncology as an underappreciated program.
+Upside scenario
+Our upside scenario of $142 reflects a higher multiple (14x, still
+at a discount to the group) to reflect a bullish outlook on the
+pipeline and cash flow redeployment, as well as for the HCV and
+HIV businesses. In HCV, upside drivers include a higher diagnosis
+rate leading to a larger market opportunity and deeper
+penetration. Additional upside could come from reimbursement
+and pricing, where our base-case model is relatively conservative.
+We see additional upside from HIV and TAF, with higher
+utilization extending the revenue tail before patent expiry.
+Downside scenario
+Our downside scenario of $89 reflects a suppressed (8.5x)
+multiple to reflect a failure of the pipeline and weak HCV sales
+due to pricing pressure or competition.
+Upcoming catalysts
+1).Ph2 data of 3D combo at EASL (April 22-26); 2) Ph3 data of
+SOF+GS-5816 in 3Q15; 3) Ph3 C-EDGE data from Merck; 4) Ph2
+simtuzumab in NASH and IPF, and MMP9 in 3 cancer trials and 1
+UC in 2015. 5) M&A.
+Business description
+Gilead Sciences, Inc. discovers, develops, and commercializes
+treatments for infectious and pulmonary diseases. Its currently
+marketed products include Stribild, Complera, Atripla, Truvada,
+Viread, and Emtriva for HIV; Hepsera for hepatitis B; and
+AmBisome for the treatment of fungal diseases. Gilead also
+receives royalties from Roche for Tamiflu, a treatment for
+influenza. Gilead's key pipeline programs are sofosbuvir in
+hepatitis C, TAF in HIV, and idelisilib in cancer.
+Industry outlook
+As an industry, we expect biotech stocks to outperform the
+broader markets on the basis of attractive growth relative to
+the S&P 500. Within biotech, the long term revenue and
+earnings growth outlook is the key determinant of biotech
+stock performance. Companies creating new product cycles
+through organic pipeline development and strategic
+acquisitions, paired with financial metrics and shareholder
+friendly programs (buy-backs, dividends, etc) are likely to
+outperform. Gilead's significant double-digit growth is above
+the peer group mean and in our view, justifies a higher
+multiple than currently implied on 2014-15 EPS. Further, GILD
+could see significant multiple expansion relative to peers if
+acquisitions or pipeline development improves the out-year
+outlook.
+ 
+Key facts and comments from the quarter
+[1] HCV pricing. The 46% is a blended discount for Sovaldi and Harvoni across
+payers, reflecting larger private discounts (we est 40%) and a shift in mix toward
+public payers who receive discounting over 50%. The discounts are triggered by
+volumes, with contracts set to limit denials and increase access (in-line, see HERE).
+[2] Patient access. Contracts are in place for about 60% of covered lives in US, and
+Harvoni gained access to 80% of those. The treatment rate in EU will be lower due
+to budgetary constraints
+[3] 4Q numbers. HIV is in great shape, beating by $181m (7%), driven by higher
+US sales across major products. Mgmt did not exclude the possibility for a HIV
+price increase in 2015. Harvoni beat by $466m (30%), with inventory 2-3days
+($65-100m) higher than normal.
+[4] Guidance. $26-27bn of 2015 product sales (consensus $28bn) factored in
+discount and 250k treatment capacity in HCV.
+[5] Pipeline. The BTK inhibitor will be studies in combination with Gilead's other
+kinase inhibitors. The 4 and 6wk data of the pan-genotypic triple pill will be
+presented at EASL. The MMP9 antibody is advancing based on activity in ph1b.
+ 

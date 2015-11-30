@@ -1,0 +1,1426 @@
+Equity Research
+Healthcare | U.S. Biotechnology
+4 February 2015
+
+Gilead Sciences
+
+Our Thoughts Post the 4Q Call
+
+OVERWEIGHT
+
+Stock Rating
+
+Unchanged
+
+POSITIVE
+
+Industry View
+
+Gilead’s strong 4Q results, newly announced dividend (1.6% yield) and $15B share
+buyback were major positives from the call, but most investors will likely focus on
+hep C discounting (~46% gross/net adjustment). Clearly, the level of discounting
+(which has been a Street obsession) was a negative surprise but looking forward, 1)
+pricing is now stable with lower headline risk and 2) patient volumes are poised for a
+material acceleration from enhanced patient access. 2015 guidance looked
+conservative; we’re still above it with $28.9B in product sales (vs guidance of $26-27B)
+with highly achievable patient numbers (196K US; 102K EU; 6K Japan). In sum, we’re
+not concerned about AbbVie competitively, we don’t think that pricing will see another
+leg down with Merck’s launch in 2016e and we think the bar set by guidance gives a lot
+of room for P&L upside moving through 2015. Beyond hep C (yes, there are other
+franchises at Gilead), HIV demand trends look good going into 2015 and the pipeline is
+progressing in NASH, hep B, RSV, oncology, etc. So we’re buyers on weakness today;
+we get it that hep C discounting may drive forecasts marginally lower but ultimately
+volumes can more than make up that difference in 2015 and beyond.
+
+• Guidance: Gilead guided to 2015 product sales to $26-27B (Barclays: $28.9B),
+which implies hep C sales of ~$13-14B (Barclays: $15.6B). We forecast US/OUS hep
+C sales of $10.0B/$5.7B with a higher discount assumption which is likely to be
+lower in 1H15 (more commercial) but move higher in 2H (more public pay). OpEx
+guidance (R&D: $3-3.3B; SG&A: $3-3.3B) was marginally above estimates.
+
+Unchanged
+
+USD 125.00
+
+Price Target
+
+Unchanged
+Price (03-Feb-2015)
+
+USD 107.18
+
+Potential Upside/Downside
+
++17%
+
+Tickers
+
+GILD
+
+Market Cap (USD mn)
+
+161699
+
+Shares Outstanding (mn)
+
+1508.66
+
+Free Float (%)
+
+99.43
+
+52 Wk Avg Daily Volume (mn)
+Dividend Yield (%)
+
+N/A
+
+Return on Equity TTM (%)
+
+76.94
+
+Current BVPS (USD)
+
+8.96
+
+Source: Thomson Reuters
+
+Price Performance
+
+Exchange-Nasdaq
+
+52 Week range
+
+USD 116.83-63.50
+
+• Adjusting estimates: We’ve lowered our 2015-2017 hep C forecasts to $15.6B,
+$17.5B and $18.2B from $16.9B, $19.9B and $21.6B, but we’re above 2015
+guidance and consensus. We have fine-tuned operating expense, which together
+with lower revenue forecasts has lowered 2015-2017 non-GAAP EPS estimates to
+$10.00, $11.50 and $12.25 from $10.65, $12.35 and $13.30 previously. In year 1,
+Gilead’s hep C revenue ($12.4B) and cash flow ($12.8B) eclipsed the price of the
+Pharmasset acquisition ($11B); in our view the robust cash flow affords many
+options for value creation beyond the dividend and accelerated buyback.
+
+Link to Barclays Live for interactive charting
+
+U.S. Biotechnology
+Geoffrey Meacham, Ph.D.
++1 212 526 2795
+
+GILD: Quarterly and Annual EPS (USD)
+
+geoffrey.meacham@barclays.com
+2014
+FY Dec
+
+2015
+
+2016
+
+Change y/y
+
+BCI, New York
+
+Actual
+
+Old
+
+New
+
+Cons
+
+Old
+
+New
+
+Cons
+
+2015
+
+2016
+
+Q1
+
+1.48A
+
+2.57E
+
+2.50E
+
+2.38E
+
+N/A
+
+N/A
+
+2.87E
+
+69%
+
+N/A
+
++1 212 526 2787
+
+Q2
+
+2.36A
+
+2.61E
+
+2.41E
+
+2.47E
+
+N/A
+
+N/A
+
+3.22E
+
+2%
+
+N/A
+
+michael.ulz@barclays.com
+
+Q3
+
+1.84A
+
+2.64E
+
+2.46E
+
+2.50E
+
+N/A
+
+N/A
+
+3.29E
+
+34%
+
+N/A
+
+BCI, New York
+
+Q4
+
+2.42A
+
+2.83E
+
+2.63E
+
+2.54E
+
+N/A
+
+N/A
+
+3.36E
+
+9%
+
+N/A
+
+Carter Gould
+
+Year
+
+8.08A
+
+10.65E
+
+10.00E
+
+9.79E
+
+N/A
+
+11.50E
+
+10.97E
+
+24%
+
+15%
+
++1 212 526 5157
+
+P/E
+
+13.3
+
+10.7
+
+9.3
+
+Source: Barclays Research.
+Consensus numbers are from Thomson Reuters
+
+Barclays Capital Inc. and/or one of its affiliates does and seeks to do business with companies
+covered in its research reports. As a result, investors should be aware that the firm may have a
+conflict of interest that could affect the objectivity of this report.
+Investors should consider this report as only a single factor in making their investment decision.
+PLEASE SEE ANALYST CERTIFICATION(S) AND IMPORTANT DISCLOSURES BEGINNING ON PAGE 5.
+
+15.1
+
+Michael Ulz
+
+carter.gould@barclays.com
+BCI, New York
+
+Barclays | Gilead Sciences
+U.S. Biotechnology
+
+Industry View: POSITIVE
+
+Gilead Sciences (GILD)
+Income statement ($mn)
+Revenue
+EBITDA (adj)
+EBIT (adj)
+Pre-tax income (adj)
+Net income (adj)
+EPS (adj) ($)
+Diluted shares (mn)
+DPS ($)
+
+Stock Rating: OVERWEIGHT
+2014A
+24,883
+N/A
+16,577
+16,184
+13,283
+8.08
+1,643.8
+0.00
+
+Margin and return data
+EBITDA (adj) margin (%)
+EBIT (adj) margin (%)
+Pre-tax (adj) margin (%)
+Net (adj) margin (%)
+ROIC (%)
+ROA (%)
+ROE (%)
+
+2015E
+29,319
+N/A
+19,908
+19,392
+15,900
+10.00
+1,589.8
+0.00
+
+2016E
+32,016
+N/A
+22,577
+22,105
+18,126
+11.50
+1,576.0
+0.00
+
+2017E
+33,188
+N/A
+23,784
+23,316
+19,119
+12.25
+1,561.0
+0.00
+
+CAGR
+10.1%
+N/A
+12.8%
+12.9%
+12.9%
+14.9%
+-1.7%
+N/A
+
+N/A
+66.6
+65.0
+53.4
+N/A
+N/A
+N/A
+
+N/A
+67.9
+66.1
+54.2
+N/A
+N/A
+N/A
+
+N/A
+70.5
+69.0
+56.6
+N/A
+N/A
+N/A
+
+N/A
+71.7
+70.3
+57.6
+N/A
+N/A
+N/A
+
+Average
+N/A
+69.2
+67.6
+55.5
+N/A
+N/A
+N/A
+
+Balance sheet and cash flow ($mn)
+Tangible fixed assets
+N/A
+Intangible fixed assets
+N/A
+Cash and equivalents
+7,777
+Total assets
+32,842
+Short and long-term debt
+7,648
+Other long-term liabilities
+6,843
+Total liabilities
+14,491
+Net debt/(funds)
+N/A
+Shareholders' equity
+21,047
+Change in working capital
+-4,565
+Cash flow from operations
+8,960
+Capital expenditure
+-250
+Free cash flow
+N/A
+
+N/A
+N/A
+15,827
+41,988
+3,648
+7,090
+10,738
+N/A
+33,947
+-842
+15,300
+-250
+N/A
+
+N/A
+N/A
+33,537
+60,264
+3,648
+7,240
+10,888
+N/A
+52,073
+-408
+17,960
+-250
+N/A
+
+N/A
+N/A
+52,790
+79,448
+3,648
+7,305
+10,953
+N/A
+71,192
+142
+19,503
+-250
+N/A
+
+CAGR
+N/A
+N/A
+89.3%
+34.2%
+-21.9%
+2.2%
+-8.9%
+N/A
+50.1%
+N/A
+29.6%
+N/A
+N/A
+
+Valuation and leverage metrics
+P/E (adj) (x)
+EV/EBITDA (adj) (x)
+Equity FCF yield (%)
+EV/sales (x)
+P/BV (x)
+Dividend yield (%)
+Total debt/capital (%)
+
+13.3
+N/A
+N/A
+6.8
+N/A
+0.0
+N/A
+
+10.7
+N/A
+N/A
+5.4
+N/A
+0.0
+N/A
+
+9.3
+N/A
+N/A
+4.4
+N/A
+0.0
+N/A
+
+8.8
+N/A
+N/A
+3.6
+N/A
+0.0
+N/A
+
+Average
+10.5
+N/A
+N/A
+5.1
+N/A
+0.0
+N/A
+
+Selected operating metrics
+SG&A/sales (%)
+R&D/sales (%)
+R&D growth (%)
+SG&A growth (%)
+
+11.1
+10.4
+32.7
+77.0
+
+10.4
+10.8
+22.7
+10.9
+
+10.0
+9.6
+-3.1
+4.7
+
+9.5
+9.0
+-3.4
+-1.5
+
+Average
+10.3
+9.9
+12.2
+22.8
+
+Price (03-Feb-2015)
+USD 107.18
+Price Target
+USD 125.00
+Why Overweight? Gilead is the market leader in hep
+C, and we expect this postion to be further
+strengthened with Harvoni, despite competition. We
+expect Gilead to continue to inovate and raise the bar
+in hep C with a pangenotypic regimen and a shorter
+duration of therapy. Additionaly, we expect the core
+HIV business to remain strong.
+Upside case
+USD 140.00
+Faster-than-expected launch of Harvoni in the US and
+more rapid geographic expansion of the hep C
+business would drive upside.
+Downside case
+USD 85.00
+A greater-than-expected impact on hep C from
+competitors and increasing pricing/reimbursement
+pressures would drive downside.
+Upside/Downside scenarios
+
+Source: Company data, Barclays Research
+Note: FY End Dec
+
+4 February 2015
+
+2
+
+Barclays | Gilead Sciences
+
+Takeaways From the Quarter
+• Hep C Reimbursement / Access. The key datapoint investors will focus on is the
+company’s estimated 2015 Harvoni/Sovaldi gross-to-net adjustment (46% vs. 22% in
+2014). Of note, this is a blended average reflecting a private/public mix 75/25 in 2014.
+Gilead emphasized that the increased rebates are designed to relax treatment
+restrictions and drive patient access. Based on this, we are lowering our U.S. price
+assumption to reflect a 28% discount for Sovaldi and a 40% for Harvoni in 2015.
+Capacity – Gilead believes the US hep C market comprises 3-4M patients, of which 1.6M
+have been diagnosed, and that >250K could be treated in 2015. Our model assumes that
+~220K treated US patients in 2015, with ~77% treated by Gilead products. Payor
+negotiations – Noted that hep C negotiations have now concluded with payors
+addressing ~60% of covered lives in the U.S. (with 80% access to Harvoni). This is
+roughly in-line with our own estimates (~70% covered with 80% access for Harvoni; see
+our note from last week in conjunction with Barclays PBM analyst Eric Percher).
+
+• Hep C Commercial Performance. Harvoni sales beat consensus by ~$600M offset
+somewhat by a Sovaldi miss of ~$270M. U.S. Harvoni sales were particularly strong at
+~$2B (given that WW consensus estimates were ~$1.5B. U.S. Sovaldi sales were $1.2B
+for the quarter. Gilead noted that Sovaldi still found use in ~30% of GT1 patients in the
+4Q; the company expects use in GT1 patients to decrease dramatically as Harvoni
+launch continues. Overall, ~140K US patients have now been treated with sofosbuvirbased regimens since the Sovaldi launch in late 2013.
+
+• EU Hep C Takeaways. We were encouraged by commentary on the sustainability of hep
+C patient volumes in Europe, with Gilead noting the EU market will likely have a longertail than the U.S. Specifically, the company characterized hep C revenues as sustainable
+for 10-15 years in Europe, perhaps longer in countries such as Italy. Pricing/Access –
+Concluded price/volume negotiations in France, Italy, and Spain, while patients in
+Austria, Sweden, Finland, and Germany now have access to Harvoni. EU Volume –
+Across Europe 32K (26K in EU Big 5, 4K with Harvoni) have started treatment with a
+sofosbuvir-based regimen; hep C EU patient volumes could exceed 100K in 2015.
+
+• HIV Takeaways. 4Q HIV sales were strong (+6% q/q, +15% y/y), beating consensus
+estimates by ~$240M, driven by Truvada, Atripla, and Stribild outperformance. Gilead
+noted switches from Atripla continue, as Stribild and Complera continue to gain share.
+We anticipate modest HIV franchise growth, with 2015 WW sales of $11.1B (+8% y/y)
+
+• Pipeline. Simtuzumab – Failed to show clinical activity in myelofibrosis, pancreatic
+cancer, and colorectal cancer. Company cautioned from reading into ongoing studies in
+NASH and pulmonary fibrosis, given biologic differences in liver and pulmonary fibrosis
+relative to the previously evaluated settings. GS-5745 – Advancing the MMP-9 mAb into
+clinical development for ulcerative colitis / gastric cancer in 2015.
+
+• 2015 Guidance. Net Product Sales - $26-27B (Barclays: $2.89B). Assuming non-Hep C
+product sales of ~$12.8B implies Hep C sales for the company of ~$13.2-14.2B
+(Barclays: $15.6B). Gross-margins: 87-90% (Barclays: 89%). R&D Expense - $3.0-3.3B
+(Barclays: $3.2B). SG&A Expense - $3.0-3.3B (Barclays: $3.1BB). Tax Rate: 18-20%
+(Barclays: 18%).
+
+• Capital allocation strategy. Dividend – Announced plans to start a quarterly dividend of
+$0.43 (~1.6% yield) in 2Q, and to grow the dividend over time (though share
+repurchases remain the company’s preferred mechanism). Share repurchases –
+Disclosed plans to initiate a 5-year $15B share repurchase plan, on top of an existing
+$5B plan of which $3B is remaining.
+
+4 February 2015
+
+3
+
+Barclays | Gilead Sciences
+
+Changes to Our Model
+We’ve lowered our 2015-2017 hep C forecasts to $15.6B, $17.5B and $18.2B from $16.9B,
+$19.9B and $21.6B, but we’re above 2015 guidance and consensus. We have fine-tuned
+operating expense, which together with lower revenue forecasts has lowered 2015-2017
+non-GAAP EPS estimates to $10.00, $11.50 and $12.25 from $10.65, $12.35 and $13.30
+previously. In year 1, Gilead’s hep C revenue ($12.4B) and cash flow ($12.8B) eclipsed the
+price of the Pharmasset acquisition ($11B); in our view the robust cash flow affords many
+options for value creation beyond the dividend and accelerated buyback.
+FIGURE 1
+Changes to Our Model ($ millions, except per share data)
+Barclays
+
+Barclays
+
+Barclays
+
+Barclays
+
+Barclays
+
+Barclays
+
+2015E
+
+2015E
+
+2016E
+
+2016E
+
+2017E
+
+2017E
+
+OLD
+
+NEW
+
+OLD
+
+NEW
+
+OLD
+
+NEW
+
+WW Truvada
+
+3,205
+
+3,265
+
+3,122
+
+3,202
+
+3,038
+
+3,078
+
+WW Atripla
+
+3,297
+
+3,358
+
+3,143
+
+3,143
+
+2,975
+
+2,975
+
+WW Complera /
+Eviplera
+
+1,498
+
+1,498
+
+1,714
+
+1,714
+
+1,843
+
+1,843
+
+WW Stribild
+
+1,812
+
+1,948
+
+2,471
+
+2,576
+
+2,982
+
+3,070
+
+52
+
+89
+
+424
+
+462
+
+919
+
+919
+
+WW Sovaldi
+
+WW TAF
+
+9,059
+
+7,098
+
+9,056
+
+6,975
+
+9,279
+
+7,169
+
+WW Harvoni
+
+7,901
+
+8,566
+
+10,850
+
+10,605
+
+12,366
+
+11,037
+
+Zydelig
+
+171
+
+171
+
+386
+
+386
+
+643
+
+643
+
+Letairis
+
+606
+
+691
+
+666
+
+760
+
+700
+
+798
+
+Ranexa
+
+553
+
+561
+
+597
+
+606
+
+621
+
+630
+
+Total Product sales
+Total Revenue
+
+29,713
+
+28,935
+
+33,584
+
+31,631
+
+35,932
+
+32,803
+
+30,106
+
+29,319
+
+33,976
+
+32,016
+
+36,325
+
+33,188
+
+COGS
+
+3,268
+
+3,183
+
+3,358
+
+3,163
+
+3,593
+
+3,280
+
+R&D
+
+2,881
+
+3,171
+
+3,058
+
+3,073
+
+3,269
+
+2,970
+
+SG&A
+
+2,871
+
+3,057
+
+3,398
+
+3,202
+
+3,578
+
+3,153
+
+Total Op Ex
+
+9,021
+
+9,411
+
+9,814
+
+9,438
+
+10,440
+
+9,403
+
+Net income
+
+17,204
+
+15,900
+
+19,870
+
+18,126
+
+21,353
+
+19,119
+
+EPS
+
+10.65
+
+10.00
+
+12.35
+
+11.50
+
+13.30
+
+12.25
+
+1,615
+
+1590
+
+1,608
+
+1576
+
+1606
+
+1561
+
+Fully diluted shares
+
+Source: Barclays Research and Company reports
+
+4 February 2015
+
+4
+
+Barclays | Gilead Sciences
+
+ANALYST(S) CERTIFICATION(S):
+I, Geoffrey Meacham, Ph.D., hereby certify (1) that the views expressed in this research report accurately reflect my personal views about any or
+all of the subject securities or issuers referred to in this research report and (2) no part of my compensation was, is or will be directly or indirectly
+related to the specific recommendations or views expressed in this research report.
+
+IMPORTANT DISCLOSURES CONTINUED
+Barclays Research is a part of the Corporate and Investment Banking division of Barclays Bank PLC and its affiliates (collectively and each
+individually, "Barclays"). For current important disclosures regarding companies that are the subject of this research report, please send a written
+request to: Barclays Research Compliance, 745 Seventh Avenue, 14th Floor, New York, NY 10019 or refer to http://publicresearch.barclays.com
+or call 212-526-1072.
+The analysts responsible for preparing this research report have received compensation based upon various factors including the firm's total
+revenues, a portion of which is generated by investment banking activities.
+Analysts regularly conduct site visits to view the material operations of covered companies, but Barclays policy prohibits them from accepting
+payment or reimbursement by any covered company of their travel expenses for such visits.
+In order to access Barclays Statement regarding Research Dissemination Policies and Procedures, please refer to
+https://live.barcap.com/publiccp/RSR/nyfipubs/disclaimer/disclaimer-research-dissemination.html. In order to access Barclays Research
+Conflict Management Policy Statement, please refer to: https://live.barcap.com/publiccp/RSR/nyfipubs/disclaimer/disclaimer-conflictmanagement.html.
+The Corporate and Investment Banking division of Barclays produces a variety of research products including, but not limited to, fundamental
+analysis, equity-linked analysis, quantitative analysis, and trade ideas. Recommendations contained in one type of research product may differ
+from recommendations contained in other types of research products, whether as a result of differing time horizons, methodologies, or
+otherwise.
+Primary Stocks (Ticker, Date, Price)
+Gilead Sciences (GILD, 03-Feb-2015, USD 107.18), Overweight/Positive, A/C/D/J/K/L/M
+
+Disclosure Legend:
+A: Barclays Bank PLC and/or an affiliate has been lead manager or co-lead manager of a publicly disclosed offer of securities of the issuer in the
+previous 12 months.
+B: An employee of Barclays Bank PLC and/or an affiliate is a director of this issuer.
+C: Barclays Bank PLC and/or an affiliate is a market-maker and/or liquidity provider in equity securities issued by this issuer or one of its affiliates.
+D: Barclays Bank PLC and/or an affiliate has received compensation for investment banking services from this issuer in the past 12 months.
+E: Barclays Bank PLC and/or an affiliate expects to receive or intends to seek compensation for investment banking services from this issuer
+within the next 3 months.
+F: Barclays Bank PLC and/or an affiliate beneficially owned 1% or more of a class of equity securities of the issuer as of the end of the month prior
+to the research report's issuance.
+G: One of the analysts on the coverage team (or a member of his or her household) owns shares of the common stock of this issuer.
+H: This issuer beneficially owns 5% or more of any class of common equity securities of Barclays Bank PLC.
+I: Barclays Bank PLC and/or an affiliate has a significant financial interest in the securities of this issuer.
+J: Barclays Bank PLC and/or an affiliate trades regularly in the securities of this issuer.
+K: Barclays Bank PLC and/or an affiliate has received non-investment banking related compensation from this issuer within the past 12 months.
+L: This issuer is, or during the past 12 months has been, an investment banking client of Barclays Bank PLC and/or an affiliate.
+M: This issuer is, or during the past 12 months has been, a non-investment banking client (securities related services) of Barclays Bank PLC
+and/or an affiliate.
+N: This issuer is, or during the past 12 months has been, a non-investment banking client (non-securities related services) of Barclays Bank PLC
+and/or an affiliate.
+O: Barclays Capital Inc., through Barclays Market Makers, is a Designated Market Maker in this issuer's stock, which is listed on the New York
+Stock Exchange. At any given time, its associated Designated Market Maker may have "long" or "short" inventory position in the stock; and its
+associated Designated Market Maker may be on the opposite side of orders executed on the floor of the New York Stock Exchange in the stock.
+P: A partner, director or officer of Barclays Capital Canada Inc. has, during the preceding 12 months, provided services to the subject company for
+remuneration, other than normal course investment advisory or trade execution services.
+Q: Barclays Bank PLC and/or an affiliate is a Corporate Broker to this issuer.
+R: Barclays Capital Canada Inc. and/or an affiliate has received compensation for investment banking services from this issuer in the past 12
+months.
+S: Barclays Capital Canada Inc. is a market-maker in an equity or equity related security issued by this issuer.
+
+4 February 2015
+
+5
+
+Barclays | Gilead Sciences
+
+IMPORTANT DISCLOSURES CONTINUED
+T: Barclays Bank PLC and/or an affiliate is providing equity advisory services to this issuer.
+
+Risk Disclosure(s)
+Master limited partnerships (MLPs) are pass-through entities structured as publicly listed partnerships. For tax purposes, distributions to MLP unit
+holders may be treated as a return of principal. Investors should consult their own tax advisors before investing in MLP units.
+Guide to the Barclays Fundamental Equity Research Rating System:
+Our coverage analysts use a relative rating system in which they rate stocks as Overweight, Equal Weight or Underweight (see definitions below)
+relative to other companies covered by the analyst or a team of analysts that are deemed to be in the same industry (the "industry coverage
+universe").
+In addition to the stock rating, we provide industry views which rate the outlook for the industry coverage universe as Positive, Neutral or
+Negative (see definitions below). A rating system using terms such as buy, hold and sell is not the equivalent of our rating system. Investors
+should carefully read the entire research report including the definitions of all ratings and not infer its contents from ratings alone.
+Stock Rating
+Overweight - The stock is expected to outperform the unweighted expected total return of the industry coverage universe over a 12-month
+investment horizon.
+Equal Weight - The stock is expected to perform in line with the unweighted expected total return of the industry coverage universe over a 12month investment horizon.
+Underweight - The stock is expected to underperform the unweighted expected total return of the industry coverage universe over a 12-month
+investment horizon.
+Rating Suspended - The rating and target price have been suspended temporarily due to market events that made coverage impracticable or to
+comply with applicable regulations and/or firm policies in certain circumstances including where the Corporate and Investment Banking Division
+of Barclays is acting in an advisory capacity in a merger or strategic transaction involving the company.
+Industry View
+Positive - industry coverage universe fundamentals/valuations are improving.
+Neutral - industry coverage universe fundamentals/valuations are steady, neither improving nor deteriorating.
+Negative - industry coverage universe fundamentals/valuations are deteriorating.
+Below is the list of companies that constitute the "industry coverage universe":
+U.S. Biotechnology
+Alexion Pharmaceuticals (ALXN)
+
+Amgen Inc. (AMGN)
+
+Biogen Idec (BIIB)
+
+Celgene Corp. (CELG)
+
+Gilead Sciences (GILD)
+
+Medivation Inc. (MDVN)
+
+NPS Pharmaceuticals (NPSP)
+
+Regeneron Pharmaceuticals (REGN)
+
+United Therapeutics (UTHR)
+
+Vertex Pharmaceuticals (VRTX)
+Distribution of Ratings:
+Barclays Equity Research has 2680 companies under coverage.
+44% have been assigned an Overweight rating which, for purposes of mandatory regulatory disclosures, is classified as a Buy rating; 54% of
+companies with this rating are investment banking clients of the Firm.
+40% have been assigned an Equal Weight rating which, for purposes of mandatory regulatory disclosures, is classified as a Hold rating; 44% of
+companies with this rating are investment banking clients of the Firm.
+14% have been assigned an Underweight rating which, for purposes of mandatory regulatory disclosures, is classified as a Sell rating; 41% of
+companies with this rating are investment banking clients of the Firm.
+Guide to the Barclays Research Price Target:
+Each analyst has a single price target on the stocks that they cover. The price target represents that analyst's expectation of where the stock will
+trade in the next 12 months. Upside/downside scenarios, where provided, represent potential upside/potential downside to each analyst's price
+target over the same 12-month period.
+Top Picks:
+Barclays Equity Research's "Top Picks" represent the single best alpha-generating investment idea within each industry (as defined by the relevant
+"industry coverage universe"), taken from among the Overweight-rated stocks within that industry. Barclays Equity Research publishes global and
+regional "Top Picks" reports every quarter and analysts may also publish intra-quarter changes to their Top Picks, as necessary. While analysts
+may highlight other Overweight-rated stocks in their published research in addition to their Top Pick, there can only be one "Top Pick" for each
+industry.
+The
+current
+list
+of
+Top
+Picks
+is
+available
+on
+https://live.barcap.com/go/RSL/servlets/dv.search?pubType=4526&amp;contentType=latest.
+To see a list of companies that comprise a particular industry coverage universe, please go to http://publicresearch.barclays.com.
+Barclays offices involved in the production of equity research:
+4 February 2015
+
+6
+
+Barclays | Gilead Sciences
+
+IMPORTANT DISCLOSURES CONTINUED
+London
+Barclays Bank PLC (Barclays, London)
+New York
+Barclays Capital Inc. (BCI, New York)
+Tokyo
+Barclays Securities Japan Limited (BSJL, Tokyo)
+São Paulo
+Banco Barclays S.A. (BBSA, São Paulo)
+Hong Kong
+Barclays Bank PLC, Hong Kong branch (Barclays Bank, Hong Kong)
+Toronto
+Barclays Capital Canada Inc. (BCCI, Toronto)
+Johannesburg
+Absa Bank Limited (Absa, Johannesburg)
+Mexico City
+Barclays Bank Mexico, S.A. (BBMX, Mexico City)
+Taiwan
+Barclays Capital Securities Taiwan Limited (BCSTW, Taiwan)
+Seoul
+Barclays Capital Securities Limited (BCSL, Seoul)
+Mumbai
+Barclays Securities (India) Private Limited (BSIPL, Mumbai)
+Singapore
+Barclays Bank PLC, Singapore branch (Barclays Bank, Singapore)
+
+4 February 2015
+
+7
+
+Barclays | Gilead Sciences
+
+IMPORTANT DISCLOSURES CONTINUED
+
+Gilead Sciences (GILD)
+
+Stock Rating
+
+USD 107.18 (03-Feb-2015)
+
+OVERWEIGHT
+
+Rating and Price Target Chart - USD (as of 03-Feb-2015)
+
+Currency=USD
+Date
+
+150
+
+125
+
+100
+
+75
+
+50
+
+25
+
+0
+Jul- 2012
+Closing Price
+
+Jan- 2013
+
+Jul- 2013
+
+Target Price
+
+Jan- 2014
+Rating Change
+
+Jul- 2014
+
+Jan- 2015
+
+Drop Coverage
+
+Industry View
+POSITIVE
+
+Closing Price
+
+Rating
+
+05-Jan-2015
+
+96.79
+
+Overweight
+
+Adjusted Price Target
+
+15-May-2014
+
+80.10
+
+Drop Coverage
+
+21-Feb-2014
+
+82.59
+
+95.00
+
+26-Nov-2013
+
+74.37
+
+90.00
+
+30-Oct-2013
+
+72.67
+
+74.00
+
+25-Jul-2013
+
+60.86
+
+68.00
+
+15-Apr-2013
+
+50.68
+
+65.00
+
+04-Feb-2013
+
+39.59
+
+42.00
+
+22-Jan-2013
+
+38.96
+
+42.00
+
+04-Dec-2012
+
+37.08
+
+38.00
+
+15-Oct-2012
+
+33.66
+
+02-Aug-2012
+
+28.65
+
+Overweight
+
+21-Feb-2012
+
+22.35
+
+Equal Weight
+
+26.50
+
+10-Feb-2012
+
+26.88
+
+Overweight
+
+33.50
+
+125.00
+
+36.50
+32.50
+
+Source: Thomson Reuters, Barclays Research
+Historical stock prices and price targets may have been adjusted for
+stock splits and dividends.
+
+Source: IDC, Barclays Research
+
+Link to Barclays Live for interactive charting
+A: Barclays Bank PLC and/or an affiliate has been lead manager or co-lead manager of a publicly disclosed offer of securities of Gilead Sciences in
+the previous 12 months.
+C: Barclays Bank PLC and/or an affiliate is a market-maker and/or liquidity provider in equity securities issued by Gilead Sciences or one of its
+affiliates.
+D: Barclays Bank PLC and/or an affiliate has received compensation for investment banking services from Gilead Sciences in the past 12 months.
+J: Barclays Bank PLC and/or an affiliate trades regularly in the securities of Gilead Sciences.
+K: Barclays Bank PLC and/or an affiliate has received non-investment banking related compensation from Gilead Sciences within the past 12
+months.
+L: Gilead Sciences is, or during the past 12 months has been, an investment banking client of Barclays Bank PLC and/or an affiliate.
+M: Gilead Sciences is, or during the past 12 months has been, a non-investment banking client (securities related services) of Barclays Bank PLC
+and/or an affiliate.
+Valuation Methodology: Our YE15 price target of $125 is based on a P/E multiple. Gilead is currently trading at a P/E multiple of 9X 2015 EPS, yet
+has a 2014-2016E CAGR above peers (13% vs. 13% on revenue; 19% vs. 10% on EPS). As such, a multiple closer to the group in the 12X range
+(in-line with the EPS CAGR) is more reasonable; our PT of $125/share based on 12X our 2015 EPS estimate of $10.00.
+Risks which May Impede the Achievement of the Barclays Research Price Target: 1) Commercial Risk: Gilead has successfully launched Sovaldi
+for hep C. However, Gilead could face challenges commercializing Harvoni in hep C with a combination of competitive and pricing pressures.
+Additionally, other competitors could enter the hep C market in the future further pressuring share gains with payors further influencing the
+market by preferences for specific products. This could limit growth and the peak potential of the hep C business, which would have a negative
+impact on share performance. 2) Regulatory Risk
+Gilead has a broad pipeline that has produced positive late stage data including TAF-Stribild. However, positive data is no guarantee that the FDA
+or EMA will grant approval. Delays in timelines or an inability to gain approval could significantly impact Gilead's future sales. 3) Clinical Risk:
+Gilead is developing multiple drugs for a broad range of diseases. Gilead's sofosbuvir + GS-5816 could fail to demonstrate comparable benefits in
+phase 3 to that observed in phase 2. Additionally, other agents in early to mid stage development, such as simtuzuamab in phase 2 for NASH,
+could also fail to demonstrate any benefits. As such Gilead may be unable to sustain its revenue stream. 4) Patent Risk: Gilead relies on patents to
+protect its investment in drug development. Gilead is facing multiple patent challenges to its hep C business. While we believe Gilead will
+ultimately prevail and failure to successfully defend its hep C patents could significantly reduce future sales and pressure GILD shares.
+
+4 February 2015
+
+8
+
+DISCLAIMER:
+This publication has been prepared by the Corporate and Investment Banking division of Barclays Bank PLC and/or one or more of its affiliates (collectively
+and each individually, "Barclays"). It has been issued by one or more Barclays legal entities within its Corporate and Investment Banking division as provided
+below. It is provided to our clients for information purposes only, and Barclays makes no express or implied warranties, and expressly disclaims all warranties
+of merchantability or fitness for a particular purpose or use with respect to any data included in this publication. Barclays will not treat unauthorized
+recipients of this report as its clients. Prices shown are indicative and Barclays is not offering to buy or sell or soliciting offers to buy or sell any financial
+instrument.
+Without limiting any of the foregoing and to the extent permitted by law, in no event shall Barclays, nor any affiliate, nor any of their respective officers,
+directors, partners, or employees have any liability for (a) any special, punitive, indirect, or consequential damages; or (b) any lost profits, lost revenue, loss of
+anticipated savings or loss of opportunity or other financial loss, even if notified of the possibility of such damages, arising from any use of this publication or
+its contents.
+Other than disclosures relating to Barclays, the information contained in this publication has been obtained from sources that Barclays Research believes to
+be reliable, but Barclays does not represent or warrant that it is accurate or complete. Barclays is not responsible for, and makes no warranties whatsoever as
+to, the content of any third-party web site accessed via a hyperlink in this publication and such information is not incorporated by reference.
+The views in this publication are those of the author(s) and are subject to change, and Barclays has no obligation to update its opinions or the information in
+this publication. The analyst recommendations in this publication reflect solely and exclusively those of the author(s), and such opinions were prepared
+independently of any other interests, including those of Barclays and/or its affiliates. This publication does not constitute personal investment advice or take
+into account the individual financial circumstances or objectives of the clients who receive it. The securities discussed herein may not be suitable for all
+investors. Barclays recommends that investors independently evaluate each issuer, security or instrument discussed herein and consult any independent
+advisors they believe necessary. The value of and income from any investment may fluctuate from day to day as a result of changes in relevant economic
+markets (including changes in market liquidity). The information herein is not intended to predict actual results, which may differ substantially from those
+reflected. Past performance is not necessarily indicative of future results.
+This material has been issued and approved for distribution in the UK and European Economic Area ("EEA") by Barclays Bank PLC. It is being made available
+primarily to persons who are investment professionals as that term is defined in Article 19 of the Financial Services and Markets Act 2000 (Financial
+Promotion) Order 2005. It is directed at, and therefore should only be relied upon by, persons who have professional experience in matters relating to
+investments. The investments to which it relates are available only to such persons and will be entered into only with such persons. Barclays Bank PLC is
+authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority and is a
+member of the London Stock Exchange.
+The Corporate and Investment Banking division of Barclays undertakes U.S. securities business in the name of its wholly owned subsidiary Barclays Capital
+Inc., a FINRA and SIPC member. Barclays Capital Inc., a U.S. registered broker/dealer, is distributing this material in the United States and, in connection
+therewith accepts responsibility for its contents. Any U.S. person wishing to effect a transaction in any security discussed herein should do so only by
+contacting a representative of Barclays Capital Inc. in the U.S. at 745 Seventh Avenue, New York, New York 10019.
+Non-U.S. persons should contact and execute transactions through a Barclays Bank PLC branch or affiliate in their home jurisdiction unless local regulations
+permit otherwise.
+Barclays Bank PLC, Paris Branch (registered in France under Paris RCS number 381 066 281) is regulated by the Autorité des marchés financiers and the
+Autorité de contrôle prudentiel. Registered office 34/36 Avenue de Friedland 75008 Paris.
+This material is distributed in Canada by Barclays Capital Canada Inc., a registered investment dealer and member of IIROC (www.iiroc.ca).
+Subject to the conditions of this publication as set out above, the Corporate &amp; Investment Banking Division of Absa Bank Limited, an authorised
+financial services provider (Registration No.: 1986/004794/06. Registered Credit Provider Reg No NCRCP7), is distributing this material in South Africa. Absa
+Bank Limited is regulated by the South African Reserve Bank. This publication is not, nor is it intended to be, advice as defined and/or contemplated in the
+(South African) Financial Advisory and Intermediary Services Act, 37 of 2002, or any other financial, investment, trading, tax, legal, accounting, retirement,
+actuarial or other professional advice or service whatsoever. Any South African person or entity wishing to effect a transaction in any security discussed
+herein should do so only by contacting a representative of the Corporate &amp; Investment Banking Division of Absa Bank Limited in South Africa, 15 Alice
+Lane, Sandton, Johannesburg, Gauteng 2196. Absa Bank Limited is a member of the Barclays group.
+In Japan, foreign exchange research reports are prepared and distributed by Barclays Bank PLC Tokyo Branch. Other research reports are distributed to
+institutional investors in Japan by Barclays Securities Japan Limited. Barclays Securities Japan Limited is a joint-stock company incorporated in Japan with
+registered office of 6-10-1 Roppongi, Minato-ku, Tokyo 106-6131, Japan. It is a subsidiary of Barclays Bank PLC and a registered financial instruments firm
+regulated by the Financial Services Agency of Japan. Registered Number: Kanto Zaimukyokucho (kinsho) No. 143.
+Barclays Bank PLC, Hong Kong Branch is distributing this material in Hong Kong as an authorised institution regulated by the Hong Kong Monetary
+Authority. Registered Office: 41/F, Cheung Kong Center, 2 Queen's Road Central, Hong Kong.
+Information on securities/instruments that trade in Taiwan or written by a Taiwan-based research analyst is distributed by Barclays Capital Securities
+Taiwan Limited to its clients. The material on securities/instruments not traded in Taiwan is not to be construed as 'recommendation' in Taiwan. Barclays
+Capital Securities Taiwan Limited does not accept orders from clients to trade in such securities. This material may not be distributed to the public media or
+used by the public media without prior written consent of Barclays.
+This material is distributed in South Korea by Barclays Capital Securities Limited, Seoul Branch.
+All equity research material is distributed in India by Barclays Securities (India) Private Limited (SEBI Registration No: INB/INF 231292732 (NSE), INB/INF
+011292738 (BSE) | Corporate Identification Number: U67120MH2006PTC161063 | Registered Office: 208 | Ceejay House | Dr. Annie Besant Road | Shivsagar
+Estate | Worli | Mumbai - 400 018 | India, Phone: + 91 22 67196363). Other research reports are distributed in India by Barclays Bank PLC, India Branch.
+Barclays Bank PLC Frankfurt Branch distributes this material in Germany under the supervision of Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin).
+This material is distributed in Malaysia by Barclays Capital Markets Malaysia Sdn Bhd.
+This material is distributed in Brazil by Banco Barclays S.A.
+This material is distributed in Mexico by Barclays Bank Mexico, S.A.
+Barclays Bank PLC in the Dubai International Financial Centre (Registered No. 0060) is regulated by the Dubai Financial Services Authority (DFSA). Principal
+place of business in the Dubai International Financial Centre: The Gate Village, Building 4, Level 4, PO Box 506504, Dubai, United Arab Emirates. Barclays
+
+Bank PLC-DIFC Branch, may only undertake the financial services activities that fall within the scope of its existing DFSA licence. Related financial products or
+services are only available to Professional Clients, as defined by the Dubai Financial Services Authority.
+Barclays Bank PLC in the UAE is regulated by the Central Bank of the UAE and is licensed to conduct business activities as a branch of a commercial bank
+incorporated outside the UAE in Dubai (Licence No.: 13/1844/2008, Registered Office: Building No. 6, Burj Dubai Business Hub, Sheikh Zayed Road, Dubai
+City) and Abu Dhabi (Licence No.: 13/952/2008, Registered Office: Al Jazira Towers, Hamdan Street, PO Box 2734, Abu Dhabi).
+Barclays Bank PLC in the Qatar Financial Centre (Registered No. 00018) is authorised by the Qatar Financial Centre Regulatory Authority (QFCRA). Barclays
+Bank PLC-QFC Branch may only undertake the regulated activities that fall within the scope of its existing QFCRA licence. Principal place of business in Qatar:
+Qatar Financial Centre, Office 1002, 10th Floor, QFC Tower, Diplomatic Area, West Bay, PO Box 15891, Doha, Qatar. Related financial products or services
+are only available to Business Customers as defined by the Qatar Financial Centre Regulatory Authority.
+This material is distributed in the UAE (including the Dubai International Financial Centre) and Qatar by Barclays Bank PLC.
+This material is distributed in Saudi Arabia by Barclays Saudi Arabia ('BSA'). It is not the intention of the publication to be used or deemed as
+recommendation, option or advice for any action (s) that may take place in future. Barclays Saudi Arabia is a Closed Joint Stock Company, (CMA License No.
+09141-37). Registered office Al Faisaliah Tower, Level 18, Riyadh 11311, Kingdom of Saudi Arabia. Authorised and regulated by the Capital Market
+Authority, Commercial Registration Number: 1010283024.
+This material is distributed in Russia by OOO Barclays Capital, affiliated company of Barclays Bank PLC, registered and regulated in Russia by the FSFM.
+Broker License #177-11850-100000; Dealer License #177-11855-010000. Registered address in Russia: 125047 Moscow, 1st Tverskaya-Yamskaya str. 21.
+This material is distributed in Singapore by the Singapore branch of Barclays Bank PLC, a bank licensed in Singapore by the Monetary Authority of Singapore.
+For matters in connection with this report, recipients in Singapore may contact the Singapore branch of Barclays Bank PLC, whose registered address is One
+Raffles Quay Level 28, South Tower, Singapore 048583.
+Barclays Bank PLC, Australia Branch (ARBN 062 449 585, AFSL 246617) is distributing this material in Australia. It is directed at 'wholesale clients' as defined
+by Australian Corporations Act 2001.
+IRS Circular 230 Prepared Materials Disclaimer: Barclays does not provide tax advice and nothing contained herein should be construed to be tax advice.
+Please be advised that any discussion of U.S. tax matters contained herein (including any attachments) (i) is not intended or written to be used, and cannot
+be used, by you for the purpose of avoiding U.S. tax-related penalties; and (ii) was written to support the promotion or marketing of the transactions or other
+matters addressed herein. Accordingly, you should seek advice based on your particular circumstances from an independent tax advisor.
+© Copyright Barclays Bank PLC (2015). All rights reserved. No part of this publication may be reproduced or redistributed in any manner without the prior
+written permission of Barclays. Barclays Bank PLC is registered in England No. 1026167. Registered office 1 Churchill Place, London, E14 5HP. Additional
+information regarding this publication will be furnished upon request.
+
+US08-000001
+
+

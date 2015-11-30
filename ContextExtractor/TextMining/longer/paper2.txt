@@ -1,0 +1,1005 @@
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+Equity Research
+
+HepC price wars worsen, tail comes more quickly; ABBV PT to $73
+HepC pricing discounts greater than expected; but volumes higher
+On GILD’s 4Q earnings call, management called out a gross to net pricing
+discount of 46% in the US in 2015 for their hepC franchise vs. a gross to net
+discount of 22% at the end of 2014. This implies pricing of~$50K per cure
+for g1 patients vs. our expectations of ~$70K. We had expected hepC
+pricing to decline, but the speed of the discounts is far greater then we had
+expected. On the positive side, GILD stated that they believe >250K
+patients could be treated per year in the US (prior expectations for 200K),
+but that means the peak likely comes more quickly (potentially 2016 versus
+2017).
+
+RELATED RESEARCH
+
+Americas: Healthcare: The ongoing evolution of
+the unique market that is hepC; October 7 2014
+
+More to ABBV than hepC; updating our estimates and price target
+We update our global 2016 ABBV hepC estimates to $2.3 bn (from $2.6 bn)
+including $1.8 bn for the US market. We maintain our $1.8 bn world wide
+forecast for 2015, which is below guidance. Our 2016 estimate assumes
+less than 20% market share of g1 patients in the US based on our
+assumption of $50K pricing and 250K patients treated per year (around
+75% of which are g1 patients). We also update our 12-month price target
+to $73 (prior $75). ABBV claims that they weren’t surprised by GILD’s
+comments and that their guidance for Viekira assumes “appropriate” gross
+to net discounts. However, with greater-than-expected price discounts we
+are now more conservative with our hepC estimates.
+HepC now out of ABBV’s share price: We calculate ABBV’s $2.3 bn in
+HepC sales in 2016 (peak) is worth about $0.85 in EPS (assuming 75%
+operating margin). Using a GILD multiple (~10x 2015 EPS) that implies
+around $8/share. ABBV shares have already declined $8 since its peak in
+early Dec (mostly all based on hepC concerns in our view).
+Reiterate Buy: HepC is a small piece to the ABBV story. Even at peak hepC
+represents only ~10% of ABBV sales. ABBV’s multiple reflects basically no
+growth (12x 2016 vs 16x for pharma) despite 14% EPS CAGR from 20142018 and meaningful pipeline opportunities (eg. ABT-199, Elagolix, etc).
+
+Risk to our MRK estimates; less room for newer competitors
+We have MRK sales peaking at $3-4 bn (unrisk adjusted) which looks to be
+at risk based on lower pricing for hepC drugs. We believe MRK’s HepC
+plan hinges on a long tail and greater opportunity for late entrance.
+
+Jami Rubin
+(212) 357-7536 jami.rubin@gs.com Goldman, Sachs & Co.
+Ariel Herman
+(212) 902-3669 ariel.herman@gs.com Goldman, Sachs & Co.
+Jay Olson, CFA
+(212) 357-7671 jay.olson@gs.com Goldman, Sachs & Co.
+Christopher Benassi
+(801) 741-5456 christopher.benassi@gs.com Goldman, Sachs & Co.
+
+The Goldman Sachs Group, Inc.
+
+Goldman Sachs does and seeks to do business with
+companies covered in its research reports. As a result,
+investors should be aware that the firm may have a conflict of
+interest that could affect the objectivity of this report. Investors
+should consider this report as only a single factor in making
+their investment decision. For Reg AC certification and other
+important disclosures, see the Disclosure Appendix, or go to
+www.gs.com/research/hedge.html. Analysts employed by nonUS affiliates are not registered/qualified as research analysts
+with FINRA in the U.S.
+Global Investment Research
+
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+
+HepC class likely unique with limited risk for price war contagion: As we called out in
+our global hepC note Oct 2014, we view the hepC market as an exception that is likely to be
+contained due to a fixed patient pool, acute curative treatments and substitutable drugs.
+
+Updating our ABBV estimates and 12-month price target
+Exhibit 1: Our current and prior estimates for ABBV
+hepC estimates in $ millions
+
+ABBV estimates
+Current hepC estimates
+Prior hepC estimates
+
+2015
+1,800
+1,800
+
+2016
+2,300
+2,600
+
+2017
+2,300
+2,600
+
+2018
+2,300
+2,600
+
+Current EPS estimates
+Prior EPS estimates
+
+4.21
+4.21
+
+4.89
+5.01
+
+5.42
+5.55
+
+5.63
+5.70
+
+Source: Goldman Sachs Global Investment Research
+
+We update our ABBV 12-month price target to $73 (prior $75) based on 17x our 2015E EPS
+(lower multiple on lower long-term hepC sales), weighted at 85%, and an unchanged M&A
+value of $78, weighted at 15%.
+Risk include Humira, product launches (hepC), pipeline and business development.
+
+Goldman Sachs Global Investment Research
+
+2
+
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+
+Exhibit 2: ABBV summary revenue and income statement
+$ mns, except per share value
+5 Year Sales and Earnings
+Humira
+Lipid Franchise
+Tricor & Trilipix franchise - US
+Niaspan
+Simcor (Niaspan+simvastatin)
+Virology Franchise
+Norvir (ritonavir PI for HIV)
+Kaletra (lopinavir/ritonavir PI for HIV)
+Viekira Pak
+Metabolics/Hormones
+Synthroid (thyroid disease)
+Androgel (testosterone replacement)
+Creon (pancreatic enzyme therapy)
+Endocrinology
+Lupron (palliative treatment of prostate cancers)
+Other pharmaceuticals
+Sevoflurane /Sevorane (Anesthesia)
+Zemplar (renal care)
+Synagis
+Doudopa
+Other pharma
+
+2,069
+622
+1,035
+412
+785
+785
+2,806
+568
+389
+827
+178
+844
+
+2014
+12,543
+297
+115
+112
+70
+1,390
+472
+870
+48
+2,159
+709
+934
+516
+778
+778
+2,712
+550
+228
+835
+220
+879
+
+2015E
+13,778
+128
+41
+44
+42
+2,642
+157
+685
+1,800
+1,820
+744
+492
+583
+748
+748
+2,636
+488
+176
+810
+331
+832
+
+18,380
+4,448
+13,932
+4,659
+2,511
+7,170
+
+18,790
+4,051
+14,739
+5,084
+2,831
+7,915
+
+19,879
+3,947
+15,932
+5,487
+3,252
+8,739
+
+21,752
+3,907
+17,844
+5,565
+3,371
+8,936
+
+Operating Income
+Net foreign exchange (gain) loss
+Total other non-operating (income)/expense
+Earnings before taxes
+
+6,762
+17
+37
+6,708
+
+6,824
+44
+265
+6,515
+
+7,193
+12
+257
+6,924
+
+Tax expense (non-GAAP)
+Net Income
+
+793
+5,916
+
+1,449
+5,066
+
+earnings 2-class adjustment
+Diluted EPS (continuing)
+Diluted shares
+Annual EPS Growth
+
+$3.75
+1,577
+23%
+
+(26)
+$3.14
+1,607
+-14%
+
+New Products
+daclizumab
+ABT-888/Veliparib
+ABT-199
+elotuzumab
+Elagolix
+atrasentan (formerly Xinlay)
+Total Sales
+COGS
+Gross Profit
+SG&A
+R&D
+Operating Expenses
+
+2012
+9,266
+2,113
+1,099
+911
+103
+1,402
+389
+1,013
+
+2013
+10,659
+1,039
+303
+650
+86
+1,432
+470
+962
+
+2,055
+551
+1,151
+353
+800
+800
+2,744
+602
+383
+842
+153
+764
+-
+
+2016E
+15,034
+104
+35
+35
+34
+2,969
+90
+579
+2,300
+1,842
+782
+419
+641
+713
+713
+2,719
+478
+155
+850
+404
+832
+
+2017E
+15,851
+87
+32
+28
+27
+2,799
+73
+425
+2,300
+1,882
+821
+356
+706
+679
+679
+2,789
+468
+149
+893
+447
+832
+
+2018E
+15,681
+73
+29
+23
+22
+2,710
+60
+350
+2,300
+1,926
+862
+302
+762
+646
+646
+2,853
+459
+137
+938
+487
+832
+
+2019E
+15,020
+61
+26
+18
+17
+2,249
+50
+299
+1,900
+1,985
+905
+257
+823
+615
+615
+2,848
+450
+69
+984
+513
+832
+
+2020E
+14,425
+51
+23
+14
+14
+2,197
+42
+255
+1,900
+2,019
+950
+180
+889
+586
+586
+2,878
+441
+34
+1,034
+537
+832
+
+23,781
+4,233
+19,548
+5,945
+3,520
+9,465
+
+864
+248
+330
+186
+100
+24,950
+4,416
+20,534
+6,038
+3,618
+9,656
+
+1,514
+300
+225
+480
+234
+275
+25,403
+4,369
+21,034
+6,097
+3,760
+9,856
+
+2,378
+352
+575
+600
+276
+425
+150
+25,156
+4,277
+20,879
+6,037
+3,773
+9,811
+
+3,278
+408
+800
+720
+375
+750
+225
+25,434
+4,324
+21,110
+6,104
+3,815
+9,919
+
+8,908
+20
+279
+8,610
+
+10,083
+20
+257
+9,806
+
+10,878
+20
+157
+10,701
+
+11,177
+20
+90
+11,067
+
+11,069
+20
+38
+11,011
+
+11,191
+20
+(8)
+11,179
+
+1,549
+5,375
+
+1,911
+6,698
+
+2,177
+7,629
+
+2,376
+8,326
+
+2,457
+8,610
+
+2,444
+8,566
+
+2,482
+8,697
+
+(37)
+$3.32
+1,610
+6%
+
+$4.21
+1,591
+25%
+
+$4.89
+1,559
+14%
+
+$5.42
+1,536
+9%
+
+$5.63
+1,530
+3%
+
+$5.60
+1,530
+-1%
+
+$5.68
+1,530
+2%
+
+401
+152
+150
+99
+-
+
+Source: Company Data, Goldman Sachs Global Investment Research
+
+Goldman Sachs Global Investment Research
+
+3
+
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+
+Disclosure Appendix
+Reg AC
+We, Jami Rubin, Ariel Herman, Jay Olson, CFA and Christopher Benassi, hereby certify that all of the views expressed in this report accurately reflect
+our personal views about the subject company or companies and its or their securities. We also certify that no part of our compensation was, is or
+will be, directly or indirectly, related to the specific recommendations or views expressed in this report.
+Unless otherwise stated, the individuals listed on the cover page of this report are analysts in Goldman Sachs' Global Investment Research division.
+
+Investment Profile
+The Goldman Sachs Investment Profile provides investment context for a security by comparing key attributes of that security to its peer group and
+market. The four key attributes depicted are: growth, returns, multiple and volatility. Growth, returns and multiple are indexed based on composites
+of several methodologies to determine the stocks percentile ranking within the region's coverage universe.
+The precise calculation of each metric may vary depending on the fiscal year, industry and region but the standard approach is as follows:
+Growth is a composite of next year's estimate over current year's estimate, e.g. EPS, EBITDA, Revenue. Return is a year one prospective aggregate
+of various return on capital measures, e.g. CROCI, ROACE, and ROE. Multiple is a composite of one-year forward valuation ratios, e.g. P/E, dividend
+yield, EV/FCF, EV/EBITDA, EV/DACF, Price/Book. Volatility is measured as trailing twelve-month volatility adjusted for dividends.
+
+Quantum
+Quantum is Goldman Sachs' proprietary database providing access to detailed financial statement histories, forecasts and ratios. It can be used for
+in-depth analysis of a single company, or to make comparisons between companies in different sectors and markets.
+
+GS SUSTAIN
+GS SUSTAIN is a global investment strategy aimed at long-term, long-only performance with a low turnover of ideas. The GS SUSTAIN focus list
+includes leaders our analysis shows to be well positioned to deliver long term outperformance through sustained competitive advantage and
+superior returns on capital relative to their global industry peers. Leaders are identified based on quantifiable analysis of three aspects of corporate
+performance: cash return on cash invested, industry positioning and management quality (the effectiveness of companies' management of the
+environmental, social and governance issues facing their industry).
+
+Disclosures
+Coverage group(s) of stocks by primary analyst(s)
+Jami Rubin: America-Major Pharmaceuticals, America-Pharmaceuticals Generics. Jay Olson, CFA: America-Major Pharmaceuticals.
+America-Major Pharmaceuticals: AbbVie Inc., Allergan, Inc., Bristol-Myers Squibb Company, Eli Lilly & Company, Johnson & Johnson, MannKind
+Corporation, Merck & Co., Inc., Pfizer Inc., Zoetis Inc..
+America-Pharmaceuticals Generics: Actavis Plc, Mylan Inc., Perrigo Co., Teva Pharmaceuticals.
+
+Company-specific regulatory disclosures
+The following disclosures relate to relationships between The Goldman Sachs Group, Inc. (with its affiliates, "Goldman Sachs") and companies
+covered by the Global Investment Research Division of Goldman Sachs and referred to in this research.
+Goldman Sachs has received compensation for investment banking services in the past 12 months: AbbVie Inc. ($61.65) and Merck & Co., Inc.
+($61.02)
+Goldman Sachs expects to receive or intends to seek compensation for investment banking services in the next 3 months: AbbVie Inc. ($61.65) and
+Merck & Co., Inc. ($61.02)
+Goldman Sachs has received compensation for non-investment banking services during the past 12 months: AbbVie Inc. ($61.65) and Merck & Co.,
+Inc. ($61.02)
+Goldman Sachs had an investment banking services client relationship during the past 12 months with: AbbVie Inc. ($61.65) and Merck & Co., Inc.
+($61.02)
+Goldman Sachs had a non-investment banking securities-related services client relationship during the past 12 months with: AbbVie Inc. ($61.65) and
+Merck & Co., Inc. ($61.02)
+Goldman Sachs had a non-securities services client relationship during the past 12 months with: AbbVie Inc. ($61.65) and Merck & Co., Inc. ($61.02)
+Goldman Sachs makes a market in the securities or derivatives thereof: AbbVie Inc. ($61.65) and Merck & Co., Inc. ($61.02)
+
+Distribution of ratings/investment banking relationships
+Goldman Sachs Investment Research global coverage universe
+Rating Distribution
+
+Buy
+
+Hold
+
+Investment Banking Relationships
+
+Sell
+
+Buy
+
+Hold
+
+Sell
+
+Global
+33%
+54%
+13%
+44%
+38%
+32%
+As of January 1, 2015, Goldman Sachs Global Investment Research had investment ratings on 3,483 equity securities. Goldman Sachs assigns stocks
+as Buys and Sells on various regional Investment Lists; stocks not so assigned are deemed Neutral. Such assignments equate to Buy, Hold and Sell
+for the purposes of the above disclosure required by NASD/NYSE rules. See 'Ratings, Coverage groups and views and related definitions' below.
+
+Goldman Sachs Global Investment Research
+
+4
+
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+
+Price target and rating history chart(s)
+Stock Price Currency : U.S. Dollar
+
+Goldman Sachs rating and stock price target history
+
+52
+45
+
+60
+50
+38
+
+2,000
+
+58
+
+1,800
+76
+68
+80 1,600
+73
+
+42
+60
+
+1,400
+
+30
+Stock Price
+
+20
+
+Dec 14
+
+Jun 20
+B
+NR
+F M A M J J A S O N D J F MA M J J A S O N D J F MA M J J A S O N D
+2012
+2013
+2014
+
+1,200
+Index Price
+
+40
+
+60
+
+57
+55
+54
+
+Source: Goldman Sachs Investment Research for ratings and price targets; FactSet closing prices as of 12/31/2014.
+Rating
+Covered by Jami Rubin,
+Oct 23, 2014 to B f rom NR
+as of Dec 14, 2012
+Price target
+Price target at removal
+
+2,200
+
+70
+48
+
+65
+60
+47
+45
+
+55
+50
+
+46
+47
+
+54
+52
+
+62
+
+56
+52
+
+2,000
+1,800
+
+45
+60
+
+65
+
+40
+
+1,600
+1,400
+
+35
+30
+
+1,200
+N
+F M A M J J A S O N D J F MA M J J A S O N D J F MA M J J A S O N D
+2012
+2013
+2014
+
+Source: Goldman Sachs Investment Research for ratings and price targets; FactSet closing prices as of 12/31/2014.
+Rating
+Covered by Jami Rubin
+Price target
+
+Not covered by current analyst
+
+Price target at removal
+
+S&P 500
+
+The price targets show n should be considered in the context of all prior published Goldman Sachs research, w hich may or
+may not have included price targets, as w ell as developments relating to the company, its industry and f inancial markets.
+
+49
+
+50
+
+45 41
+
+Stock Price
+
+2,200
+
+70
+
+Stock Price Currency : U.S. Dollar
+
+Me rck & Co., Inc. (MRK)
+
+Goldman Sachs rating and stock price target history
+80
+
+Index Price
+
+AbbVie Inc. (ABBV)
+
+Not covered by current analyst
+
+S&P 500
+
+The price targets show n should be considered in the context of all prior published Goldman Sachs research, w hich may or
+may not have included price targets, as w ell as developments relating to the company, its industry and f inancial markets.
+
+Regulatory disclosures
+Disclosures required by United States laws and regulations
+See company-specific regulatory disclosures above for any of the following disclosures required as to companies referred to in this report: manager
+or co-manager in a pending transaction; 1% or other ownership; compensation for certain services; types of client relationships; managed/comanaged public offerings in prior periods; directorships; for equity securities, market making and/or specialist role. Goldman Sachs usually makes a
+market in fixed income securities of issuers discussed in this report and usually deals as a principal in these securities.
+The following are additional required disclosures: Ownership and material conflicts of interest: Goldman Sachs policy prohibits its analysts,
+professionals reporting to analysts and members of their households from owning securities of any company in the analyst's area of
+coverage. Analyst compensation: Analysts are paid in part based on the profitability of Goldman Sachs, which includes investment banking
+revenues. Analyst as officer or director: Goldman Sachs policy prohibits its analysts, persons reporting to analysts or members of their
+households from serving as an officer, director, advisory board member or employee of any company in the analyst's area of coverage. Non-U.S.
+Analysts: Non-U.S. analysts may not be associated persons of Goldman, Sachs & Co. and therefore may not be subject to NASD Rule 2711/NYSE
+Rules 472 restrictions on communications with subject company, public appearances and trading securities held by the analysts.
+Distribution of ratings: See the distribution of ratings disclosure above. Price chart: See the price chart, with changes of ratings and price targets in
+prior periods, above, or, if electronic format or if with respect to multiple companies which are the subject of this report, on the Goldman Sachs
+website at http://www.gs.com/research/hedge.html.
+
+Additional disclosures required under the laws and regulations of jurisdictions other than the United States
+The following disclosures are those required by the jurisdiction indicated, except to the extent already made above pursuant to United States laws
+and regulations. Australia: Goldman Sachs Australia Pty Ltd and its affiliates are not authorised deposit-taking institutions (as that term is defined in
+the Banking Act 1959 (Cth)) in Australia and do not provide banking services, nor carry on a banking business, in Australia. This research, and any
+access to it, is intended only for "wholesale clients" within the meaning of the Australian Corporations Act, unless otherwise agreed by Goldman
+Sachs. In producing research reports, members of the Global Investment Research Division of Goldman Sachs Australia may attend site visits and
+other meetings hosted by the issuers the subject of its research reports. In some instances the costs of such site visits or meetings may be met in part
+or in whole by the issuers concerned if Goldman Sachs Australia considers it is appropriate and reasonable in the specific circumstances relating to
+the site visit or meeting. Brazil: Disclosure information in relation to CVM Instruction 483 is available at
+http://www.gs.com/worldwide/brazil/area/gir/index.html. Where applicable, the Brazil-registered analyst primarily responsible for the content of this
+research report, as defined in Article 16 of CVM Instruction 483, is the first author named at the beginning of this report, unless indicated otherwise at
+the end of the text. Canada: Goldman Sachs Canada Inc. is an affiliate of The Goldman Sachs Group Inc. and therefore is included in the company
+specific disclosures relating to Goldman Sachs (as defined above). Goldman Sachs Canada Inc. has approved of, and agreed to take responsibility for,
+this research report in Canada if and to the extent that Goldman Sachs Canada Inc. disseminates this research report to its clients. Hong
+Kong: Further information on the securities of covered companies referred to in this research may be obtained on request from Goldman Sachs
+(Asia) L.L.C. India: Further information on the subject company or companies referred to in this research may be obtained from Goldman Sachs
+(India) Securities Private Limited. Japan: See below. Korea: Further information on the subject company or companies referred to in this research
+may be obtained from Goldman Sachs (Asia) L.L.C., Seoul Branch. New Zealand: Goldman Sachs New Zealand Limited and its affiliates are neither
+"registered banks" nor "deposit takers" (as defined in the Reserve Bank of New Zealand Act 1989) in New Zealand. This research, and any access to it,
+is intended for "wholesale clients" (as defined in the Financial Advisers Act 2008) unless otherwise agreed by Goldman Sachs. Russia: Research
+reports distributed in the Russian Federation are not advertising as defined in the Russian legislation, but are information and analysis not having
+product promotion as their main purpose and do not provide appraisal within the meaning of the Russian legislation on appraisal
+activity. Singapore: Further information on the covered companies referred to in this research may be obtained from Goldman Sachs (Singapore)
+Pte. (Company Number: 198602165W). Taiwan: This material is for reference only and must not be reprinted without permission. Investors should
+carefully consider their own investment risk. Investment results are the responsibility of the individual investor. United Kingdom: Persons who
+would be categorized as retail clients in the United Kingdom, as such term is defined in the rules of the Financial Conduct Authority, should read this
+research in conjunction with prior Goldman Sachs research on the covered companies referred to herein and should refer to the risk warnings that
+have been sent to them by Goldman Sachs International. A copy of these risks warnings, and a glossary of certain financial terms used in this report,
+are available from Goldman Sachs International on request.
+European Union: Disclosure information in relation to Article 4 (1) (d) and Article 6 (2) of the European Commission Directive 2003/126/EC is available
+at http://www.gs.com/disclosures/europeanpolicy.html which states the European Policy for Managing Conflicts of Interest in Connection with
+Investment Research.
+Japan: Goldman Sachs Japan Co., Ltd. is a Financial Instrument Dealer registered with the Kanto Financial Bureau under registration number Kinsho
+69, and a member of Japan Securities Dealers Association, Financial Futures Association of Japan and Type II Financial Instruments Firms
+Association. Sales and purchase of equities are subject to commission pre-determined with clients plus consumption tax. See company-specific
+disclosures as to any applicable disclosures required by Japanese stock exchanges, the Japanese Securities Dealers Association or the Japanese
+Securities Finance Company.
+
+Goldman Sachs Global Investment Research
+
+5
+
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+
+Ratings, coverage groups and views and related definitions
+Buy (B), Neutral (N), Sell (S) -Analysts recommend stocks as Buys or Sells for inclusion on various regional Investment Lists. Being assigned a Buy
+
+or Sell on an Investment List is determined by a stock's return potential relative to its coverage group as described below. Any stock not assigned as
+a Buy or a Sell on an Investment List is deemed Neutral. Each regional Investment Review Committee manages various regional Investment Lists to a
+global guideline of 25%-35% of stocks as Buy and 10%-15% of stocks as Sell; however, the distribution of Buys and Sells in any particular coverage
+group may vary as determined by the regional Investment Review Committee. Regional Conviction Buy and Sell lists represent investment
+recommendations focused on either the size of the potential return or the likelihood of the realization of the return.
+Return potential represents the price differential between the current share price and the price target expected during the time horizon associated
+with the price target. Price targets are required for all covered stocks. The return potential, price target and associated time horizon are stated in each
+report adding or reiterating an Investment List membership.
+Coverage groups and views: A list of all stocks in each coverage group is available by primary analyst, stock and coverage group at
+http://www.gs.com/research/hedge.html. The analyst assigns one of the following coverage views which represents the analyst's investment outlook
+on the coverage group relative to the group's historical fundamentals and/or valuation. Attractive (A). The investment outlook over the following 12
+months is favorable relative to the coverage group's historical fundamentals and/or valuation. Neutral (N). The investment outlook over the
+following 12 months is neutral relative to the coverage group's historical fundamentals and/or valuation. Cautious (C). The investment outlook over
+the following 12 months is unfavorable relative to the coverage group's historical fundamentals and/or valuation.
+Not Rated (NR). The investment rating and target price have been removed pursuant to Goldman Sachs policy when Goldman Sachs is acting in an
+advisory capacity in a merger or strategic transaction involving this company and in certain other circumstances. Rating Suspended (RS). Goldman
+
+Sachs Research has suspended the investment rating and price target for this stock, because there is not a sufficient fundamental basis for
+determining, or there are legal, regulatory or policy constraints around publishing, an investment rating or target. The previous investment rating and
+price target, if any, are no longer in effect for this stock and should not be relied upon. Coverage Suspended (CS). Goldman Sachs has suspended
+coverage of this company. Not Covered (NC). Goldman Sachs does not cover this company. Not Available or Not Applicable (NA). The
+information is not available for display or is not applicable. Not Meaningful (NM). The information is not meaningful and is therefore excluded.
+
+Global product; distributing entities
+The Global Investment Research Division of Goldman Sachs produces and distributes research products for clients of Goldman Sachs on a global
+basis. Analysts based in Goldman Sachs offices around the world produce equity research on industries and companies, and research on
+macroeconomics, currencies, commodities and portfolio strategy. This research is disseminated in Australia by Goldman Sachs Australia Pty Ltd
+(ABN 21 006 797 897); in Brazil by Goldman Sachs do Brasil Corretora de Títulos e Valores Mobiliários S.A.; in Canada by either Goldman Sachs
+Canada Inc. or Goldman, Sachs & Co.; in Hong Kong by Goldman Sachs (Asia) L.L.C.; in India by Goldman Sachs (India) Securities Private Ltd.; in
+Japan by Goldman Sachs Japan Co., Ltd.; in the Republic of Korea by Goldman Sachs (Asia) L.L.C., Seoul Branch; in New Zealand by Goldman Sachs
+New Zealand Limited; in Russia by OOO Goldman Sachs; in Singapore by Goldman Sachs (Singapore) Pte. (Company Number: 198602165W); and in
+the United States of America by Goldman, Sachs & Co. Goldman Sachs International has approved this research in connection with its distribution in
+the United Kingdom and European Union.
+European Union: Goldman Sachs International authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority
+
+and the Prudential Regulation Authority, has approved this research in connection with its distribution in the European Union and United Kingdom;
+Goldman Sachs AG and Goldman Sachs International Zweigniederlassung Frankfurt, regulated by the Bundesanstalt für
+Finanzdienstleistungsaufsicht, may also distribute research in Germany.
+
+General disclosures
+This research is for our clients only. Other than disclosures relating to Goldman Sachs, this research is based on current public information that we
+consider reliable, but we do not represent it is accurate or complete, and it should not be relied on as such. We seek to update our research as
+appropriate, but various regulations may prevent us from doing so. Other than certain industry reports published on a periodic basis, the large
+majority of reports are published at irregular intervals as appropriate in the analyst's judgment.
+Goldman Sachs conducts a global full-service, integrated investment banking, investment management, and brokerage business. We have
+investment banking and other business relationships with a substantial percentage of the companies covered by our Global Investment Research
+Division. Goldman, Sachs & Co., the United States broker dealer, is a member of SIPC (http://www.sipc.org).
+Our salespeople, traders, and other professionals may provide oral or written market commentary or trading strategies to our clients and our
+proprietary trading desks that reflect opinions that are contrary to the opinions expressed in this research. Our asset management area, our
+proprietary trading desks and investing businesses may make investment decisions that are inconsistent with the recommendations or views
+expressed in this research.
+The analysts named in this report may have from time to time discussed with our clients, including Goldman Sachs salespersons and traders, or may
+discuss in this report, trading strategies that reference catalysts or events that may have a near-term impact on the market price of the equity
+securities discussed in this report, which impact may be directionally counter to the analyst's published price target expectations for such stocks. Any
+such trading strategies are distinct from and do not affect the analyst's fundamental equity rating for such stocks, which rating reflects a stock's
+return potential relative to its coverage group as described herein.
+We and our affiliates, officers, directors, and employees, excluding equity and credit analysts, will from time to time have long or short positions in,
+act as principal in, and buy or sell, the securities or derivatives, if any, referred to in this research.
+The views attributed to third party presenters at Goldman Sachs arranged conferences, including individuals from other parts of Goldman Sachs, do
+not necessarily reflect those of Global Investment Research and are not an official view of Goldman Sachs.
+Any third party referenced herein, including any salespeople, traders and other professionals or members of their household, may have positions in
+the products mentioned that are inconsistent with the views expressed by analysts named in this report.
+This research is not an offer to sell or the solicitation of an offer to buy any security in any jurisdiction where such an offer or solicitation would be
+illegal. It does not constitute a personal recommendation or take into account the particular investment objectives, financial situations, or needs of
+individual clients. Clients should consider whether any advice or recommendation in this research is suitable for their particular circumstances and, if
+appropriate, seek professional advice, including tax advice. The price and value of investments referred to in this research and the income from them
+may fluctuate. Past performance is not a guide to future performance, future returns are not guaranteed, and a loss of original capital may occur.
+Fluctuations in exchange rates could have adverse effects on the value or price of, or income derived from, certain investments.
+Certain transactions, including those involving futures, options, and other derivatives, give rise to substantial risk and are not suitable for all investors.
+Investors should review current options disclosure documents which are available from Goldman Sachs sales representatives or at
+
+Goldman Sachs Global Investment Research
+
+6
+
+February 4, 2015
+
+Americas: Healthcare: Pharmaceuticals
+
+http://www.theocc.com/about/publications/character-risks.jsp. Transaction costs may be significant in option strategies calling for multiple purchase
+and sales of options such as spreads. Supporting documentation will be supplied upon request.
+All research reports are disseminated and available to all clients simultaneously through electronic publication to our internal client websites. Not all
+research content is redistributed to our clients or available to third-party aggregators, nor is Goldman Sachs responsible for the redistribution of our
+research by third party aggregators. For research, models or other data available on a particular security, please contact your sales representative or
+go to http://360.gs.com.
+Disclosure information is also available at http://www.gs.com/research/hedge.html or from Research Compliance, 200 West Street, New York, NY
+10282.
+© 2015 Goldman Sachs.
+No part of this material may be (i) copied, photocopied or duplicated in any form by any means or (ii) redistributed without the prior
+written consent of The Goldman Sachs Group, Inc.
+
+Goldman Sachs Global Investment Research
+
+7
+
+

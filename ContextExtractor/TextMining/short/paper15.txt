@@ -1,0 +1,70 @@
+Gilead Sciences, Inc.
+GILD: Q4-Steep HCV Discount Overshadows Strong Demand, Dividend
+• Summary: On 2/3, GILD reported Q4 results, most notable for the disclosure of
+an HCV gross-to-net meaningfully less favorable vs. expectations. Though
+enhanced patient access should enable GILD to make up for this by volume, it
+does mean GILD will likely need to sustain high patient flow long term to
+maintain robust sales, and makes them less likely to beat 2015 expectations as
+easily as the prescription run-rate had been suggesting. A significant increase in
+expenses yr/yr to support growth of the HCV franchise was also notable.
+Nonetheless, there were quite a few bright spots in the quarter, including strong
+sales of HIV products and Harvoni (albeit driven in part by inventory builds),
+positive data from under-the-radar pipeline agent ‘5745, and the positive step of
+aggressively returning capital to shareholders through expanded buybacks and
+initiation of a dividend. It is clear coming out of the quarter that demand for
+GILD’s products is still quite strong and investors will more directly see the cash
+these products will generate, even if it’s not quite as robust-- and that the pipeline
+continues to progress with multiple underappreciated products. Though HCV
+competitive/pricing dynamics and HIV patent expiries could limit dramatic
+growth potential from here, GILD still looks inexpensive on a DCF basis--moreso
+after the post-market pullback--assuming any reasonable long-term HCV and
+HIV sustainability. Adjusting 2015E non-GAAP EPS to $10.18 from $10.31 and
+valuation range to $123-127 from $127-131.
+• Solid Q4 beat, helped in part by inventory buildups; increasing
+expenses going forward. GILD reported revenue of $7.3B, above our and
+consensus’ estimates ($7.07B/$6.72B). Harvoni sales of $2.11B handily beat
+consensus' $1.5B and our $1.8B estimate; this did include expected inventory
+build. Sovaldi was softer than expected, in part because of additional inventory
+drawdowns. Sales were strong across the HIV franchise, though it was also driven
+in part by inventory build. The strong sales more than offset higher-thanexpected
+expenses, leading to a non-GAAP EPS beat at $2.43. Expenses, while
+related to several one-time items, appear likely to grow more than expected in
+2015 (guided for R&D $3-3.3B and SG&A $3-3.3B)--illustrating the additional
+commercial investment needed to support the emerging HCV franchise.
+• Gross-to-net for Harvoni/Sovaldi worse-than-expected, in part
+explains guidance for low 2015 product sales yr/yr growth. Somewhat
+surprisingly, the company provided clarity on gross-to-net for the HCV products,
+citing 46% in the U.S.--in part reflecting an increased mix of government payers
+and more rapid-than-expected formulary/access agreements. We believe this
+explains the 2015 product sales guidance of $26-27B, which represents only 6-
+10% yr/yr. Volume growth could provide key offsets to this as access improves. GILD reaffirmed expectations
+that significant HCV patient volume increases pulling through via greater access; given Harvoni new
+prescriptions were already on a 3,000/wk run rate exiting Q4, when insurers were highly restrictive on
+fibrosis score for patient eligibility, we agree the patient volume should rise considerably (though increased
+proportion of less sick patients eligible for the 8-week regimen is likely to further decrease revenues per
+patient over the course of the year, even if gross-to-net is flat from here). Overlaying the updated HCV
+metrics provided by the company including gross-to-net, genotype mix, and duration, on top of our
+prescription projections, we now estimate global HCV sales of $15.3B – slightly less optimistic than the
+prescription trends had pointed to before the new gross/net info, but still potentially enabling GILD to beat
+their sales guidance (we now est. $28.4B sales).
+• One step backward, one step forward for pipeline. On the negative front, GILD reported that
+simtuzumab, an anti-fibrotic antibody that looked very promising in animal models, failed to show any
+activity in colorectal cancer or MF. Still, it is worth noting that cancers represented a challenging application
+of the drug’s mechanism (drug already failed in pancreatic cancer); the company noted stronger evidence for
+LOXL2’s association with fibrosis and disease progression in fibrotic diseases of the lung and liver, and recall
+there were some signals in an early liver fibrosis study, still allowing for the possibility the agent could be
+active in NASH--still a high-risk mid-year readout, but one where we believe expectations are low. On the
+positive flip side, GILD reported they will advance their anti-MMP9 antibody in gastric cancer and ulcerative
+colitis following signals in ph.I/IIs which the company told us indicated clear evidence of responses and
+remissions--particularly encouraging given potentially large opportunity in UC, and an asset that could start
+garnering some value.
+• Returning cash to shareholders – displays confidence in revenue sustainability, signals major
+acquisition unlikely on the horizon. Addressing a key question prompted in part by GILD’s rapid but
+substantially decelerating growth, and significant cashflows generated by their HCV franchise, the company
+announced an expanded buyback plan ($15B over 5 years, once remaining $3B is used) and dividend
+($0.43/quarter). Though the dividend was bit surprising at this point, overall, we view this commitment to
+return capital to shareholders as signaling their confidence in the long-term revenue sustainability that we
+believe remains underappreciated on DCF basis, and could potentially open up shares to new class of
+investors. It does, though, suggest that a large acquisition to bring in a core growth-driving product, which
+we believe many had hoped for at some point this year, most likely is not imminent.
+ 

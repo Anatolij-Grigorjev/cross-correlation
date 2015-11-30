@@ -1,0 +1,2606 @@
+
+
+Global Research
+
+4 February 2015
+
+Gilead Sciences
+
+Equities
+
+Lowering Numbers; Why It's Still a Buy
+
+Americas
+Biotechnology
+
+Conclusions on 4Q update: Surprises in both directions; net: Lowering ests
+Despite a 10% beat on 4Q EPS and the upside surprise of a new $15bn share buyback
+and Gilead's first-ever dividend, the focus of Gilead's 4Q was on the downside surprise
+of guiding to a 46% gross-to-net adjustment for HCV sales in 2015 (vs. 22% at YE14).
+Clearly this negatively affects sales and market size forecasts, both of which we move
+lower in our model. We further think the discounting will impact not only GILD shares,
+but also represents a headline negative for the sector (though several names are less
+exposed to price erosion). That said, it's really not the end of the world for GILD
+numbers, since [1] we ultimately got to that level of HCV discounting (just not until the
+outer years), and [2] this level of discounting occurs in other large segments as well,
+such as HIV and multiple sclerosis. The offset to the lower value of the HCV market is
+the value creation from capital allocation. Although we expect a hit to the stock, we
+maintain our Buy rating, as our DCF is still supportive; the multiple is already cheaper
+than all other biotechs / pharma, and pipeline and M&A could drive multiple expansion.
+Impact of wider gross-to-net
+[1] Lower HCV market value. The 46% gross-to-net is about twice as wide as we
+expected, and lowers our sales and market size estimates (peak global HCV market size:
+$24bn, from $28bn). [2] Volumes are going higher… As expected the volumes
+compensate for lower pricing near term. Arguably the market penetration will be
+higher over time because it will be more affordable to treat patients. [3] …but the
+patients are being treated sooner. This is good: more patients are captured by
+Gilead ahead of further competition, and the time value of money says sooner is better
+than later. However, out year ests go lower as the patient pool is depleted faster.
+Impact to our model: Lowering 2015e EPS by 4%, but numbers more concrete
+We increased the gross-to-net in HCV to 46% in 2015e, and increasing thereafter. This
+lowers our sales and EPS estimates, though the new $15bn repo and dividend helps
+offset.
+
+12-month rating
+
+Buy
+
+12m price target
+
+US$120.00
+Prior: US$125.00
+
+Price
+
+US$107.18
+
+RIC: GILD.O BBG: GILD US
+Trading data and key metrics
+52-wk range
+US$114.22-65.48
+Market cap.
+
+US$171bn
+
+Shares o/s
+
+1,596m (COM)
+
+Free float
+
+99%
+
+Avg. daily volume ('000)
+
+17,016
+
+Avg. daily value (m)
+
+US$1,713.4
+
+Common s/h equity (12/15E)
+
+US$15.4bn
+
+P/BV (12/15E)
+
+10.3x
+
+Net debt / EBITDA (12/15E)
+EPS (UBS, diluted) (US$)
+12/15E
+From
+To
+2.28
+2.27
+Q1E
+2.40
+2.34
+Q2E
+2.46
+2.35
+Q3E
+2.56
+2.34
+Q4E
+9.71
+9.31
+12/15E
+11.16
+10.50
+12/16E
+12.20
+11.25
+12/17E
+
+NM
+
+% ch
+-0.61
+-2.53
+-4.33
+-8.65
+-4.11
+-5.90
+-7.81
+
+Cons.
+2.38
+2.47
+2.50
+2.54
+9.79
+10.97
+11.59
+
+Matthew Roden, PhD
+Analyst
+matthew.roden@ubs.com
++1-212-713 2491
+
+Valuation: Buy; Lowering PT to $120 (from $125) based on 11.4x our 2016e EPS
+GILD currently trades at 9.7x our 2016 EPS estimate, vs. next lowest biotech (14x) and
+pharma (12x).
+
+Jeffrey Hung
+Associate Analyst
+jeffrey.hung@ubs.com
++1-212-713 3982
+
+Charles Shi, PhD
+Associate Analyst
+charles.shi@ubs.com
++1-212-713 4015
+Highlights (US$m)
+Revenues
+EBIT (UBS)
+Net earnings (UBS)
+EPS (UBS, diluted) (US$)
+DPS (US$)
+Net (debt) / cash
+
+12/12
+9,398
+4,580
+3,084
+1.95
+0.00
+(6,362)
+
+12/13
+10,804
+4,989
+3,465
+2.06
+0.00
+(4,504)
+
+12/14
+24,474
+16,584
+13,312
+8.10
+0.00
+(3,335)
+
+12/15E
+27,171
+18,357
+14,548
+9.31
+1.29
+10,798
+
+12/16E
+28,917
+19,716
+15,706
+10.50
+1.72
+20,078
+
+12/17E
+29,514
+20,352
+16,269
+11.25
+1.72
+30,185
+
+12/18E
+28,011
+19,777
+15,915
+11.48
+1.72
+40,420
+
+12/19E
+26,583
+19,124
+15,381
+11.60
+1.72
+50,273
+
+Profitability/valuation
+EBIT margin %
+ROIC (EBIT) %
+EV/EBITDA (core) x
+P/E (UBS, diluted) x
+Equity FCF (UBS) yield %
+Net dividend yield %
+
+12/12
+48.7
+46.5
+9.2
+14.5
+6.6
+0.0
+
+12/13
+46.2
+32.1
+18.3
+27.3
+3.2
+0.0
+
+12/14
+67.8
+102.1
+9.0
+11.1
+6.8
+0.0
+
+12/15E
+67.6
+176.7
+9.3
+11.5
+7.7
+1.2
+
+12/16E
+68.2
+455.7
+8.7
+10.2
+8.4
+1.6
+
+12/17E
+69.0
+447.1
+8.4
+9.5
+9.0
+1.6
+
+12/18E
+70.6
+437.8
+8.7
+9.3
+9.1
+1.6
+
+12/19E
+71.9
+442.3
+9.1
+9.2
+8.5
+1.6
+
+Source: Company accounts, Thomson Reuters, UBS estimates. Metrics marked as (UBS) have had analyst adjustments applied. Valuations: based on an average share price that year, (E): based on a
+share price of US$107.18 on 03 Feb 2015 19:41 EST
+
+www.ubs.com/investmentresearch
+
+This report has been prepared by UBS Securities LLC. ANALYST CERTIFICATION AND REQUIRED DISCLOSURES BEGIN ON
+PAGE 9. UBS does and seeks to do business with companies covered in its research reports. As a result, investors should be aware
+that the firm may have a conflict of interest that could affect the objectivity of this report. Investors should consider this report as
+only a single factor in making their investment decision.
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+Investment Thesis
+
+12-month rating
+
+Buy
+
+Gilead Sciences
+
+12m price target
+
+US$120.00
+
+Investment case
+
+Business description
+
+We rate GILD shares BUY, on the basis of 1) several pipeline
+catalysts over the next 12 months, 2) potential upside to 201516 estimates, which have been reset lower, and 3) the lowest P/E
+multiple on 2016E EPS. Key to upside to 2015 numbers is the
+launch of Harvoni in hepatitis C, which should drive share
+outperformance as we expect GILD's HCV regimens to be both
+the first- and best in a very large market with double-digit-billion
+dollar potential. Additionally, we see significant pipeline
+opportunities with simtuzumab in fibrosis, and in the TAF
+program in HIV that provides opportunities to extend the life of
+the franchise beyond the core tenofovir patents expire in 2018.
+Further, we view oncology as an underappreciated program.
+
+Gilead Sciences, Inc. discovers, develops, and commercializes
+treatments for infectious and pulmonary diseases. Its currently
+marketed products include Stribild, Complera, Atripla, Truvada,
+Viread, and Emtriva for HIV; Hepsera for hepatitis B; and
+AmBisome for the treatment of fungal diseases. Gilead also
+receives royalties from Roche for Tamiflu, a treatment for
+influenza. Gilead's key pipeline programs are sofosbuvir in
+hepatitis C, TAF in HIV, and idelisilib in cancer.
+
+Upside scenario
+Our upside scenario of $142 reflects a higher multiple (14x, still
+at a discount to the group) to reflect a bullish outlook on the
+pipeline and cash flow redeployment, as well as for the HCV and
+HIV businesses. In HCV, upside drivers include a higher diagnosis
+rate leading to a larger market opportunity and deeper
+penetration. Additional upside could come from reimbursement
+and pricing, where our base-case model is relatively conservative.
+We see additional upside from HIV and TAF, with higher
+utilization extending the revenue tail before patent expiry.
+Downside scenario
+Our downside scenario of $89 reflects a suppressed (8.5x)
+multiple to reflect a failure of the pipeline and weak HCV sales
+due to pricing pressure or competition.
+
+Industry outlook
+As an industry, we expect biotech stocks to outperform the
+broader markets on the basis of attractive growth relative to
+the S&P 500. Within biotech, the long term revenue and
+earnings growth outlook is the key determinant of biotech
+stock performance. Companies creating new product cycles
+through organic pipeline development and strategic
+acquisitions, paired with financial metrics and shareholder
+friendly programs (buy-backs, dividends, etc) are likely to
+outperform. Gilead's significant double-digit growth is above
+the peer group mean and in our view, justifies a higher
+multiple than currently implied on 2014-15 EPS. Further, GILD
+could see significant multiple expansion relative to peers if
+acquisitions or pipeline development improves the out-year
+outlook.
+Revenues by region (%) (2014)
+
+Upcoming catalysts
+1).Ph2 data of 3D combo at EASL (April 22-26); 2) Ph3 data of
+SOF+GS-5816 in 3Q15; 3) Ph3 C-EDGE data from Merck; 4) Ph2
+simtuzumab in NASH and IPF, and MMP9 in 3 cancer trials and 1
+UC in 2015. 5) M&A.
+
+Source for chart and table: UBS estimates
+
+Revenues by segment
+Segment Revenues ($m)
+
+2012
+
+2013
+
+2014E
+
+2015E
+
+2016E
+
+HIV
+
+8,004
+0
+138
+0
+1,561
+9,703
+
+9,092
+139
+109
+0
+1,862
+11,202
+
+10,216
+8,478
+78
+109
+1,929
+20,809
+
+10,802
+11,211
+72
+284
+1,979
+24,348
+
+11,620
+13,701
+68
+490
+2,022
+27,902
+
+HCV
+HBV
+Oncology
+Other
+Total
+
+Matthew Roden, PhD, Analyst, matthew.roden@ubs.com, +1-212-713 2491
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 2
+
+Key facts and comments from the quarter
+[1] HCV pricing. The 46% is a blended discount for Sovaldi and Harvoni across
+payers, reflecting larger private discounts (we est 40%) and a shift in mix toward
+public payers who receive discounting over 50%. The discounts are triggered by
+volumes, with contracts set to limit denials and increase access (in-line, see HERE).
+[2] Patient access. Contracts are in place for about 60% of covered lives in US, and
+Harvoni gained access to 80% of those. The treatment rate in EU will be lower due
+to budgetary constraints
+[3] 4Q numbers. HIV is in great shape, beating by $181m (7%), driven by higher
+US sales across major products. Mgmt did not exclude the possibility for a HIV
+price increase in 2015. Harvoni beat by $466m (30%), with inventory 2-3days
+($65-100m) higher than normal.
+[4] Guidance. $26-27bn of 2015 product sales (consensus $28bn) factored in
+
+discount and 250k treatment capacity in HCV.
+[5] Pipeline. The BTK inhibitor will be studies in combination with Gilead's other
+
+kinase inhibitors. The 4 and 6wk data of the pan-genotypic triple pill will be
+presented at EASL. The MMP9 antibody is advancing based on activity in ph1b.
+
+The tables showing the 4Q variance and changes to our model appear in the
+following pages.
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 3
+
+Figure 1: Gilead 4Q14 results vs. expectations
+
+4Q14 Actual
+($M)
+
+Consensus
+($M)
+
+4Q14 UBSe
+($M)
+
+Actual vs.
+Consensus
+($M)
+
+Actual vs. UBSe
+($M)
+
+925
+897
+311
+
+878
+825
+262
+
+900
+861
+254
+
+47
+72
+49
+
+25
+36
+57
+
+TOTAL COMPLERA
+
+348
+
+346
+
+364
+
+2
+
+(16)
+
+TOTAL STRIBILD (QUAD)
+
+385
+
+351
+
+379
+
+35
+
+6
+
+0
+
+11
+
+17
+
+(11)
+
+(17)
+
+TOTAL ATRIPLA
+TOTAL TRUVADA
+TOTAL VIREAD
+
+TOTAL ELVITEGRAVIR
+TOTAL COBICISTAT
+TOTAL SOVALDI
+
+0
+
+12
+
+21
+
+(12)
+
+(21)
+
+1,732
+
+2,040
+
+2,140
+
+(308)
+
+(408)
+
+TOTAL HARVONI
+
+2,107
+
+1,504
+
+1,551
+
+603
+
+556
+
+Total Antiviral Products
+Total Product Sales
+
+6,726
+7,222
+
+6,146
+6,545
+
+6,512
+6,970
+
+580
+677
+
+214
+252
+
+Royalties/Corp. Partner/Contract Revenue
+Total Operating Revenue
+
+82
+7,314
+
+86
+6,724
+
+82
+7,055
+
+(3)
+590
+
+0
+259
+
+Operating Expenses (adjusted non-GAAP)
+COGS
+R&D
+SG&A
+Total Operating Expenses
+
+847
+899
+799
+2,545
+
+854
+639
+744
+2,237
+
+811
+656
+797
+2,265
+
+(7)
+260
+55
+308
+
+36
+243
+2
+280
+
+Incom e (Loss) from Operations
+
+4,769
+
+4,449
+
+4,791
+
+320
+
+(22)
+
+Provision for Income Taxes
+
+811
+
+780
+
+967
+
+31
+
+(156)
+
+Tax Rate (non-GAAP)
+
+17.4%
+
+17.9%
+
+20.7%
+
+-0.5%
+
+-3.3%
+
+Net Incom e (loss) (adjusted non-GAAP)
+
+3,883
+
+3,542
+
+3,712
+
+341
+
+171
+
+EPS, non-GAAP (diluted ex-FAS123R)
+Number of Shares (non-GAAP Diluted)
+
+$2.43
+1596
+
+$2.22
+1620
+
+$2.32
+1602
+
+$0.21
+(24)
+
+$0.12
+(6)
+
+Source: Company reports, Factset, and UBS estimates
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 4
+
+Figure 2: Gilead 2015e-2018e model updates
+2015E
+
+2016E
+
+2017E
+
+Ambisome - New
+Ambisome - Old
+Change
+
+370
+359
+10
+
+351
+341
+10
+
+316
+307
+9
+
+Letairis - New
+Letairis - Old
+Change
+
+574
+574
+-
+
+553
+553
+-
+
+533
+533
+-
+
+Ranexa - New
+Ranexa - Old
+Change
+
+556
+543
+14
+
+589
+575
+14
+
+619
+604
+15
+
+Idelalisib - New
+Idelalisib - Old
+Change
+
+183
+183
+-
+
+381
+381
+-
+
+591
+591
+-
+
+Other products - New
+Other products - Old
+Change
+
+191
+184
+7
+
+214
+206
+7
+
+239
+230
+8
+
+Total Product Sales - New
+
+27,171
+
+28,917
+
+29,514
+
+Total Product Sales - Old
+Change
+
+27,553
+(382)
+
+30,235
+(1,319)
+
+31,597
+(2,083)
+
+Total Operating Revenue - New
+Total Operating Revenue - Old
+Change
+
+27,647
+27,979
+(332)
+
+29,625
+30,891
+(1,266)
+
+30,478
+32,520
+(2,042)
+
+9,290
+8,859
+431
+
+9,909
+9,548
+360
+
+10,127
+9,758
+368
+
+Income (Loss) from Operations - New
+Income (Loss) from Operations - Old
+Change
+
+18,357
+19,120
+(763)
+
+19,716
+21,342
+(1,626)
+
+20,352
+22,762
+(2,410)
+
+Net Income (loss) (adjusted non-GAAP) - New
+
+14,528
+
+15,706
+
+16,269
+
+Net Income (loss) (adjusted non-GAAP) - Old
+
+15,146
+
+17,089
+
+18,327
+
+(618)
+
+(1,383)
+
+(2,058)
+
+EPS, non-GAAP (diluted ex-FAS123R) - New
+
+$9.30
+
+$10.50
+
+$11.25
+
+EPS, non-GAAP (diluted ex-FAS123R) - Old
+
+$9.70
+
+$11.16
+
+$12.20
+
+($0.40)
+
+($0.66)
+
+($0.95)
+
+1,562
+1,562
+1
+
+1,496
+1,532
+(36)
+
+1,446
+1,502
+(56)
+
+USD MMs except EPS, December fiscal year
+
+Total Operating Expenses (incl. FAS123R) - New
+Total Operating Expenses (incl. FAS123R) - Old
+Change
+
+Change
+
+Change
+Number of Shares (non-GAAP Diluted) - New
+Number of Shares (non-GAAP Diluted) - Old
+Change
+Source: Company reports and UBS estimates
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 5
+
+Gilead Sciences (GILD.O)
+Income statement (US$m)
+Revenues
+Gross profit
+EBITDA (UBS)
+Depreciation & amortisation
+EBIT (UBS)
+Associates & investment income
+Other non-operating income
+Net interest
+Exceptionals (incl goodwill)
+Profit before tax
+Tax
+Profit after tax
+Preference dividends
+Minorities
+Extraordinary items
+Net earnings (local GAAP)
+Net earnings (UBS)
+Tax rate (%)
+Per share (US$)
+EPS (UBS, diluted)
+EPS (local GAAP, diluted)
+EPS (UBS, basic)
+Net DPS (US$)
+Cash EPS (UBS, diluted)1
+Book value per share
+Average shares (diluted)
+Balance sheet (US$m)
+Cash and equivalents
+Other current assets
+Total current assets
+Net tangible fixed assets
+Net intangible fixed assets
+Investments / other assets
+Total assets
+Trade payables & other ST liabilities
+Short term debt
+Total current liabilities
+Long term debt
+Other long term liabilities
+Preferred shares
+Total liabilities (incl pref shares)
+Common s/h equity
+Minority interests
+Total liabilities & equity
+Cash flow (US$m)
+Net income (before pref divs)
+Depreciation & amortisation
+Net change in working capital
+Other operating
+Operating cash flow
+Tangible capital expenditure
+Intangible capital expenditure
+Net (acquisitions) / disposals
+Other investing
+Investing cash flow
+Equity dividends paid
+Share issues / (buybacks)
+Other financing
+Change in debt & pref shares
+Financing cash flow
+Cash flow inc/(dec) in cash
+FX / non cash items
+Balance sheet inc/(dec) in cash
+
+12/12
+9,398
+6,997
+4,858
+(278)
+4,580
+0
+(52)
+(339)
+(577)
+3,612
+(1,123)
+2,489
+0
+18
+85
+2,592
+3,084
+31.1
+
+12/13
+10,804
+8,096
+5,333
+(345)
+4,989
+0
+0
+(301)
+(464)
+4,223
+(1,240)
+2,983
+0
+18
+89
+3,090
+3,465
+29.4
+
+12/14
+24,474
+21,510
+16,969
+(385)
+16,584
+0
+0
+(412)
+(1,317)
+14,855
+(2,902)
+11,953
+0
+42
+104
+12,100
+13,312
+19.5
+
+12/15E
+27,171
+24,074
+18,788
+(431)
+18,357
+0
+0
+(434)
+(1,348)
+16,575
+(3,404)
+13,171
+0
+29
+340
+13,539
+14,548
+20.5
+
+12/12
+1.95
+1.64
+2.04
+0.00
+2.13
+6.31
+1,581.38
+
+12/13
+2.06
+1.83
+2.27
+0.00
+2.26
+7.10
+1,685.17
+
+12/14
+8.10
+7.36
+8.75
+0.00
+8.33
+8.56
+1,643.58
+
+12/15E
+9.31
+8.67
+9.88
+1.29
+9.59
+10.43
+1,562.25
+
+12/12
+1,862
+4,294
+6,156
+1,100
+12,797
+1,186
+21,240
+3,068
+1,169
+4,238
+7,055
+397
+0
+11,689
+9,551
+0
+21,240
+
+12/13
+2,132
+5,142
+7,274
+1,166
+13,069
+988
+22,497
+3,628
+2,697
+6,325
+3,939
+424
+0
+10,688
+11,808
+0
+22,497
+
+12/14
+6,469
+6,502
+12,971
+1,303
+12,879
+925
+28,078
+4,043
+1,872
+5,915
+7,932
+567
+0
+14,414
+13,664
+0
+28,078
+
+12/15E
+19,852
+6,871
+26,722
+1,457
+0
+953
+29,133
+4,082
+1,872
+5,954
+7,182
+634
+0
+13,770
+15,362
+0
+29,133
+
+12/12
+2,592
+278
+177
+166
+3,213
+(397)
+0
+0
+(11,449)
+(11,846)
+0
+(1,579)
+0
+2,143
+563
+(8,070)
+32
+(8,038)
+
+12/13
+3,090
+345
+(218)
+(97)
+3,120
+(191)
+0
+0
+(64)
+(254)
+0
+(2,544)
+0
+0
+(2,544)
+322
+(52)
+269
+
+12/14
+12,100
+385
+(1,069)
+(1,067)
+10,350
+(191)
+0
+0
+16
+(175)
+0
+(5,348)
+0
+3,993
+(1,355)
+8,820
+(4,483)
+4,338
+
+12/15E
+13,539
+431
+(346)
+(344)
+13,280
+(191)
+0
+0
+8
+(183)
+0
+(3,000)
+0
+(750)
+(3,750)
+9,346
+4,036
+13,383
+
+% ch
+11.0
+11.9
+
+10.7
+11.8
+
+10.7
+-5.4
+-2.3
+
+11.6
+-17.3
+
+10.2
+-31.6
+225.0
+
+11.9
+9.3
+5.1
+
+% ch
+15.0
+17.7
+13.0
+15.0
+21.9
+-4.9
+
+% ch
+206.9
+5.7
+
+106.0
+11.8
+3.0
+
+3.8
+1.0
+0.00
+
+0.7
+-9.5
+11.8
+-
+
+-4.5
+12.4
+-
+
+3.8
+% ch
+11.9
+11.8
+67.6
+67.7
+
+28.3
+0.0
+-
+
+-5.0
+43.9
+-
+
+-176.8
+6.0
+-
+
+208.5
+
+12/16E
+28,917
+25,792
+20,175
+(459)
+19,716
+0
+0
+(373)
+(1,405)
+17,938
+(3,668)
+14,270
+0
+31
+365
+14,666
+15,706
+20.4
+
+% ch
+6.4
+
+12/16E
+10.50
+9.80
+11.17
+1.72
+10.81
+17.75
+1,496.00
+
+% ch
+
+12/16E
+28,382
+7,138
+35,520
+1,554
+0
+969
+38,044
+4,105
+1,872
+5,976
+6,432
+677
+0
+13,085
+24,959
+0
+38,044
+
+% ch
+
+12/16E
+14,666
+459
+(248)
+(246)
+14,631
+(191)
+0
+0
+8
+(183)
+0
+(3,000)
+0
+(750)
+(3,750)
+10,698
+(2,168)
+8,530
+
+% ch
+
+7.1
+
+7.4
+6.7
+
+7.4
+14.1
+-4.2
+
+8.2
+-7.7
+
+8.3
+8.0
+7.4
+
+8.3
+8.0
+-0.4
+
+12.7
+13.1
+13.1
+33.3
+12.7
+70.1
+-4.2
+
+43.0
+3.9
+
+32.9
+6.7
+1.7
+
+30.6
+0.6
+0.00
+
+0.4
+-10.4
+6.7
+-
+
+-5.0
+62.5
+-
+
+30.6
+
+8.3
+6.7
+28.3
+28.5
+
+10.2
+0.0
+-
+
+0.0
+0.0
+0.00
+
+0.0
+14.5
+-
+
+-36.3
+
+12/17E
+29,514
+26,580
+20,821
+(470)
+20,352
+0
+0
+(329)
+(1,390)
+18,633
+(3,785)
+14,848
+0
+32
+376
+15,256
+16,269
+20.3
+
+12/18E
+28,011
+25,638
+20,215
+(438)
+19,777
+0
+0
+(293)
+(1,235)
+18,249
+(3,600)
+14,650
+0
+31
+366
+15,047
+15,915
+19.7
+
+12/19E
+26,583
+24,526
+19,124
+0
+19,124
+0
+0
+(293)
+(1,137)
+17,694
+(3,481)
+14,214
+0
+30
+354
+14,598
+15,381
+19.7
+
+12/17E
+11.25
+10.55
+12.00
+1.72
+11.58
+25.96
+1,446.00
+
+12/18E
+11.48
+10.86
+12.28
+1.72
+11.80
+34.91
+1,386.00
+
+12/19E
+11.60
+11.01
+12.44
+1.72
+11.60
+44.43
+1,326.00
+
+12/17E
+37,739
+7,261
+45,000
+1,589
+0
+979
+47,567
+4,115
+1,872
+5,986
+5,682
+692
+0
+12,360
+35,207
+0
+47,567
+
+12/18E
+47,224
+7,108
+54,332
+1,481
+0
+974
+56,788
+4,099
+1,872
+5,971
+4,932
+645
+0
+11,548
+45,240
+0
+56,788
+
+12/19E
+56,327
+6,969
+63,296
+1,401
+0
+972
+65,669
+4,088
+1,872
+5,960
+4,182
+610
+0
+10,751
+54,918
+0
+65,669
+
+12/17E
+15,256
+470
+(107)
+(105)
+15,514
+(191)
+0
+0
+8
+(183)
+0
+(3,000)
+0
+(750)
+(3,750)
+11,581
+(2,223)
+9,358
+
+12/18E
+15,047
+438
+158
+160
+15,803
+(191)
+0
+0
+8
+(183)
+0
+(3,000)
+0
+(750)
+(3,750)
+11,870
+(2,385)
+9,485
+
+12/19E
+14,598
+0
+0
+0
+14,598
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+14,598
+(5,494)
+9,103
+
+Source: Company accounts, UBS estimates. (UBS) metrics use reported figures which have been adjusted by UBS analysts.1Cash EPS (UBS, diluted) is calculated using UBS net income adding back depreciation and
+amortization.
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 6
+
+Gilead Sciences (GILD.O)
+Valuation (x)
+P/E (local GAAP, diluted)
+P/E (UBS, diluted)
+P/CEPS
+Equity FCF (UBS) yield %
+Net dividend yield (%)
+P/BV x
+EV/revenues (core)
+EV/EBITDA (core)
+EV/EBIT (core)
+EV/OpFCF (core)
+EV/op. invested capital
+
+12/12
+17.2
+14.5
+12.7
+6.6
+0.0
+4.5
+4.8
+9.2
+9.8
+9.9
+4.6
+
+12/13
+30.6
+27.3
+22.5
+3.2
+0.0
+7.9
+9.1
+18.3
+19.6
+19.6
+6.3
+
+12/14
+12.2
+11.1
+10.0
+6.8
+0.0
+10.5
+6.2
+9.0
+9.2
+9.2
+9.4
+
+12/15E
+12.4
+11.5
+10.5
+7.7
+1.2
+10.3
+6.4
+9.3
+9.5
+9.5
+NM
+
+12/16E
+10.9
+10.2
+9.3
+8.4
+1.6
+6.0
+6.1
+8.7
+8.9
+8.8
+NM
+
+12/17E
+10.2
+9.5
+8.7
+9.0
+1.6
+4.1
+5.9
+8.4
+8.6
+8.5
+NM
+
+12/18E
+9.9
+9.3
+8.5
+9.1
+1.6
+3.1
+6.2
+8.7
+8.8
+8.8
+NM
+
+12/19E
+9.7
+9.2
+8.6
+8.5
+1.6
+2.4
+6.6
+9.1
+9.1
+9.3
+NM
+
+12/12
+42,858
+2,034
+0
+0
+44,893
+0
+44,893
+
+12/13
+92,406
+5,433
+0
+0
+97,839
+0
+97,839
+
+12/14
+148,915
+3,919
+0
+0
+152,835
+0
+152,835
+
+12/15E
+171,059
+3,919
+0
+0
+174,979
+0
+174,979
+
+12/16E
+171,059
+3,919
+0
+0
+174,979
+0
+174,979
+
+12/17E
+171,059
+3,919
+0
+0
+174,979
+0
+174,979
+
+12/18E
+171,059
+3,919
+0
+0
+174,979
+0
+174,979
+
+12/19E
+171,059
+3,919
+0
+0
+174,979
+0
+174,979
+
+Growth (%)
+Revenue
+EBITDA (UBS)
+EBIT (UBS)
+EPS (UBS, diluted)
+Net DPS
+
+12/12
+16.0
+9.7
+11.0
+1.3
+-
+
+12/13
+15.0
+9.8
+8.9
+5.4
+-
+
+12/14
+126.5
+NM
+NM
+NM
+-
+
+12/15E
+11.0
+10.7
+10.7
+15.0
+-
+
+12/16E
+6.4
+7.4
+7.4
+12.7
+33.3
+
+12/17E
+2.1
+3.2
+3.2
+7.2
+0.0
+
+12/18E
+-5.1
+-2.9
+-2.8
+2.1
+0.0
+
+12/19E
+-5.1
+-5.4
+-3.3
+1.0
+0.0
+
+Margins & Profitability (%)
+Gross profit margin
+EBITDA margin
+EBIT margin
+Net earnings (UBS) margin
+ROIC (EBIT)
+ROIC post tax
+ROE (UBS)
+
+12/12
+74.5
+51.7
+48.7
+32.8
+46.5
+34.0
+37.6
+
+12/13
+74.9
+49.4
+46.2
+32.1
+32.1
+23.6
+32.4
+
+12/14
+NM
+69.3
+67.8
+54.4
+102.1
+NM
+104.5
+
+12/15E
+NM
+69.1
+67.6
+53.5
+176.7
+NM
+100.2
+
+12/16E
+NM
+69.8
+68.2
+54.3
+455.7
+NM
+77.9
+
+12/17E
+NM
+70.5
+69.0
+55.1
+447.1
+NM
+54.1
+
+12/18E
+NM
+72.2
+70.6
+56.8
+437.8
+NM
+39.6
+
+12/19E
+NM
+71.9
+71.9
+57.9
+442.3
+NM
+30.7
+
+Capital structure & Coverage (x)
+Net debt / EBITDA
+Net debt / total equity %
+Net debt / (net debt + total equity) %
+Net debt/EV
+Capex / depreciation %
+Capex / revenue %
+EBIT / net interest
+Dividend cover (UBS)
+Div. payout ratio (UBS) %
+
+12/12
+1.3
+66.6
+40.0
+14.2
+142.7
+4.2
+13.5
+-
+
+12/13
+0.8
+38.1
+27.6
+4.6
+55.3
+1.8
+16.6
+-
+
+12/14
+0.2
+24.4
+19.6
+2.2
+49.5
+0.8
+40.3
+-
+
+12/15E
+(0.6)
+(70.3)
+NM
+(6.2)
+44.3
+0.7
+42.3
+7.7
+13.1
+
+12/16E
+(1.0)
+(80.4)
+NM
+(11.5)
+41.5
+0.7
+52.9
+6.5
+15.4
+
+12/17E
+(1.4)
+(85.7)
+NM
+(17.3)
+40.6
+0.6
+61.9
+7.0
+14.3
+
+12/18E
+(2.0)
+(89.3)
+NM
+(23.1)
+43.6
+0.7
+67.5
+7.1
+14.0
+
+12/19E
+(2.6)
+(91.5)
+NM
+(28.7)
+0.0
+65.3
+7.2
+13.8
+
+Revenues by division (US$m)
+Others
+Total
+
+12/12
+9,398
+9,398
+
+12/13
+10,804
+10,804
+
+12/14
+24,474
+24,474
+
+12/15E
+27,171
+27,171
+
+12/16E
+28,917
+28,917
+
+12/17E
+29,514
+29,514
+
+12/18E
+28,011
+28,011
+
+12/19E
+26,583
+26,583
+
+EBIT (UBS) by division (US$m)
+Others
+Total
+
+12/12
+4,580
+4,580
+
+12/13
+4,989
+4,989
+
+12/14
+16,584
+16,584
+
+12/15E
+18,357
+18,357
+
+12/16E
+19,716
+19,716
+
+12/17E
+20,352
+20,352
+
+12/18E
+19,777
+19,777
+
+12/19E
+19,124
+19,124
+
+Enterprise value (US$m)
+Market cap.
+Net debt (cash)
+Buy out of minorities
+Pension provisions/other
+Total enterprise value
+Non core assets
+Core enterprise value
+
+Source: Company accounts, UBS estimates. (UBS) metrics use reported figures which have been adjusted by UBS analysts.
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 7
+
+Forecast returns
+Forecast price appreciation
+Forecast dividend yield
+Forecast stock return
+Market return assumption
+Forecast excess return
+
++12.0%
+1.6%
++13.6%
+5.5%
++8.1%
+
+Statement of Risk
+We see several risks to our BUY rating on GILD shares. If the Quad pill in HIV fails
+to achieve revenue expectations we expect shares would react negatively.
+Additionally, if generic entrants come to the market sooner than expected, or take
+a larger portion of the HIV market share than we currently model. Further, if
+pricing pressure in Europe, and discounts and rebates in the US also continue, we
+expect GILD shares could react negatively. Most importantly however, we believe
+GILD shares are levered to the success/failure of the HCV program. and note risk to
+our Buy rating if [1] Sofosbuvir launch fails to meet expectations, [2] competitor
+data impress, or [3] regulatory decisions cause potential delays to approval.
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 8
+
+Required Disclosures
+This report has been prepared by UBS Securities LLC, an affiliate of UBS AG. UBS AG, its subsidiaries, branches and affiliates
+are referred to herein as UBS.
+For information on the ways in which UBS manages conflicts and maintains independence of its research product; historical
+performance information; and certain additional disclosures concerning UBS research recommendations, please visit
+www.ubs.com/disclosures. The figures contained in performance charts refer to the past; past performance is not a reliable
+indicator of future results. Additional information will be made available upon request. UBS Securities Co. Limited is licensed
+to conduct securities investment consultancy businesses by the China Securities Regulatory Commission.
+Analyst Certification: Each research analyst primarily responsible for the content of this research report, in whole or in
+part, certifies that with respect to each security or issuer that the analyst covered in this report: (1) all of the views expressed
+accurately reflect his or her personal views about those securities or issuers and were prepared in an independent manner,
+including with respect to UBS, and (2) no part of his or her compensation was, is, or will be, directly or indirectly, related to
+the specific recommendations or views expressed by that research analyst in the research report.
+UBS Investment Research: Global Equity Rating Definitions
+12-Month Rating
+
+Definition
+
+Coverage1
+
+IB Services2
+
+Buy
+
+FSR is > 6% above the MRA.
+
+47%
+
+37%
+
+Neutral
+
+FSR is between -6% and 6% of the MRA.
+
+42%
+
+32%
+
+Sell
+
+FSR is > 6% below the MRA.
+
+11%
+
+21%
+
+Short-Term Rating
+
+Definition
+
+Coverage3
+
+IB Services4
+
+Buy
+
+Stock price expected to rise within three months from the time
+the rating was assigned because of a specific catalyst or event.
+
+less than 1%
+
+less than 1%
+
+Sell
+
+Stock price expected to fall within three months from the time
+the rating was assigned because of a specific catalyst or event.
+
+less than 1%
+
+less than 1%
+
+Source: UBS. Rating allocations are as of 31 December 2014.
+1:Percentage of companies under coverage globally within the 12-month rating category. 2:Percentage of companies within
+the 12-month rating category for which investment banking (IB) services were provided within the past 12 months.
+3:Percentage of companies under coverage globally within the Short-Term rating category. 4:Percentage of companies
+within the Short-Term rating category for which investment banking (IB) services were provided within the past 12 months.
+KEY DEFINITIONS: Forecast Stock Return (FSR) is defined as expected percentage price appreciation plus gross dividend
+yield over the next 12 months. Market Return Assumption (MRA) is defined as the one-year local market interest rate
+plus 5% (a proxy for, and not a forecast of, the equity risk premium). Under Review (UR) Stocks may be flagged as UR
+by the analyst, indicating that the stock's price target and/or rating are subject to possible change in the near term, usually
+in response to an event that may affect the investment case or valuation. Short-Term Ratings reflect the expected nearterm (up to three months) performance of the stock and do not reflect any change in the fundamental view or investment
+case. Equity Price Targets have an investment horizon of 12 months.
+EXCEPTIONS AND SPECIAL CASES: UK and European Investment Fund ratings and definitions are: Buy: Positive
+on factors such as structure, management, performance record, discount; Neutral: Neutral on factors such as structure,
+management, performance record, discount; Sell: Negative on factors such as structure, management, performance
+record, discount. Core Banding Exceptions (CBE): Exceptions to the standard +/-6% bands may be granted by the
+Investment Review Committee (IRC). Factors considered by the IRC include the stock's volatility and the credit spread of the
+respective company's debt. As a result, stocks deemed to be very high or low risk may be subject to higher or lower bands
+as they relate to the rating. When such exceptions apply, they will be identified in the Company Disclosures table in the
+relevant research piece.
+Research analysts contributing to this report who are employed by any non-US affiliate of UBS Securities LLC are not
+registered/qualified as research analysts with the NASD and NYSE and therefore are not subject to the restrictions contained
+in the NASD and NYSE rules on communications with a subject company, public appearances, and trading securities held by
+a research analyst account. The name of each affiliate and analyst employed by that affiliate contributing to this report, if
+any, follows.
+UBS Securities LLC: Matthew Roden, PhD; Jeffrey Hung; Charles Shi, PhD.
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 9
+
+Company Disclosures
+Company Name
+Gilead Sciences16, 18
+
+Reuters
+
+12-month rating
+
+Short-term rating
+
+Price
+
+Price date
+
+GILD.O
+
+Buy
+
+N/A
+
+US$107.18
+
+03 Feb 2015
+
+Source: UBS. All prices as of local market close.
+Ratings in this table are the most current published ratings prior to this report. They may be more recent than the stock
+pricing date
+16.
+18.
+
+UBS Securities LLC makes a market in the securities and/or ADRs of this company.
+A U.S.-based global equity strategist, a member of his team, or one of their household members has a long
+common stock position in Gilead Sciences Inc.
+
+Unless otherwise indicated, please refer to the Valuation and Risk sections within the body of this report.
+Gilead Sciences (US$)
+Stock Price (US$)
+
+Price Target (US$)
+150
+100
+50
+
+01-Jan-15
+
+01-Oct-14
+
+01-Jul-14
+
+01-Apr-14
+
+01-Jan-14
+
+01-Oct-13
+
+01-Jul-13
+
+01-Apr-13
+
+01-Jan-13
+
+01-Oct-12
+
+01-Jul-12
+
+01-Apr-12
+
+01-Jan-12
+
+01-Oct-11
+
+01-Jul-11
+
+01-Apr-11
+
+01-Jan-11
+
+01-Oct-10
+
+01-Jul-10
+
+01-Apr-10
+
+01-Jan-10
+
+0
+
+Buy
+No Rating
+Source: UBS; as of 03 Feb 2015
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 10
+
+Global Disclaimer
+This document has been prepared by UBS Securities LLC, an affiliate of UBS AG. UBS AG, its subsidiaries, branches and affiliates are referred to herein as UBS.
+This document is for distribution only as may be permitted by law. It is not directed to, or intended for distribution to or use by, any person or entity who is a citizen or
+resident of or located in any locality, state, country or other jurisdiction where such distribution, publication, availability or use would be contrary to law or regulation or
+would subject UBS to any registration or licensing requirement within such jurisdiction. It is published solely for information purposes; it is not an advertisement nor is it
+a solicitation or an offer to buy or sell any financial instruments or to participate in any particular trading strategy. No representation or warranty, either express or
+implied, is provided in relation to the accuracy, completeness or reliability of the information contained in this document (‘the Information’), except with respect to
+Information concerning UBS. The Information is not intended to be a complete statement or summary of the securities, markets or developments referred to in the
+document. UBS does not undertake to update or keep current the Information. Any opinions expressed in this document may change without notice and may differ or
+be contrary to opinions expressed by other business areas or groups of UBS. Any statements contained in this report attributed to a third party represent UBS's
+interpretation of the data, information and/or opinions provided by that third party either publicly or through a subscription service, and such use and interpretation
+have not been reviewed by the third party.
+Nothing in this document constitutes a representation that any investment strategy or recommendation is suitable or appropriate to an investor’s individual
+circumstances or otherwise constitutes a personal recommendation. Investments involve risks, and investors should exercise prudence and their own judgement in
+making their investment decisions. The financial instruments described in the document may not be eligible for sale in all jurisdictions or to certain categories of
+investors. Options, derivative products and futures are not suitable for all investors, and trading in these instruments is considered risky. Mortgage and asset-backed
+securities may involve a high degree of risk and may be highly volatile in response to fluctuations in interest rates or other market conditions. Foreign currency rates of
+exchange may adversely affect the value, price or income of any security or related instrument referred to in the document. For investment advice, trade execution or
+other enquiries, clients should contact their local sales representative.
+The value of any investment or income may go down as well as up, and investors may not get back the full (or any) amount invested. Past performance is not necessarily
+a guide to future performance. Neither UBS nor any of its directors, employees or agents accepts any liability for any loss (including investment loss) or damage arising
+out of the use of all or any of the Information.
+Any prices stated in this document are for information purposes only and do not represent valuations for individual securities or other financial instruments. There is no
+representation that any transaction can or could have been effected at those prices, and any prices do not necessarily reflect UBS's internal books and records or
+theoretical model-based valuations and may be based on certain assumptions. Different assumptions by UBS or any other source may yield substantially different results.
+This document and the Information are produced by UBS as part of its research function and are provided to you solely for general background information. UBS has no
+regard to the specific investment objectives, financial situation or particular needs of any specific recipient. In no circumstances may this document or any of the
+Information be used for any of the following purposes:
+(i) valuation or accounting purposes;
+(ii) to determine the amounts due or payable, the price or the value of any financial instrument or financial contract; or
+(iii) to measure the performance of any financial instrument.
+By receiving this document and the Information you will be deemed to represent and warrant to UBS that you will not use this document or any of the Information for
+any of the above purposes or otherwise rely upon this document or any of the Information.
+Research will initiate, update and cease coverage solely at the discretion of UBS Investment Bank Research Management. The analysis contained in this document is
+based on numerous assumptions. Different assumptions could result in materially different results. The analyst(s) responsible for the preparation of this document may
+interact with trading desk personnel, sales personnel and other parties for the purpose of gathering, applying and interpreting market information. UBS relies on
+information barriers to control the flow of information contained in one or more areas within UBS into other areas, units, groups or affiliates of UBS. The compensation
+of the analyst who prepared this document is determined exclusively by research management and senior management (not including investment banking). Analyst
+compensation is not based on investment banking revenues; however, compensation may relate to the revenues of UBS Investment Bank as a whole, of which
+investment banking, sales and trading are a part.
+For financial instruments admitted to trading on an EU regulated market: UBS AG, its affiliates or subsidiaries (excluding UBS Securities LLC) acts as a market maker or
+liquidity provider (in accordance with the interpretation of these terms in the UK) in the financial instruments of the issuer save that where the activity of liquidity
+provider is carried out in accordance with the definition given to it by the laws and regulations of any other EU jurisdictions, such information is separately disclosed in
+this document. For financial instruments admitted to trading on a non-EU regulated market: UBS may act as a market maker save that where this activity is carried out in
+the US in accordance with the definition given to it by the relevant laws and regulations, such activity will be specifically disclosed in this document. UBS may have issued
+a warrant the value of which is based on one or more of the financial instruments referred to in the document. UBS and its affiliates and employees may have long or
+short positions, trade as principal and buy and sell in instruments or derivatives identified herein; such transactions or positions may be inconsistent with the opinions
+expressed in this document.
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 11
+
+United Kingdom and the rest of Europe: Except as otherwise specified herein, this material is distributed by UBS Limited to persons who are eligible counterparties
+or professional clients. UBS Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation
+Authority. France: Prepared by UBS Limited and distributed by UBS Limited and UBS Securities France S.A. UBS Securities France S.A. is regulated by the ACP (Autorité
+de Contrôle Prudentiel) and the Autorité des Marchés Financiers (AMF). Where an analyst of UBS Securities France S.A. has contributed to this document, the document
+is also deemed to have been prepared by UBS Securities France S.A. Germany: Prepared by UBS Limited and distributed by UBS Limited and UBS Deutschland AG. UBS
+Deutschland AG is regulated by the Bundesanstalt fur Finanzdienstleistungsaufsicht (BaFin). Spain: Prepared by UBS Limited and distributed by UBS Limited and UBS
+Securities España SV, SA. UBS Securities España SV, SA is regulated by the Comisión Nacional del Mercado de Valores (CNMV). Turkey: Distributed by UBS Limited. No
+information in this document is provided for the purpose of offering, marketing and sale by any means of any capital market instruments and services in the Republic of
+Turkey. Therefore, this document may not be considered as an offer made or to be made to residents of the Republic of Turkey. UBS AG is not licensed by the Turkish
+Capital Market Board under the provisions of the Capital Market Law (Law No. 6362). Accordingly, neither this document nor any other offering material related to the
+instruments/services may be utilized in connection with providing any capital market services to persons within the Republic of Turkey without the prior approval of the
+Capital Market Board. However, according to article 15 (d) (ii) of the Decree No. 32, there is no restriction on the purchase or sale of the securities abroad by residents of
+the Republic of Turkey. Poland: Distributed by UBS Limited (spolka z ograniczona odpowiedzialnoscia) Oddzial w Polsce. Russia: Prepared and distributed by UBS
+Securities CJSC. Switzerland: Distributed by UBS AG to persons who are institutional investors only. UBS AG is regulated by the Swiss Financial Market Supervisory
+Authority (FINMA). Italy: Prepared by UBS Limited and distributed by UBS Limited and UBS Italia Sim S.p.A. UBS Italia Sim S.p.A. is regulated by the Bank of Italy and
+by the Commissione Nazionale per le Società e la Borsa (CONSOB). Where an analyst of UBS Italia Sim S.p.A. has contributed to this document, the document is also
+deemed to have been prepared by UBS Italia Sim S.p.A. South Africa: Distributed by UBS South Africa (Pty) Limited, an authorised user of the JSE and an authorised
+Financial Services Provider. Israel: This material is distributed by UBS Limited. UBS Limited is authorised by the Prudential Regulation Authority and regulated by the
+Financial Conduct Authority and the Prudential Regulation Authority. UBS Securities Israel Ltd is a licensed Investment Marketer that is supervised by the Israel Securities
+Authority (ISA). UBS Limited and its affiliates incorporated outside Israel are not licensed under the Israeli Advisory Law. UBS Limited is not covered by insurance as
+required from a licensee under the Israeli Advisory Law. UBS may engage among others in issuance of Financial Assets or in distribution of Financial Assets of other
+issuers for fees or other benefits. UBS Limited and its affiliates may prefer various Financial Assets to which they have or may have Affiliation (as such term is defined
+under the Israeli Advisory Law). Nothing in this Material should be considered as investment advice under the Israeli Advisory Law. This Material is being issued only to
+and/or is directed only at persons who are Eligible Clients within the meaning of the Israeli Advisory Law, and this material must not be relied on or acted upon by any
+other persons. Saudi Arabia: This document has been issued by UBS AG (and/or any of its subsidiaries, branches or affiliates), a public company limited by shares,
+incorporated in Switzerland with its registered offices at Aeschenvorstadt 1, CH-4051 Basel and Bahnhofstrasse 45, CH-8001 Zurich. This publication has been approved
+by UBS Saudi Arabia (a subsidiary of UBS AG), a Saudi closed joint stock company incorporated in the Kingdom of Saudi Arabia under commercial register number
+1010257812 having its registered office at Tatweer Towers, P.O. Box 75724, Riyadh 11588, Kingdom of Saudi Arabia. UBS Saudi Arabia is authorized and regulated by
+the Capital Market Authority to conduct securities business under license number 08113-37. United States: Distributed to US persons by either UBS Securities LLC or
+by UBS Financial Services Inc., subsidiaries of UBS AG; or by a group, subsidiary or affiliate of UBS AG that is not registered as a US broker-dealer (a ‘non-US affiliate’ )
+to major US institutional investors only. UBS Securities LLC or UBS Financial Services Inc. accepts responsibility for the content of a document prepared by another nonUS affiliate when distributed to US persons by UBS Securities LLC or UBS Financial Services Inc. All transactions by a US person in the securities mentioned in this
+document must be effected through UBS Securities LLC or UBS Financial Services Inc., and not through a non-US affiliate. Canada: Distributed by UBS Securities
+Canada Inc., a registered investment dealer in Canada and a Member-Canadian Investor Protection Fund, or by another affiliate of UBS AG that is registered to conduct
+business in Canada or is otherwise exempt from registration. Brazil: Except as otherwise specified herein, this material is prepared by UBS Brasil CCTVM S.A. to
+persons who are eligible investors residing in Brazil, which are considered to be: (i) financial institutions, (ii) insurance firms and investment capital companies, (iii)
+supplementary pension entities, (iv) entities that hold financial investments higher than R$300,000.00 and that confirm the status of qualified investors in written, (v)
+investment funds, (vi) securities portfolio managers and securities consultants duly authorized by Comissão de Valores Mobiliários (CVM), regarding their own
+investments, and (vii) social security systems created by the Federal Government, States, and Municipalities. Hong Kong: Distributed by UBS Securities Asia Limited
+and/or UBS AG, Hong Kong Branch. Singapore: Distributed by UBS Securities Pte. Ltd. [mica (p) 107/09/2013 and Co. Reg. No.: 198500648C] or UBS AG, Singapore
+Branch. Please contact UBS Securities Pte. Ltd., an exempt financial adviser under the Singapore Financial Advisers Act (Cap. 110); or UBS AG, Singapore Branch, an
+exempt financial adviser under the Singapore Financial Advisers Act (Cap. 110) and a wholesale bank licensed under the Singapore Banking Act (Cap. 19) regulated by
+the Monetary Authority of Singapore, in respect of any matters arising from, or in connection with, the analysis or document. The recipients of this document represent
+and warrant that they are accredited and institutional investors as defined in the Securities and Futures Act (Cap. 289). Japan: Distributed by UBS Securities Japan Co.,
+Ltd. to professional investors (except as otherwise permitted). Where this document has been prepared by UBS Securities Japan Co., Ltd., UBS Securities Japan Co., Ltd.
+is the author, publisher and distributor of the document. Distributed by UBS AG, Tokyo Branch to Professional Investors (except as otherwise permitted) in relation to
+foreign exchange and other banking businesses when relevant. Australia: Clients of UBS AG: Distributed by UBS AG (Holder of Australian Financial Services License
+No. 231087). Clients of UBS Securities Australia Ltd: Distributed by UBS Securities Australia Ltd (Holder of Australian Financial Services License No. 231098). Clients of
+UBS Wealth Management Australia Ltd: Distributed by UBS Wealth Management Australia Ltd (Holder of Australian Financial Services Licence No. 231127). This
+Document contains general information and/or general advice only and does not constitute personal financial product advice. As such, the Information in this document
+has been prepared without taking into account any investor’s objectives, financial situation or needs, and investors should, before acting on the Information, consider
+the appropriateness of the Information, having regard to their objectives, financial situation and needs. If the Information contained in this document relates to the
+acquisition, or potential acquisition of a particular financial product by a ‘Retail’ client as defined by section 761G of the Corporations Act 2001 where a Product
+Disclosure Statement would be required, the retail client should obtain and consider the Product Disclosure Statement relating to the product before making any
+decision about whether to acquire the product. The UBS Securities Australia Limited Financial Services Guide is available at: www.ubs.com/ecs-research-fsg. New
+Zealand: Distributed by UBS New Zealand Ltd. The information and recommendations in this publication are provided for general information purposes only. To the
+extent that any such information or recommendations constitute financial advice, they do not take into account any person’s particular financial situation or goals. We
+recommend that recipients seek advice specific to their circumstances from their financial advisor. Dubai: The research distributed by UBS AG Dubai Branch is intended
+for Professional Clients only and is not for further distribution within the United Arab Emirates. Korea: Distributed in Korea by UBS Securities Pte. Ltd., Seoul Branch.
+This document may have been edited or contributed to from time to time by affiliates of UBS Securities Pte. Ltd., Seoul Branch. Malaysia: This material is authorized
+to be distributed in Malaysia by UBS Securities Malaysia Sdn. Bhd (253825-x). India: Prepared by UBS Securities India Private Ltd. (Corporate Identity Number
+U67120MH1996PTC097299) 2/F, 2 North Avenue, Maker Maxity, Bandra Kurla Complex, Bandra (East), Mumbai (India) 400051. Phone: +912261556000 SEBI
+Registration Numbers: NSE (Capital Market Segment): INB230951431, NSE (F&O Segment) INF230951431, BSE (Capital Market Segment) INB010951437.
+The disclosures contained in research documents produced by UBS Limited shall be governed by and construed in accordance with English law.
+UBS specifically prohibits the redistribution of this document in whole or in part without the written permission of UBS and UBS accepts no liability whatsoever for the
+actions of third parties in this respect. Images may depict objects or elements that are protected by third party copyright, trademarks and other intellectual property
+rights. © UBS 2015. The key symbol and UBS are among the registered and unregistered trademarks of UBS. All rights reserved.
+
+
+Gilead Sciences 4 February 2015
+
+JPeeter@its.jnj.com Johan Peeter 02/04/15 11:03:59 AM Johnson & Johnson
+
+ 12
+
+

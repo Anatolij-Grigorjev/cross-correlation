@@ -1,0 +1,90 @@
+Gilead’s strong 4Q results, newly announced dividend (1.6% yield) and $15B share
+buyback were major positives from the call, but most investors will likely focus on
+hep C discounting (~46% gross/net adjustment). Clearly, the level of discounting
+(which has been a Street obsession) was a negative surprise but looking forward, 1)
+pricing is now stable with lower headline risk and 2) patient volumes are poised for a
+material acceleration from enhanced patient access. 2015 guidance looked
+conservative; we’re still above it with $28.9B in product sales (vs guidance of $26-27B)
+with highly achievable patient numbers (196K US; 102K EU; 6K Japan). In sum, we’re
+not concerned about AbbVie competitively, we don’t think that pricing will see another
+leg down with Merck’s launch in 2016e and we think the bar set by guidance gives a lot
+of room for P&L upside moving through 2015. Beyond hep C (yes, there are other
+franchises at Gilead), HIV demand trends look good going into 2015 and the pipeline is
+progressing in NASH, hep B, RSV, oncology, etc. So we’re buyers on weakness today;
+we get it that hep C discounting may drive forecasts marginally lower but ultimately
+volumes can more than make up that difference in 2015 and beyond.
+• Guidance: Gilead guided to 2015 product sales to $26-27B (Barclays: $28.9B),
+which implies hep C sales of ~$13-14B (Barclays: $15.6B). We forecast US/OUS hep
+C sales of $10.0B/$5.7B with a higher discount assumption which is likely to be
+lower in 1H15 (more commercial) but move higher in 2H (more public pay). OpEx
+guidance (R&D: $3-3.3B; SG&A: $3-3.3B) was marginally above estimates.
+• Adjusting estimates: We’ve lowered our 2015-2017 hep C forecasts to $15.6B,
+$17.5B and $18.2B from $16.9B, $19.9B and $21.6B, but we’re above 2015
+guidance and consensus. We have fine-tuned operating expense, which together
+with lower revenue forecasts has lowered 2015-2017 non-GAAP EPS estimates to
+$10.00, $11.50 and $12.25 from $10.65, $12.35 and $13.30 previously. In year 1,
+Gilead’s hep C revenue ($12.4B) and cash flow ($12.8B) eclipsed the price of the
+Pharmasset acquisition ($11B); in our view the robust cash flow affords many
+options for value creation beyond the dividend and accelerated buyback.
+ 
+ 
+Takeaways From the Quarter
+• Hep C Reimbursement / Access. The key datapoint investors will focus on is the
+company’s estimated 2015 Harvoni/Sovaldi gross-to-net adjustment (46% vs. 22% in
+2014). Of note, this is a blended average reflecting a private/public mix 75/25 in 2014.
+Gilead emphasized that the increased rebates are designed to relax treatment
+restrictions and drive patient access. Based on this, we are lowering our U.S. price
+assumption to reflect a 28% discount for Sovaldi and a 40% for Harvoni in 2015.
+Capacity – Gilead believes the US hep C market comprises 3-4M patients, of which 1.6M
+have been diagnosed, and that >250K could be treated in 2015. Our model assumes that
+~220K treated US patients in 2015, with ~77% treated by Gilead products. Payor
+negotiations – Noted that hep C negotiations have now concluded with payors
+addressing ~60% of covered lives in the U.S. (with 80% access to Harvoni). This is
+roughly in-line with our own estimates (~70% covered with 80% access for Harvoni; see
+our note from last week in conjunction with Barclays PBM analyst Eric Percher).
+• Hep C Commercial Performance. Harvoni sales beat consensus by ~$600M offset
+somewhat by a Sovaldi miss of ~$270M. U.S. Harvoni sales were particularly strong at
+~$2B (given that WW consensus estimates were ~$1.5B. U.S. Sovaldi sales were $1.2B
+for the quarter. Gilead noted that Sovaldi still found use in ~30% of GT1 patients in the
+4Q; the company expects use in GT1 patients to decrease dramatically as Harvoni
+launch continues. Overall, ~140K US patients have now been treated with sofosbuvirbased
+regimens since the Sovaldi launch in late 2013.
+• EU Hep C Takeaways. We were encouraged by commentary on the sustainability of hep
+C patient volumes in Europe, with Gilead noting the EU market will likely have a longertail
+than the U.S. Specifically, the company characterized hep C revenues as sustainable
+for 10-15 years in Europe, perhaps longer in countries such as Italy. Pricing/Access –
+Concluded price/volume negotiations in France, Italy, and Spain, while patients in
+Austria, Sweden, Finland, and Germany now have access to Harvoni. EU Volume –
+Across Europe 32K (26K in EU Big 5, 4K with Harvoni) have started treatment with a
+sofosbuvir-based regimen; hep C EU patient volumes could exceed 100K in 2015.
+• HIV Takeaways. 4Q HIV sales were strong (+6% q/q, +15% y/y), beating consensus
+estimates by ~$240M, driven by Truvada, Atripla, and Stribild outperformance. Gilead
+noted switches from Atripla continue, as Stribild and Complera continue to gain share.
+We anticipate modest HIV franchise growth, with 2015 WW sales of $11.1B (+8% y/y)
+• Pipeline. Simtuzumab – Failed to show clinical activity in myelofibrosis, pancreatic
+cancer, and colorectal cancer. Company cautioned from reading into ongoing studies in
+NASH and pulmonary fibrosis, given biologic differences in liver and pulmonary fibrosis
+relative to the previously evaluated settings. GS-5745 – Advancing the MMP-9 mAb into
+clinical development for ulcerative colitis / gastric cancer in 2015.
+• 2015 Guidance. Net Product Sales - $26-27B (Barclays: $2.89B). Assuming non-Hep C
+product sales of ~$12.8B implies Hep C sales for the company of ~$13.2-14.2B
+(Barclays: $15.6B). Gross-margins: 87-90% (Barclays: 89%). R&D Expense - $3.0-3.3B
+(Barclays: $3.2B). SG&A Expense - $3.0-3.3B (Barclays: $3.1BB). Tax Rate: 18-20%
+(Barclays: 18%).
+• Capital allocation strategy. Dividend – Announced plans to start a quarterly dividend of
+$0.43 (~1.6% yield) in 2Q, and to grow the dividend over time (though share
+repurchases remain the company’s preferred mechanism). Share repurchases –
+Disclosed plans to initiate a 5-year $15B share repurchase plan, on top of an existing
+$5B plan of which $3B is remaining.
+Barclays | Gilead Sciences
+4 February 2015 4
+Changes to Our Model
+We’ve lowered our 2015-2017 hep C forecasts to $15.6B, $17.5B and $18.2B from $16.9B,
+$19.9B and $21.6B, but we’re above 2015 guidance and consensus. We have fine-tuned
+operating expense, which together with lower revenue forecasts has lowered 2015-2017
+non-GAAP EPS estimates to $10.00, $11.50 and $12.25 from $10.65, $12.35 and $13.30
+previously. In year 1, Gilead’s hep C revenue ($12.4B) and cash flow ($12.8B) eclipsed the
+price of the Pharmasset acquisition ($11B); in our view the robust cash flow affords many
+options for value creation beyond the dividend and accelerated buyback.
+ 
+

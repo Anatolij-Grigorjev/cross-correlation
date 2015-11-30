@@ -1,0 +1,132 @@
+4Q Snapshot - Performance Exceeds Expectations
+but High Discounting Again Brings Tail into Question ▼
+Price: $107.18
+Price Target: $116.00
+Previous: $117.00
+Biotechnology
+Cory Kasimov AC
+(1-212) 622-5266
+cory.w.kasimov@jpmorgan.com
+Bloomberg JPMA KASIMOV <GO>
+Whitney G Ijem
+(1-212) 622-4668
+whitney.g.ijem@jpmorgan.com
+Brittany Terner
+(1-212) 622-8527
+brittany.terner@jpmorgan.com
+J.P. Morgan Securities LLC
+YTD 1m 3m 12m
+Abs 13.7% 10.7% -2.5% 36.0%
+Rel 14.1% 9.2% -4.1% 18.3%
+Gilead Sciences, Inc. (GILD;GILD US)
+FYE Dec 2013A 2014A 2015E
+(Prev)
+2015E
+(Curr)
+2016E
+(Prev)
+2016E
+(Curr)
+EPS Reported ($)
+Q1 (Mar) 0.48 1.48 - - - -
+Q2 (Jun) 0.50 2.36 - - - -
+Q3 (Sep) 0.52 1.84 - - - -
+Q4 (Dec) 0.55 2.43 - - - -
+FY 2.05 8.10 9.05 8.21 10.39 9.67
+Bloomberg EPS FY ($) 2.00 7.88 - 9.80 - 10.65
+Source: Company data, Bloomberg, J.P. Morgan estimates.
+Company Data
+Price ($) 107.18
+Date Of Price 03 Feb 15
+52-week Range ($) 116.83-63.50
+Market Cap ($ mn) 161,698.60
+Fiscal Year End Dec
+Shares O/S (mn) 1,509
+Price Target ($) 116.00
+Price Target End Date 31-Dec-15
+See page 8 for analyst certification and important disclosures.
+J.P. Morgan does and seeks to do business with companies covered in its research reports. As a result, investors should be aware that
+the firm may have a conflict of interest that could affect the objectivity of this report. Investors should consider this report as only a single
+factor in making their investment decision.
+60
+80
+100
+120
+$
+Feb-14 May-14 Aug-14 Nov-14 Feb-15
+Price Performance
+GILD share price ($)
+S&P500 (rebased)
+We are reiterating our OW rating on GILD following last night’s 4Q report that while
+strong, wasn't without a curve ball (baseball analogy for those dreaming of spring
+training). Namely, GILD’s expectation for the gross-to-net on HCV products to be
+~46%, more than double the 22% at the end of 2014, caught just about everyone by
+surprise. These discounts seem to be largely contingent on increased patient volumes
+that should help offset the impact in the near term but again call into question the HCV
+tail. The volume offset is highlighted by 2015 net product sales guidance of $26-27B
+vs. our previous $26.7B estimate. Assuming patient volumes do in fact make up for
+discounts (even if not completely), the bottom line is that GILD's HCV business will
+still be a significant source of revenue and earnings growth as well as cash flow
+generation. The key question in our minds remains how GILD leverages HCV into the
+next phase of the company’s evolution. On that front GILD was clear that its newly
+announced dividend and aggressive share repo program won’t impact its appetite for
+BD/pipeline investment.
+· Key update #1: 2015 HCV gross-to-net expected to be ~46%...prompting
+emphasis on increased patient volumes. The more than doubling in discounting is
+driven by both negotiations with payors and a higher % of public payor patients
+(with rebates to Medicaid and the VA exceeding 50%). GILD emphasized this level
+of discounting is designed to increase patient access and believes there is the
+capacity to treat 250K+ pts (all genotypes) in the US in 2015. On payor negotiation
+progress, GILD indicated ~60% of covered lives in the US have been negotiated,
+and estimates 80% of these covered patients have access to GILD products. It also
+indicated that it is confident that terms negotiated thus far will last through the year.
+· Key update #2: GILD announces a $0.43/sh dividend and a new $15B buyback
+program. After much debate/speculation on the issue, GILD will begin paying a
+dividend equal to $1.72/sh annually, representing an ~1.6% yield. GILD intends to
+grow it over time, but still views repurchases as the larger component of the capital
+return strategy for the time being. Nevertheless, we expect this dividend to broaden
+GILD’s investor base. There is ~$3B remaining under the current $5B repurchase
+program (approved last May), and GILD announced a new $15B program (good for
+5 yrs after completion of May’14 program). GILD reiterated the level at which it
+repurchases shares has more to do with valuation (vs. targeting a specific payout
+ratio).
+ 
+4Q14 Non-GAAP EPS of $2.43 was meaningfully ahead of JPMe/cons of
+$2.23/$2.21. Total revenue of $7.3B was ahead of JPMe/Bloomberg cons of
+$6.8B/$6.7B; 4Q total product sales of $7.2B were ahead of JPMe/cons of $6.7/$6.6B.
+Sovaldi sales of $1.73B vs. JPMe of $1.94B and Harvoni sales of $2.1B vs. JPMe of
+$1.57B. On Harvoni uptake, the co noted that 7 of 10 HCV pts initiating treatment in 4Q
+started on Harvoni. Total non-GAAP OpEx was $2.5B vs. JPMe/company cons of
+$2.2B. See the variance table on p.3 for more details.
+· 2015 product rev guidance brackets our previous estimate, highlighting the price
+vs. volume relationship. GILD provided 2015 guidance for net product revs of $26-
+27B vs. JPMe of $26.7B and a non-GAAP gross margin of 87-90% vs. JPMe of 88%.
+On expenses, GILD guided to R&D expense of $3-3.3B, SG&A expense of $3-3.3B,
+and a non-GAAP effective tax rate of 18-20% vs. JPMe of 19%.
+· Updating model: We updated our model for 4Q results, 2015 guidance, and the
+dividend. See the summary of key changes on p.4 for a more detailed overview. Overall,
+the biggest changes to our model came from increased gross-to-net on HCV revenues
+(to 46% from 22% in 2015), which was partially offset by increased patient volume
+assumptions (we now assume ~220K pts treated in the US in 2015 vs. ~175K prvsly).
+Our peak HCV sales estimate is now $15B in 2016 vs. 16.5B in 2017 prvsly. We also
+increased expense assumptions in 2015 based on company guidance/commentary
+around pipeline advancement. On valuation basis, the net effect of our changes was
+relatively modest, and we are lowering our FY15 price target to $116 vs. $117.
+· Balance sheet update. GILD ended 4Q with $11.7B in cash and investments and
+~$13B in debt. During the quarter GILD generated $12.8B in operating cash flow, and
+used $5.3B for share repurchases. Based on our updated model, we expect GILD to
+generate ~$30B in cash over the next 3 years and ~$60B over the next 5 years. We
+continue to believe this unprecedented CF generation in the biotech industry gives the
+company significant strategic flexibility.
+· Upcoming events: continued focus on HCV market dynamics, with HCV next-gen
+regimen data updates coming at EASL. We expect HCV Rx trends, quarterly reports,
+and payer updates will all continue to be significant drivers in 2015. Also in the HCV
+world, we expect approval of Sovaldi and Harvoni in Japan in 1H15. On a pipeline
+front, we should see some data from the 9857/5816/sof triple regimen for 4 or 6 weeks
+in April at EASL (4/22-26, Vienna), and we anticipate top-line Phase 3 data from
+5816/sof in 3Q15. We expect regulatory filings to expand Harvoni’s label into GT3 and
+also look for the addition of the 12wk+RBV regimen for cirrhotic patients in 2H. In
+HBV, we anticipate top-line Phase 1 data of GS-4774 in 1H15. In HIV, we expect
+filings for F/TAF in 2Q and anticipate approval of E/C/F/TAF in the US in 4Q15. Topline
+data from simtuzumab in NASH and PFC is anticipated in 4Q15.
+ 
