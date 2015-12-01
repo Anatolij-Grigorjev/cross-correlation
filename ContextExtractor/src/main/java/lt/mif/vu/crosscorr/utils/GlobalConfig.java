@@ -6,6 +6,7 @@ package lt.mif.vu.crosscorr.utils;
 public class GlobalConfig {
 	private GlobalConfig() {}
 	
-	public static Boolean LOG_VERBOSE = Boolean.FALSE;
+	public static Boolean LOG_CVECTOR_VERBOSE = Boolean.FALSE;
+	public static Boolean LOG_EVECTOR_VERBOSE = Boolean.FALSE;
 	
 }

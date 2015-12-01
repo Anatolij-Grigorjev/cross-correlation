@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
+import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
 import net.didion.jwnl.JWNLException;
@@ -64,8 +65,9 @@ public class GUIFacade extends Application {
 		Label lblInput = new Label("Input text: ");
 		TextArea fieldInput = new TextArea();
 		fieldInput.setWrapText(true);
-		Label lblOutput = new Label("CVector info: ");
+		Label lblOutput = new Label("cVector output: ");
 		TextArea fieldOutput = new TextArea("Click button to begin...");
+		TextArea fldeVectorOutput = new TextArea("Click button to begin...");
 		fieldOutput.setEditable(false);
 		fieldOutput.setMaxHeight(Double.MAX_VALUE);
 		fieldInput.setMaxHeight(Double.MAX_VALUE);
@@ -76,6 +78,7 @@ public class GUIFacade extends Application {
 			input = input.trim();
 			if (StringUtils.isWhitespace(input)) {
 				fieldOutput.setText("Need text to make document!");
+				fldeVectorOutput.setText("Need text to make document!");
 			} else {
 				documents.getItems().add(input);
 				btnAddDoc.setText("Add document #" + (documents.getItems().size() + 1));
@@ -91,9 +94,11 @@ public class GUIFacade extends Application {
 			fieldOutput.setText("");
 			if (documents.getItems().isEmpty()) {
 				fieldOutput.setText("Input Q was empty! Try again!");
+				fldeVectorOutput.setText("Input Q was empty! Try again!");
 				btnProcess.setDisable(false);
 			} else {
 				try {
+					//CVECTOR LAUNCH
 					new Thread(new CVectorProcessor(documents.getItems(),
 							text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
 
@@ -103,22 +108,47 @@ public class GUIFacade extends Application {
 						}
 
 					}).start();
+					
+					//EVECTOR LAUNCH
+					new Thread(new EVectorProcessor(documents.getItems(),
+							text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
+
+						@Override
+						public void runFinished() {
+							Platform.runLater(() -> btnProcess.setDisable(false));
+						}
+						
+					}).start();
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 			}
 		});
-		CheckBox checkboxLogs = new CheckBox();
-		HBox checkboxPanel = new HBox(new Label("Verbose logging: "), checkboxLogs);
-		checkboxLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
-			GlobalConfig.LOG_VERBOSE = newVal;
+		CheckBox checkboxCVectorLogs = new CheckBox();
+		CheckBox checkboxEVectorLogs = new CheckBox();
+		HBox checkboxPanel = new HBox(new Label("Verbose logging (cVector): "), checkboxCVectorLogs);
+		HBox eVcheckboxPanel = new HBox(new Label("Verbose logging (eVector): "), checkboxEVectorLogs);
+		checkboxCVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
+			GlobalConfig.LOG_CVECTOR_VERBOSE = newVal;
+		});
+		checkboxEVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
+			GlobalConfig.LOG_EVECTOR_VERBOSE = newVal;
 		});
 		HBox buttonsBox = new HBox(btnAddDoc, btnClearDocs);
 		btnAddDoc.setMaxWidth(Double.MAX_VALUE);
 		btnClearDocs.setMaxWidth(Double.MAX_VALUE);
 		HBox.setHgrow(btnAddDoc, Priority.ALWAYS);
 		HBox.setHgrow(btnClearDocs, Priority.ALWAYS);
-		VBox cVectorBox = new VBox(lblInput, fieldInput, checkboxPanel, buttonsBox, btnProcess, lblOutput, fieldOutput);
+		VBox cVectorBox = new VBox(
+				lblInput
+				, fieldInput
+				, checkboxPanel
+				, eVcheckboxPanel
+				, buttonsBox
+				, btnProcess
+				, lblOutput
+				, fieldOutput
+		);
 		btnProcess.setMaxWidth(Double.MAX_VALUE);
 		btnProcess.setMaxHeight(Double.MAX_VALUE);
 		cVectorBox.setSpacing(5.0);
@@ -126,7 +156,7 @@ public class GUIFacade extends Application {
 		VBox.setMargin(buttonsBox, new Insets(5, 10, 5, 10));
 		VBox.setMargin(lblInput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(fieldInput, new Insets(5, 10, 5, 10));
-		VBox.setMargin(lblOutput, new Insets(25, 10, 5, 10));
+		VBox.setMargin(lblOutput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(fieldOutput, new Insets(5, 10, 5, 10));
 		VBox.setVgrow(fieldOutput, Priority.ALWAYS);
 		fieldOutput.setPrefWidth(500.0);
@@ -135,7 +165,6 @@ public class GUIFacade extends Application {
 		
 		//EVECTOR BOX
 		Label lbleVOutput = new Label("eVector Output:");
-		TextArea fldeVectorOutput = new TextArea("Click button to begin...");
 		VBox eVectorBox = new VBox(lbleVOutput, fldeVectorOutput);
 		eVectorBox.setAlignment(Pos.BOTTOM_LEFT);
 		fldeVectorOutput.setPrefHeight(250.0);

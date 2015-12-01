@@ -124,7 +124,7 @@ public abstract class CVectorProcessor implements Runnable {
 					allTermsDictionary);
 			Map<String, List<Double>> parsTermsTFIDF = getChunksTFIDFMap(allParagraphs,
 					allTermsDictionary);
-			if (GlobalConfig.LOG_VERBOSE) {
+			if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 				appender.appendOut("DOCS TF*IDF:\n" + PrintUtils.printMapLines(docsTermsTFIDF) + "\n");
 				appender.appendOut("PARS TF*IDF:\n" + PrintUtils.printMapLines(parsTermsTFIDF) + "\n");
 			}
@@ -141,7 +141,7 @@ public abstract class CVectorProcessor implements Runnable {
 			
 			appender.appendOut("Pre-score reduction factors: \n" + PrintUtils.printMapLines(termWieghtReductionFactorMap));
 			
-			if (GlobalConfig.LOG_VERBOSE) {
+			if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 				appender.appendOut("Document z-values: " + PrintUtils.printMapLines(docsTermsDev));
 				appender.appendOut("Paragraph z-values: " + PrintUtils.printMapLines(parsTermsDev));
 			}
@@ -169,7 +169,7 @@ public abstract class CVectorProcessor implements Runnable {
 				}
 			}
 			
-			if (GlobalConfig.LOG_VERBOSE) {
+			if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 				appender.appendOut("The word relevance scores: \n" + PrintUtils.printWordRelevance(wordRelevanceScores));
 			}
 			//sentence scores according to sentence index
@@ -309,7 +309,7 @@ public abstract class CVectorProcessor implements Runnable {
 			String[] docTokens = nlpUtils.getTokenizer().tokenize(docParagraphs[j]);
 			tokensSum += docTokens.length;
 			if (docTokens.length > 0) {
-				if (GlobalConfig.LOG_VERBOSE) {
+				if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 					appender.appendOut("Got " + docTokens.length + " tokens! From paragraph #"
 							+ (j + 1) + "\n");
 				}
@@ -320,7 +320,7 @@ public abstract class CVectorProcessor implements Runnable {
 				newDocBuilder.append(newDocumentParagraph);
 				newDocBuilder.append(PARAGRAPH_SEPARATOR);
 			} else {
-				if (GlobalConfig.LOG_VERBOSE) {
+				if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 					appender.appendOut("Skipping empty paragraph...\n");
 				}
 			}
@@ -427,7 +427,7 @@ public abstract class CVectorProcessor implements Runnable {
 							termWieghtReductionFactorMap.put(finalReplacement,
 									new ArrayList<Integer>(Arrays.asList(depth)));
 						}
-					if (GlobalConfig.LOG_VERBOSE) {
+					if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 						appender.appendOut("Replacing token " + token + " with replacer "
 								+ finalReplacement + " and depth " + depth + "\n");
 					}
@@ -470,7 +470,7 @@ public abstract class CVectorProcessor implements Runnable {
 									newDocBuilder.append(replacer);
 									// make sure we dont have to do this search
 									// in the future
-									if (GlobalConfig.LOG_VERBOSE) {
+									if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 										appender.appendOut("Token " + token
 												+ " is replaced with synset member " + replacer + "\n");
 									}
@@ -506,7 +506,7 @@ public abstract class CVectorProcessor implements Runnable {
 										// when we search the term again, we
 										// know what to do without all this
 										// depth search
-										if (GlobalConfig.LOG_VERBOSE) {
+										if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 											appender.appendOut("Token " + token
 													+ " is replaced with hypernim member " + replacer
 													+ " at depth " + depth + "\n");
@@ -529,7 +529,7 @@ public abstract class CVectorProcessor implements Runnable {
 						// rolling
 						// form here others will grab it for synonyms
 						// and deep relations
-						if (GlobalConfig.LOG_VERBOSE) {
+						if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
 							appender.appendOut("Root replacer: " + token + "\n");
 						}
 						replaceables.put(token, token);
@@ -547,7 +547,8 @@ public abstract class CVectorProcessor implements Runnable {
 	}
 
 	/**
-	 * The delegate to be implemented by target class
+	 * The delegate to be implemented by target class, this fires after all 
+	 * processing is complete
 	 */
 	public abstract void runFinished();
 
