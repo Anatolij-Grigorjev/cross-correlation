@@ -1,5 +1,0 @@
-0. Having a large piece of text , it can be separated into individual words . (SCORE: 0.0)
-1. All those words have their innate positions within the text , meaning that we can order them all relative to each other within their individual sentences . (SCORE: 0.0)
-2. For example , the word "fox " is the 4th word in the sentence " The quick brown fox jumped over the lazy dog" , it comes after the word "brown " and before the word " jumped ".This sequence can be made more ambiguous by asserting , that there exists only one version of any giver word for an entire piece of text . (SCORE: 0.0)
-3. So , for example , in the 3 sentence text corpus " The fox was walking along the road . (SCORE: 0.0)
-4. While on it ’s journey , the fox has had to jump over quite a few lazy dogs . (SCORE: 0.0)
