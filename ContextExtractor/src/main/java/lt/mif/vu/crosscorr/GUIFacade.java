@@ -1,6 +1,7 @@
 package lt.mif.vu.crosscorr;
 
 import java.util.Iterator;
+import java.util.stream.Stream;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -22,6 +23,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
+import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
@@ -92,6 +94,7 @@ public class GUIFacade extends Application {
 		btnProcess.setOnAction(e -> {
 			btnProcess.setDisable(true);
 			fieldOutput.setText("");
+			fldeVectorOutput.setText("");
 			if (documents.getItems().isEmpty()) {
 				fieldOutput.setText("Input Q was empty! Try again!");
 				fldeVectorOutput.setText("Input Q was empty! Try again!");
@@ -204,6 +207,8 @@ public class GUIFacade extends Application {
 	}
 
 	public static void main(String[] args) {
+//		System.out.println("Known parts of speech(" + PartOfSpeech.values().length + "): ");
+//		Stream.of(PartOfSpeech.values()).forEach(pos -> System.out.println(pos));
 		GUIFacade.launch(args);
 	}
 

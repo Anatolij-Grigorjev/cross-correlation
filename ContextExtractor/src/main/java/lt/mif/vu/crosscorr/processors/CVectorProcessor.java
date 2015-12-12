@@ -216,85 +216,12 @@ public abstract class CVectorProcessor implements Runnable {
 				}
 			}
 			
-			//time to turn the sentences into a united piece of text
-			String contextText = infoList.stream()
-			.limit(subList.size())
-			.map(info -> docsSentences[info.getOriginalIndex()])
-			.reduce("", String::concat);
-			//unite all of the texts
-			String allText = inputDocs.stream().reduce("", String::concat);
-			
-			//find terms groups and group sizes	
-			for (String text: new String[] {contextText, allText}) {
-				Map<String, Double> relativeContextFreq = getRelativeWordFrequencies(text);
-				appender.appendOut("\n\nRelative frequencies: \n");
-				appender.appendOut(PrintUtils.printWordRelevance(relativeContextFreq));
-				double smallest = relativeContextFreq.values().stream()
-					.mapToDouble(value -> value)
-					.min()
-					.orElse(Double.NaN);
-				List<String> lowestScores = relativeContextFreq.entrySet().stream()
-					.filter(entry -> entry.getValue() <= smallest)
-					.map(entry -> entry.getKey())
-					.collect(Collectors.toList());
-				appender.appendOut("\nLowest score: " + smallest);
-				appender.appendOut("\nLowest score terms (" + 
-						lowestScores.size() 
-						+ "): " 
-						+ Arrays.toString(lowestScores.toArray()));
-				double largest = relativeContextFreq.values().stream()
-						.mapToDouble(value -> value)
-						.max()
-						.orElse(Double.NaN);
-					List<String> highestScores = relativeContextFreq.entrySet().stream()
-						.filter(entry -> entry.getValue() >= largest)
-						.map(entry -> entry.getKey())
-						.collect(Collectors.toList());
-					appender.appendOut("\nHighest score: " + largest);
-					appender.appendOut("\nHighest score terms (" + 
-							highestScores.size() 
-							+ "): " 
-							+ Arrays.toString(highestScores.toArray()));
-			}
-			
-			
-			
 			appender.appendOut("\n\n------------------------------------------------\nRun finished after " + (System.currentTimeMillis() - start) + "ms");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			runFinished();
 		}
-	}
-
-	private Map<String, Double> getRelativeWordFrequencies(String fullText) {
-		
-		String[] wordTokens = NLPUtil.getInstance().getTokenizer().tokenize(fullText);
-		String[] posTags = NLPUtil.getInstance().getPosTagger().tag(wordTokens);
-		
-		Map<String, Double> relativeFreqMap = new HashMap<>();
-		List<String> wordTokensList = Arrays.asList(wordTokens);
-		for (int i = 0; i < wordTokens.length; i++) {
-			PartOfSpeech pos = null;
-			try {
-				pos = PartOfSpeech.get(StringUtils.strip(posTags[i], " -*^&%#?!.,:[]\\|<>"));
-			} catch(Exception e) {
-				e.printStackTrace();
-			}
-			if (StringUtils.isAlpha(wordTokens[i]) 
-					&& (pos == null 
-					|| (!pos.isPreposition() 
-							&& WordNetUtils.getInstance().isParsablePOS(pos)
-							)
-						)
-					) {
-				String token = wordTokens[i];
-				double freq = Collections.frequency(wordTokensList, token); 
-				relativeFreqMap.put(token, freq / (double)wordTokens.length);
-			}
-		}	
-
-		return relativeFreqMap;
 	}
 
 	private String transformDocument(String document, Function<String[], String> paragraphTransformer) {
