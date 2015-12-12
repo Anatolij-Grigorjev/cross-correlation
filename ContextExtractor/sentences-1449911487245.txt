@@ -1,0 +1,3 @@
+3. Siteground , one of our favorite providers , offer a one year free SSL certificate with their “grow big” plan ) . (SCORE: 51.94259378821453)
+4. If your hosting provider does not offer a free SSL certificate , then you can ask them if they sell third party SSL Certificates . (SCORE: 62.94824211221408)
+7. Once you have purchased a SSL Certificate , you would need to ask your web hosting provider to install it on your server . (SCORE: 63.11344031764502)

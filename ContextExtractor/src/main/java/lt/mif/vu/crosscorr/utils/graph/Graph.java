@@ -487,4 +487,26 @@ public class Graph<T> {
 		return tmp.toString();
 	}
 
+	/**
+	 * Find a vertex by its data. This is a return-fast method that returns the
+	 * first vertex in the graph with the equal data. 
+	 * @param data The data to check vertices agains
+	 * @return the vertex with equal data or <code>null</code> if none was found
+	 */
+	public Vertex<T> getVertexByValue(T data) {
+		if (data == null) {
+			for (Vertex<T> v: getVerticies()) {
+				if (v.getData() == null) {
+					return v;
+				}
+			}
+		}
+		for (Vertex<T> v: getVerticies()) {
+			if (data.equals(v.getData())) {
+				return v;
+			}
+		}
+		return null;
+	}
+
 }
