@@ -25,12 +25,10 @@ public abstract class EVectorProcessor implements Runnable {
 	private List<String> inputDocs;
 	private OutputAppender appender;
 	private static final int FREQ_TERMS = 5;
-	private Graph<String> wordsGraph;
 
 	public EVectorProcessor(List<String> inputDocs, OutputAppender appender) {
 		this.inputDocs = inputDocs;
 		this.appender = appender;
-		this.wordsGraph = new Graph<>();
 	}
 
 	public abstract void runFinished();
@@ -41,10 +39,17 @@ public abstract class EVectorProcessor implements Runnable {
 		appender.appendOut("Processing " + inputDocs.size() + " input docs...\n");
 		// unite all of the texts
 		String allText = inputDocs.stream().reduce("", String::concat);
-		appender.appendOut("Total text length: " + allText.length() + "\n");
+		
+		Arrays.stream(NLPUtil.getInstance().getSentenceDetector().sentDetect(allText))
+			.forEach(sentence -> processTextToGraph(sentence));
+	}
+
+	private void processTextToGraph(String text) {
+		
+		appender.appendOut("Total text length: " + text.length() + "\n");
 
 		// find terms groups and group sizes
-		String[] wordTokens = getFilteredWordTokens(allText);
+		String[] wordTokens = getFilteredWordTokens(text);
 		Map<String, Double> relativeFreq = getRelativeWordFrequencies(wordTokens);
 		if (GlobalConfig.LOG_EVECTOR_VERBOSE) {
 			appender.appendOut("\n\nRelative frequencies: \n");
@@ -66,15 +71,20 @@ public abstract class EVectorProcessor implements Runnable {
 		appender.appendOut("\nThe highest " + FREQ_TERMS + " term frequencies: \n");
 		appender.appendOut(PrintUtils.printWordRelevance(highestFreqTerms));
 		
-		assembleConnectionGraph(wordTokens);
+		Graph<String> sentenceGraph = assembleConnectionGraph(wordTokens);
 		
 		appender.appendOut("Graph complete! \n"
-				+ "Vertices: " + wordsGraph.getVerticies().size()
-				+ "\nEdges: " + wordsGraph.getEdges().size()
+				+ "Vertices: " + sentenceGraph.getVerticies().size()
+				+ "\nEdges: " + sentenceGraph.getEdges().size()
 				+ "\n");
+		
+		
 	}
 
-	private void assembleConnectionGraph(String[] wordTokens) {
+	private Graph<String> assembleConnectionGraph(String[] wordTokens) {
+		
+		Graph<String> sentenceGraph = new Graph<>();
+		
 		if (GlobalConfig.LOG_EVECTOR_VERBOSE) {
 			appender.appendOut("Making a graph of " + wordTokens.length + " tokens...\n\n");
 		}
@@ -82,11 +92,10 @@ public abstract class EVectorProcessor implements Runnable {
 		Arrays.stream(wordTokens).forEach(word -> {
 			Vertex<String> vertex = new Vertex<String>("Vertex-" + word, word) {
 				
-				@SuppressWarnings("rawtypes")
 				@Override
 				public boolean equals(Object obj) {
 					if (obj instanceof Vertex) {
-						Vertex other = (Vertex) obj;
+						Vertex<?> other = (Vertex<?>) obj;
 						return other.getName().equals(this.getName()) 
 								&& other.getData().equals(this.getData());
 					} else {
@@ -95,20 +104,20 @@ public abstract class EVectorProcessor implements Runnable {
 				};
 			};
 			
-			wordsGraph.addVertex(vertex);
+			sentenceGraph.addVertex(vertex);
 		});
 		
 		//start connecting edges
 		
 		List<String> tokensList = Arrays.asList(wordTokens);
-		wordsGraph.getVerticies().forEach(vertex -> {
+		sentenceGraph.getVerticies().forEach(vertex -> {
 			int index = tokensList.indexOf(vertex.getData());
 			//the before vertex
 			if (index > 0) {
 				String beforeToken = tokensList.get(index - 1);
-				Vertex<String> beforeVertex = wordsGraph.getVertexByValue(beforeToken);
+				Vertex<String> beforeVertex = sentenceGraph.getVertexByValue(beforeToken);
 				if (beforeVertex != null) {
-					wordsGraph.addEdge(beforeVertex, vertex, 1);
+					sentenceGraph.addEdge(beforeVertex, vertex, 1);
 				} else {
 					//all tokens should have a vertex or be known there
 					appender.appendOut("Can't vind vertex for token: " + beforeToken);
@@ -117,15 +126,17 @@ public abstract class EVectorProcessor implements Runnable {
 			//the after vertex
 			if (index < tokensList.size() - 1) {
 				String afterToken = tokensList.get(index + 1);
-				Vertex<String> afterVertex = wordsGraph.getVertexByValue(afterToken);
+				Vertex<String> afterVertex = sentenceGraph.getVertexByValue(afterToken);
 				if (afterVertex != null) {
-					wordsGraph.addEdge(vertex, afterVertex, 1);
+					sentenceGraph.addEdge(vertex, afterVertex, 1);
 				} else {
 					//all tokens should have a vertex or be known there
 					appender.appendOut("Can't vind vertex for token: " + afterToken);
 				}
 			}
 		});
+		
+		return sentenceGraph;
 	}
 	
 	
