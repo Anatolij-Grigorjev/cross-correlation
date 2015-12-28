@@ -1,6 +1,7 @@
 package lt.mif.vu.crosscorr;
 
 import java.util.Iterator;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.apache.commons.lang.StringUtils;
@@ -13,6 +14,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -26,6 +28,7 @@ import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
+import lt.mif.vu.crosscorr.utils.Algorithm;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
 import net.didion.jwnl.JWNLException;
@@ -39,6 +42,8 @@ import net.didion.jwnl.data.relationship.RelationshipList;
 public class GUIFacade extends Application {
 
 	ListView<String> documents = new ListView<String>();
+	private ComboBox<Algorithm> selectedAlgorithmBox = new ComboBox<>();
+	private ComboBox<Integer> selectedDampeningFactor = new ComboBox<>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -93,6 +98,8 @@ public class GUIFacade extends Application {
 		});
 		btnProcess.setOnAction(e -> {
 			btnProcess.setDisable(true);
+			selectedAlgorithmBox.setDisable(true);
+			selectedDampeningFactor.setDisable(true);
 			fieldOutput.setText("");
 			fldeVectorOutput.setText("");
 			if (documents.getItems().isEmpty()) {
@@ -107,7 +114,11 @@ public class GUIFacade extends Application {
 
 						@Override
 						public void runFinished() {
-							Platform.runLater(() -> btnProcess.setDisable(false));
+							Platform.runLater(() -> {
+								selectedAlgorithmBox.setDisable(false);
+								selectedDampeningFactor.setDisable(false);
+								btnProcess.setDisable(false);
+							});
 						}
 
 					}).start();
@@ -118,7 +129,11 @@ public class GUIFacade extends Application {
 
 						@Override
 						public void runFinished() {
-							Platform.runLater(() -> btnProcess.setDisable(false));
+							Platform.runLater(() -> {
+								btnProcess.setDisable(false);
+								selectedAlgorithmBox.setDisable(false);
+								selectedDampeningFactor.setDisable(false);
+							});
 						}
 						
 					}).start();
@@ -126,16 +141,6 @@ public class GUIFacade extends Application {
 					e1.printStackTrace();
 				}
 			}
-		});
-		CheckBox checkboxCVectorLogs = new CheckBox();
-		CheckBox checkboxEVectorLogs = new CheckBox();
-		HBox checkboxPanel = new HBox(new Label("Verbose logging (cVector): "), checkboxCVectorLogs);
-		HBox eVcheckboxPanel = new HBox(new Label("Verbose logging (eVector): "), checkboxEVectorLogs);
-		checkboxCVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
-			GlobalConfig.LOG_CVECTOR_VERBOSE = newVal;
-		});
-		checkboxEVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
-			GlobalConfig.LOG_EVECTOR_VERBOSE = newVal;
 		});
 		HBox buttonsBox = new HBox(btnAddDoc, btnClearDocs);
 		btnAddDoc.setMaxWidth(Double.MAX_VALUE);
@@ -145,8 +150,6 @@ public class GUIFacade extends Application {
 		VBox cVectorBox = new VBox(
 				lblInput
 				, fieldInput
-				, checkboxPanel
-				, eVcheckboxPanel
 				, buttonsBox
 				, btnProcess
 				, lblOutput
@@ -186,12 +189,41 @@ public class GUIFacade extends Application {
 
 	private Node getListPane() {
 		Label title = new Label("Documents: ");
-		VBox box = new VBox(title, documents);
+		Label lblOptions = new Label("Options: ");
 		documents.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 		VBox.setVgrow(documents, Priority.ALWAYS);
 		VBox.setMargin(documents, new Insets(5, 15, 5, 5));
 		VBox.setMargin(title, new Insets(5, 15, 5, 5));
-
+		VBox.setMargin(lblOptions, new Insets(5, 15, 5, 5));
+		CheckBox checkboxCVectorLogs = new CheckBox();
+		CheckBox checkboxEVectorLogs = new CheckBox();
+		checkboxCVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
+			GlobalConfig.LOG_CVECTOR_VERBOSE = newVal;
+		});
+		checkboxEVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
+			GlobalConfig.LOG_EVECTOR_VERBOSE = newVal;
+		});
+		HBox checkboxPanel = new HBox(new Label("Verbose logging (cVector): "), checkboxCVectorLogs);
+		HBox eVcheckboxPanel = new HBox(new Label("Verbose logging (eVector): "), checkboxEVectorLogs);
+		VBox.setMargin(checkboxPanel, new Insets(5, 5, 5, 5));
+		VBox.setMargin(eVcheckboxPanel, new Insets(5, 20, 5, 5));
+		IntStream.rangeClosed(1, 7).forEach(num -> selectedDampeningFactor.getItems().add(num));
+		Stream.of(Algorithm.values()).forEach(algo -> selectedAlgorithmBox.getItems().add(algo));
+		selectedAlgorithmBox.valueProperty().addListener((obsValue, from, to) -> {
+			GlobalConfig.SELECTED_ALGORITHM = to;
+		});
+		selectedDampeningFactor.valueProperty().addListener((obsValue, from, to) -> {
+			GlobalConfig.DAMPENING_FACTOR = to;
+		});
+		HBox selectedAlgorithmBoxPanel = new HBox(new Label("Bias algorithm: "), selectedAlgorithmBox);
+		HBox selectedDampeningFactorPanel = new HBox(new Label("Dampening factor: "), selectedDampeningFactor);
+		VBox.setMargin(selectedAlgorithmBoxPanel, new Insets(5, 50, 5, 5));
+		VBox.setMargin(selectedDampeningFactorPanel, new Insets(5, 50, 5, 5));
+		VBox optionsBox = new VBox(checkboxPanel, eVcheckboxPanel, selectedAlgorithmBoxPanel, selectedDampeningFactorPanel);
+		selectedAlgorithmBox.setValue(Algorithm.FRONT_TO_BACK);
+		selectedDampeningFactor.setValue(1);
+		
+		VBox box = new VBox(lblOptions, optionsBox, title, documents);
 		return box;
 	}
 	

@@ -76,7 +76,7 @@ public abstract class EVectorProcessor implements Runnable {
 		appender.appendOut("Graph complete! \n"
 				+ "Vertices: " + sentenceGraph.getVerticies().size()
 				+ "\nEdges: " + sentenceGraph.getEdges().size()
-				+ "\n");
+				+ "\n\n\n");
 		
 		
 	}
