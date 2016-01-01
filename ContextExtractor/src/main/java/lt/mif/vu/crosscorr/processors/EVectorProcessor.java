@@ -14,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 import lt.mif.vu.crosscorr.OutputAppender;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
+import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.utils.PrintUtils;
 import lt.mif.vu.crosscorr.utils.graph.Graph;
@@ -24,11 +25,13 @@ public abstract class EVectorProcessor implements Runnable {
 
 	private List<String> inputDocs;
 	private OutputAppender appender;
+	private StanfordNLPUtils nlpProcessor;
 	private static final int FREQ_TERMS = 5;
 
 	public EVectorProcessor(List<String> inputDocs, OutputAppender appender) {
 		this.inputDocs = inputDocs;
 		this.appender = appender;
+		this.nlpProcessor = StanfordNLPUtils.getInstance();
 	}
 
 	public abstract void runFinished();
@@ -50,27 +53,6 @@ public abstract class EVectorProcessor implements Runnable {
 
 		// find terms groups and group sizes
 		String[] wordTokens = getFilteredWordTokens(text);
-		Map<String, Double> relativeFreq = getRelativeWordFrequencies(wordTokens);
-		if (GlobalConfig.LOG_EVECTOR_VERBOSE) {
-			appender.appendOut("\n\nRelative frequencies: \n");
-			appender.appendOut(PrintUtils.printWordRelevance(relativeFreq));
-		}
-
-		Map<String, Double> highestFreqTerms = relativeFreq.entrySet().stream()
-				.sorted((entry1, entry2) -> {
-					return -1 * entry1.getValue().compareTo(entry2.getValue());
-				})
-				.limit(FREQ_TERMS)
-				.collect(Collectors.toMap(entry -> {
-						return entry.getKey();
-					} , entry -> {
-						return entry.getValue();
-					})
-				);
-
-		appender.appendOut("\nThe highest " + FREQ_TERMS + " term frequencies: \n");
-		appender.appendOut(PrintUtils.printWordRelevance(highestFreqTerms));
-		
 		Graph<String> sentenceGraph = assembleConnectionGraph(wordTokens);
 		
 		appender.appendOut("Graph complete! \n"
@@ -78,7 +60,54 @@ public abstract class EVectorProcessor implements Runnable {
 				+ "\nEdges: " + sentenceGraph.getEdges().size()
 				+ "\n\n\n");
 		
+		String graphSentiment = resolveGraphToSentiment(sentenceGraph);
 		
+		
+	}
+
+	private String resolveGraphToSentiment(Graph<String> sentenceGraph) {
+		//the last and first vertices are the last and first sentence tokens
+		//due to graph implementations
+		
+		List<Vertex<String>> verticies = sentenceGraph.getVerticies();
+		
+		//do front-to-back calc
+		Integer ftbSentiment = getClosestAccumulatedSentiment(verticies);
+		//and back-to-front
+		List<Vertex<String>> copyList = new ArrayList<>(verticies);
+		Collections.reverse(copyList);
+		Integer btfSentiment = getClosestAccumulatedSentiment(copyList);
+		
+		String graphSentiment = "";
+		//introducing sentiment bias
+		switch (GlobalConfig.SELECTED_ALGORITHM) {
+		case BACK_TO_FRONT:
+			
+			break;
+		case FRONT_TO_BACK:
+			
+			break;
+		case STANFROD_NLP:
+			
+			break;
+		default:
+			throw new RuntimeException("Unknown Algorithm class!");
+		}
+		
+		return graphSentiment;
+	}
+
+	private Integer getClosestAccumulatedSentiment(List<Vertex<String>> verticies) {
+		double accumSentimentAverage = 0.0;
+		for (int i = 0; i < verticies.size(); i++) {
+			Vertex<String> vertex = verticies.get(i);
+			String sentiments = nlpProcessor.analyzeString(vertex.getData());
+			accumSentimentAverage += StanfordNLPUtils.sentimentClassIndex(sentiments);
+			if (i > 0) { 
+				accumSentimentAverage /= 2.0;
+			}
+		}
+		return (int) Math.round(accumSentimentAverage);
 	}
 
 	private Graph<String> assembleConnectionGraph(String[] wordTokens) {

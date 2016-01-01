@@ -28,6 +28,7 @@ import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
+import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
 import lt.mif.vu.crosscorr.utils.Algorithm;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
@@ -69,6 +70,7 @@ public class GUIFacade extends Application {
 		// start loading the nlp cruft
 		NLPUtil.getInstance();
 		WordNetUtils.getInstance();
+		StanfordNLPUtils.getInstance();
 		Label lblInput = new Label("Input text: ");
 		TextArea fieldInput = new TextArea();
 		fieldInput.setWrapText(true);
@@ -241,6 +243,7 @@ public class GUIFacade extends Application {
 	public static void main(String[] args) {
 //		System.out.println("Known parts of speech(" + PartOfSpeech.values().length + "): ");
 //		Stream.of(PartOfSpeech.values()).forEach(pos -> System.out.println(pos));
+		
 		GUIFacade.launch(args);
 	}
 
