@@ -72,7 +72,9 @@ public abstract class EVectorProcessor implements Runnable {
 
 		// find terms groups and group sizes
 		String[] wordTokens = getFilteredWordTokens(text);
-		appender.appendOut("Filtered sentence: " + Arrays.toString(wordTokens));
+		if (GlobalConfig.LOG_EVECTOR_VERBOSE) {
+			appender.appendOut("Filtered sentence: " + Arrays.toString(wordTokens));
+		}
 		Graph<String> sentenceGraph = assembleConnectionGraph(wordTokens);
 		
 		appender.appendOut("Graph complete! \n"
@@ -81,11 +83,13 @@ public abstract class EVectorProcessor implements Runnable {
 				+ "\n");
 		
 		Double graphSentiment = resolveGraphToSentiment(sentenceGraph, text);
-		appender.appendOut("Sentence: \n" 
-				+ text 
-				+ "\nSentiment: " 
-				+ graphSentiment 
-				+ "\n\n");
+		if (GlobalConfig.LOG_EVECTOR_VERBOSE) {
+			appender.appendOut("Sentence: \n" 
+					+ text 
+					+ "\nSentiment: " 
+					+ graphSentiment 
+					+ "\n\n");
+		}
 		if (graphSentiment > 0.0 ) {
 			sentimentsSignal.add(graphSentiment);
 		}
@@ -154,7 +158,9 @@ public abstract class EVectorProcessor implements Runnable {
 			Vertex<String> vertex = verticies.get(i);
 			String sentiments = nlpProcessor.analyzeString(vertex.getData());
 			double sentimentClassIndex = StanfordNLPUtils.sentimentClassIndex(sentiments);
-			appender.appendOut("\n" + vertex.getData() + "=" + sentimentClassIndex + "\n");
+			if (GlobalConfig.LOG_EVECTOR_VERBOSE) {
+				appender.appendOut("\n" + vertex.getData() + "=" + sentimentClassIndex + "\n");
+			}
 			accumSentimentAverage += sentimentClassIndex;
 			if (i > 0) { 
 				accumSentimentAverage /= 2.0;

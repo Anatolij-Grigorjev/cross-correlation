@@ -29,6 +29,7 @@ import lt.mif.vu.crosscorr.processors.CVectorProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
 import lt.mif.vu.crosscorr.utils.Algorithm;
+import lt.mif.vu.crosscorr.utils.Approximators;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
 import net.didion.jwnl.JWNLException;
@@ -44,6 +45,7 @@ public class GUIFacade extends Application {
 	ListView<String> documents = new ListView<String>();
 	private ComboBox<Algorithm> selectedAlgorithmBox = new ComboBox<>();
 	private ComboBox<Integer> selectedDampeningFactor = new ComboBox<>();
+	private ComboBox<Approximators> selectedApproximator = new ComboBox<>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -101,6 +103,7 @@ public class GUIFacade extends Application {
 			btnProcess.setDisable(true);
 			selectedAlgorithmBox.setDisable(true);
 			selectedDampeningFactor.setDisable(true);
+			selectedApproximator.setDisable(true);
 			fieldOutput.setText("");
 			fldeVectorOutput.setText("");
 			if (documents.getItems().isEmpty()) {
@@ -109,6 +112,7 @@ public class GUIFacade extends Application {
 				btnProcess.setDisable(false);
 				selectedAlgorithmBox.setDisable(false);
 				selectedDampeningFactor.setDisable(false);
+				selectedApproximator.setDisable(false);
 			} else {
 				try {
 					//CVECTOR LAUNCH
@@ -129,6 +133,7 @@ public class GUIFacade extends Application {
 											btnProcess.setDisable(false);
 											selectedAlgorithmBox.setDisable(false);
 											selectedDampeningFactor.setDisable(false);
+											selectedApproximator.setDisable(false);
 										});
 									}
 									
@@ -210,19 +215,32 @@ public class GUIFacade extends Application {
 		VBox.setMargin(eVcheckboxPanel, new Insets(5, 20, 5, 5));
 		IntStream.range(0, 10).forEach(num -> selectedDampeningFactor.getItems().add(num));
 		Stream.of(Algorithm.values()).forEach(algo -> selectedAlgorithmBox.getItems().add(algo));
+		Stream.of(Approximators.values()).forEach(approx -> selectedApproximator.getItems().add(approx));
 		selectedAlgorithmBox.valueProperty().addListener((obsValue, from, to) -> {
 			GlobalConfig.SELECTED_ALGORITHM = to;
 		});
 		selectedDampeningFactor.valueProperty().addListener((obsValue, from, to) -> {
 			GlobalConfig.DAMPENING_FACTOR = to;
 		});
+		selectedApproximator.valueProperty().addListener((obsValue, from, to) -> {
+			GlobalConfig.APPROXIMATOR = to;
+		});
 		HBox selectedAlgorithmBoxPanel = new HBox(new Label("Bias algorithm: "), selectedAlgorithmBox);
 		HBox selectedDampeningFactorPanel = new HBox(new Label("Dampening factor: "), selectedDampeningFactor);
+		HBox selectedApproximatorPanel = new HBox(new Label("Approximator: "), selectedApproximator);
 		VBox.setMargin(selectedAlgorithmBoxPanel, new Insets(5, 50, 5, 5));
 		VBox.setMargin(selectedDampeningFactorPanel, new Insets(5, 50, 5, 5));
-		VBox optionsBox = new VBox(checkboxPanel, eVcheckboxPanel, selectedAlgorithmBoxPanel, selectedDampeningFactorPanel);
+		VBox.setMargin(selectedApproximatorPanel, new Insets(5, 50, 5, 5));
+		VBox optionsBox = new VBox(
+				checkboxPanel
+				, eVcheckboxPanel
+				, selectedAlgorithmBoxPanel
+				, selectedDampeningFactorPanel
+				, selectedApproximatorPanel
+		);
 		selectedAlgorithmBox.setValue(Algorithm.FRONT_TO_BACK);
 		selectedDampeningFactor.setValue(0);
+		selectedApproximator.setValue(Approximators.ROUND);
 		
 		VBox box = new VBox(lblOptions, optionsBox, title, documents);
 		return box;

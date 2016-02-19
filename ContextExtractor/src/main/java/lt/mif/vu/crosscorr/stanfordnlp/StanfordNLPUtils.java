@@ -8,6 +8,7 @@ import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.sentiment.SentimentCoreAnnotations.SentimentClass;
+import lt.mif.vu.crosscorr.utils.GlobalConfig;
 
 public class StanfordNLPUtils {
 
@@ -46,7 +47,7 @@ public class StanfordNLPUtils {
 	
 	
 	public static String closestSentimentClass(double value) {
-		int roundedClass = (int) Math.ceil(value);
+		int roundedClass = (int) GlobalConfig.APPROXIMATOR.approximate(value);
 		
 		if (roundedClass > 4 || roundedClass < 0) {
 			throw new RuntimeException("Unkown sentiment class: " + roundedClass);
