@@ -25,7 +25,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
-import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
@@ -108,6 +107,8 @@ public class GUIFacade extends Application {
 				fieldOutput.setText("Input Q was empty! Try again!");
 				fldeVectorOutput.setText("Input Q was empty! Try again!");
 				btnProcess.setDisable(false);
+				selectedAlgorithmBox.setDisable(false);
+				selectedDampeningFactor.setDisable(false);
 			} else {
 				try {
 					//CVECTOR LAUNCH
@@ -117,27 +118,25 @@ public class GUIFacade extends Application {
 						@Override
 						public void runFinished() {
 							Platform.runLater(() -> {
-								selectedAlgorithmBox.setDisable(false);
-								selectedDampeningFactor.setDisable(false);
-								btnProcess.setDisable(false);
+								
+//								EVECTOR LAUNCH
+								new Thread(new EVectorProcessor(documents.getItems(),
+										text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
+
+									@Override
+									public void runFinished() {
+										Platform.runLater(() -> {
+											btnProcess.setDisable(false);
+											selectedAlgorithmBox.setDisable(false);
+											selectedDampeningFactor.setDisable(false);
+										});
+									}
+									
+								}).start();
+								
 							});
 						}
 
-					}).start();
-					
-					//EVECTOR LAUNCH
-					new Thread(new EVectorProcessor(documents.getItems(),
-							text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
-
-						@Override
-						public void runFinished() {
-							Platform.runLater(() -> {
-								btnProcess.setDisable(false);
-								selectedAlgorithmBox.setDisable(false);
-								selectedDampeningFactor.setDisable(false);
-							});
-						}
-						
 					}).start();
 				} catch (Exception e1) {
 					e1.printStackTrace();
@@ -209,7 +208,7 @@ public class GUIFacade extends Application {
 		HBox eVcheckboxPanel = new HBox(new Label("Verbose logging (eVector): "), checkboxEVectorLogs);
 		VBox.setMargin(checkboxPanel, new Insets(5, 5, 5, 5));
 		VBox.setMargin(eVcheckboxPanel, new Insets(5, 20, 5, 5));
-		IntStream.rangeClosed(1, 7).forEach(num -> selectedDampeningFactor.getItems().add(num));
+		IntStream.range(0, 10).forEach(num -> selectedDampeningFactor.getItems().add(num));
 		Stream.of(Algorithm.values()).forEach(algo -> selectedAlgorithmBox.getItems().add(algo));
 		selectedAlgorithmBox.valueProperty().addListener((obsValue, from, to) -> {
 			GlobalConfig.SELECTED_ALGORITHM = to;
@@ -223,7 +222,7 @@ public class GUIFacade extends Application {
 		VBox.setMargin(selectedDampeningFactorPanel, new Insets(5, 50, 5, 5));
 		VBox optionsBox = new VBox(checkboxPanel, eVcheckboxPanel, selectedAlgorithmBoxPanel, selectedDampeningFactorPanel);
 		selectedAlgorithmBox.setValue(Algorithm.FRONT_TO_BACK);
-		selectedDampeningFactor.setValue(1);
+		selectedDampeningFactor.setValue(0);
 		
 		VBox box = new VBox(lblOptions, optionsBox, title, documents);
 		return box;

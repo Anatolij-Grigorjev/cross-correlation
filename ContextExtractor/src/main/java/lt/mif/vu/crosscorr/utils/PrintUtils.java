@@ -1,5 +1,6 @@
 package lt.mif.vu.crosscorr.utils;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
@@ -42,6 +43,33 @@ public class PrintUtils {
 		builder.append("{\n");
 		map.entrySet().forEach(entry -> builder.append(printEntryLine(entry)));
 		builder.append("}\n");
+		return builder.toString();
+	}
+
+
+	public static <K, V> String printGroupingMap(Map<K, V> map) {
+		if (map == null) {
+			return "<no map>";
+		}
+		StringBuilder builder = new StringBuilder();
+		map.forEach((key, val) -> {
+			if (key == null) {
+				builder.append("null");
+			} else {
+				builder.append(key.toString());
+			}
+			builder.append(": ");
+			if (val instanceof Number) {
+				builder.append(val);
+			} else if (val instanceof Collection) {
+				builder.append(((Collection) val).size());
+			} else {
+				builder.append(val);
+			}
+			builder.append("\n");
+			
+		});
+		
 		return builder.toString();
 	}
 

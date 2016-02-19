@@ -3,7 +3,6 @@ package lt.mif.vu.crosscorr.stanfordnlp;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import java.util.stream.Collectors;
 
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
@@ -39,14 +38,15 @@ public class StanfordNLPUtils {
 		
 		String sentenceSentiments = annotation.get(SentencesAnnotation.class).stream()
 			.map(sentence -> sentence.get(SentimentClass.class))
-			.collect(Collectors.joining(", "));
+			.filter(senClass -> !("Neutral".equals(senClass)))
+			.findFirst().orElse("Neutral");
 		
 		return sentenceSentiments;
 	}
 	
 	
 	public static String closestSentimentClass(double value) {
-		int roundedClass = (int) Math.round(value);
+		int roundedClass = (int) Math.ceil(value);
 		
 		if (roundedClass > 4 || roundedClass < 0) {
 			throw new RuntimeException("Unkown sentiment class: " + roundedClass);

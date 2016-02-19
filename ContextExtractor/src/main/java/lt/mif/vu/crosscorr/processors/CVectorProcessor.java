@@ -38,7 +38,7 @@ public abstract class CVectorProcessor implements Runnable {
 	/**
 	 * Largest search depth during wordnet hypernims searches.
 	 */
-	private static final int MAX_SEARCH_DEPTH = 2;
+	private static final int MAX_SEARCH_DEPTH = 4;
 	/**
 	 * Symbol used to separate text into pargraphs
 	 */
@@ -87,6 +87,7 @@ public abstract class CVectorProcessor implements Runnable {
 			for (int i = 0; i < inputDocs.size(); i++) {
 				String document = inputDocs.get(i);
 				String newDocument = transformDocument(document, this::getNewTokensDoc);
+				appender.appendOut("New old doc: " + newDocument);
 				//this transform will ensure the same-sized sentence model
 				String newOldDoc = transformDocument(document, this::addWhiteSpaceTokenDoc);
 				inputDocs.set(i, newOldDoc);
@@ -335,7 +336,8 @@ public abstract class CVectorProcessor implements Runnable {
 			}
 			if (StringUtils.isAlpha(token) && (pos == null || !pos.isPreposition())) {
 				// this is a word! lets see if it should be replaced
-				if (replaceables.containsKey(token)) {
+				if (replaceables.containsKey(token) 
+						&& !replaceables.get(token).equalsIgnoreCase(token)) {
 					// this is a know replaceable. appending replacement instead
 					// accounting for possible depth
 					String replaceable = replaceables.get(token);
@@ -390,7 +392,8 @@ public abstract class CVectorProcessor implements Runnable {
 							try {
 								int relationship = wordNetUtils.getRelationFinder().getImmediateRelationship(indexWord,
 										replacerIndexWord);
-								if (relationship > -1) {
+								if (relationship > -1 
+										&& !token.equalsIgnoreCase(replacer)) {
 									// found in the common synset, so not only
 									// do we replace, we dont even
 									// define a depth reduction
@@ -417,29 +420,31 @@ public abstract class CVectorProcessor implements Runnable {
 									if (relationships.isEmpty()) {
 										continue;
 									} else {
-										// begrudgingly adding term under great
-										// duress - will be depth to pay
-										newDocBuilder.append(replacer);
-										loopAppended = true;
-										int depth = ((Relationship) relationships.get(0)).getDepth();
-										// add the depth to the depths this
-										// keyword has had during its time
-										if (termWieghtReductionFactorMap.containsKey(replacer)) {
-											termWieghtReductionFactorMap.get(replacer).add(depth);
-										} else {
-											termWieghtReductionFactorMap.put(replacer,
-													new ArrayList<Integer>(Arrays.asList(depth)));
+										if (!token.equalsIgnoreCase(replacer)) {
+											// begrudgingly adding term under great
+											// duress - will be depth to pay
+											newDocBuilder.append(replacer);
+											loopAppended = true;
+											int depth = ((Relationship) relationships.get(0)).getDepth();
+											// add the depth to the depths this
+											// keyword has had during its time
+											if (termWieghtReductionFactorMap.containsKey(replacer)) {
+												termWieghtReductionFactorMap.get(replacer).add(depth);
+											} else {
+												termWieghtReductionFactorMap.put(replacer,
+														new ArrayList<Integer>(Arrays.asList(depth)));
+											}
+											// when we search the term again, we
+											// know what to do without all this
+											// depth search
+											if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
+												appender.appendOut("Token " + token
+														+ " is replaced with hypernim member " + replacer
+														+ " at depth " + depth + "\n");
+											}
+											replaceables.put(token, replacer + SEPARATOR + depth);
+											break;
 										}
-										// when we search the term again, we
-										// know what to do without all this
-										// depth search
-										if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
-											appender.appendOut("Token " + token
-													+ " is replaced with hypernim member " + replacer
-													+ " at depth " + depth + "\n");
-										}
-										replaceables.put(token, replacer + SEPARATOR + depth);
-										break;
 									}
 								}
 							} catch (JWNLException e) {

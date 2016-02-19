@@ -33,5 +33,18 @@ public class MathUtils {
 		.average()
 		.orElse(0);
 	}
+
+
+	public static double dampen(Double toDampen, Double dampener,
+			Integer dampeningFactor) {
+		
+		Double dampened = toDampen;
+		for (int i = 0; i < dampeningFactor; i++) {
+			dampened += dampener;
+			dampened /= 2.0;
+		}
+		
+		return dampened;
+	}
 	
 }
