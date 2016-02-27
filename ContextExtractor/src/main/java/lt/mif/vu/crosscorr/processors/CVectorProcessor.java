@@ -64,6 +64,8 @@ public abstract class CVectorProcessor implements Runnable {
 	 * known replacement depth
 	 */
 	private Map<String, String> replaceables;
+	
+	private List<SentenceInfo> result;
 
 	public CVectorProcessor(List<String> input, OutputAppender appender)
 			throws InvalidFormatException, IOException {
@@ -201,15 +203,15 @@ public abstract class CVectorProcessor implements Runnable {
 			String[] docsSentences = nlpUtils.getSentenceDetector().sentDetect(inputDocs.stream().collect(Collectors.joining()));
 			appender.appendOut("\nActual sentences count: " + docsSentences.length + "\t Model sentences count: " + newDocSentences.length + "\n");
 			
-			List<SentenceInfo> subList = infoList.subList(0, infoList.size() / 3); //keep 1/n of the list
+			result = infoList.subList(0, infoList.size() / 3); //keep 1/n of the list
 			//and resort it by index to keep the structure flow
-			Collections.sort(subList, (inf1, inf2) -> inf1.getOriginalIndex().compareTo(inf2.getOriginalIndex()));
+			Collections.sort(result, (inf1, inf2) -> inf1.getOriginalIndex().compareTo(inf2.getOriginalIndex()));
 			
-			appender.appendOut("\nREPRESENTATIVE SENTENCES (" + subList.size() + "):\n");
+			appender.appendOut("\nREPRESENTATIVE SENTENCES (" + result.size() + "):\n");
 			//print a nth of the list and save to file
 			File file = new File("sentences-" + System.currentTimeMillis() + ".txt");
 			try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
-				for (int i = 0; i < subList.size(); i++) {
+				for (int i = 0; i < result.size(); i++) {
 					SentenceInfo info = infoList.get(i);
 					String line = info.getOriginalIndex() + ". " + docsSentences[info.getOriginalIndex()] + " (SCORE: " + info.getSentenceScore() + ")\n";
 					appender.appendOut(line);
@@ -221,7 +223,7 @@ public abstract class CVectorProcessor implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			runFinished();
+			runFinished(result);
 		}
 	}
 
@@ -482,6 +484,6 @@ public abstract class CVectorProcessor implements Runnable {
 	 * The delegate to be implemented by target class, this fires after all 
 	 * processing is complete
 	 */
-	public abstract void runFinished();
+	public abstract void runFinished(List<SentenceInfo> result);
 
 }

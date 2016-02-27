@@ -35,7 +35,7 @@ public abstract class EVectorProcessor implements Runnable {
 		this.sentimentsSignal = new ArrayList<>();
 	}
 
-	public abstract void runFinished();
+	public abstract void runFinished(List<Double> result);
 
 	@Override
 	public void run() {
@@ -63,7 +63,7 @@ public abstract class EVectorProcessor implements Runnable {
 		
 		appender.appendOut("\n" + PrintUtils.printGroupingMap(map));
 		
-		runFinished();
+		runFinished(sentimentsSignal);
 	}
 
 	private void processTextToGraph(String text) {

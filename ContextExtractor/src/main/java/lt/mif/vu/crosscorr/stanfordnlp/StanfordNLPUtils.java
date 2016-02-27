@@ -47,7 +47,7 @@ public class StanfordNLPUtils {
 	
 	
 	public static String closestSentimentClass(double value) {
-		int roundedClass = (int) GlobalConfig.APPROXIMATOR.approximate(value);
+		int roundedClass = GlobalConfig.APPROXIMATOR.approximate(value).intValue();
 		
 		if (roundedClass > 4 || roundedClass < 0) {
 			throw new RuntimeException("Unkown sentiment class: " + roundedClass);

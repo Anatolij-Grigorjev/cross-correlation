@@ -1,6 +1,8 @@
 package lt.mif.vu.crosscorr;
 
+import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -8,6 +10,8 @@ import org.apache.commons.lang.StringUtils;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -31,6 +35,7 @@ import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
 import lt.mif.vu.crosscorr.utils.Algorithm;
 import lt.mif.vu.crosscorr.utils.Approximators;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
+import lt.mif.vu.crosscorr.utils.SentenceInfo;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
 import net.didion.jwnl.JWNLException;
 import net.didion.jwnl.data.IndexWord;
@@ -39,35 +44,47 @@ import net.didion.jwnl.data.relationship.AsymmetricRelationship;
 import net.didion.jwnl.data.relationship.Relationship;
 import net.didion.jwnl.data.relationship.RelationshipFinder;
 import net.didion.jwnl.data.relationship.RelationshipList;
+import opennlp.tools.util.InvalidFormatException;
 
 public class GUIFacade extends Application {
 
-	ListView<String> documents = new ListView<String>();
+	ListView<String> documentsLeft = new ListView<String>();
+	ListView<String> documentsRight = new ListView<String>();
 	private ComboBox<Algorithm> selectedAlgorithmBox = new ComboBox<>();
 	private ComboBox<Integer> selectedDampeningFactor = new ComboBox<>();
 	private ComboBox<Approximators> selectedApproximator = new ComboBox<>();
+	private Callback<ListView<String>, ListCell<String>> cellFactory = new Callback<ListView<String>, ListCell<String>>() {
+
+		@Override
+		public ListCell<String> call(ListView<String> param) {
+			return new ListCell<String>() {
+				@Override
+				protected void updateItem(String item, boolean empty) {
+					super.updateItem(item, empty);
+					if (empty) {
+						setText(null);
+						setGraphic(null);
+					} else {
+						Platform.runLater(() -> {setText(StringUtils.substring(item, 0, 30) + "...");});
+					}
+				}
+			};
+		}
+	};
+	private Button btnProcess = new Button("Process docs!");
+	
+	
+	//----------------DATA---------------//
+	private List<SentenceInfo> cVectorLeft, cVectorRight;
+	private List<Double> eVectorLeft, eVectorRight;
+	
+	
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		documents.setCellFactory(new Callback<ListView<String>, ListCell<String>>() {
-
-			@Override
-			public ListCell<String> call(ListView<String> param) {
-				return new ListCell<String>() {
-					@Override
-					protected void updateItem(String item, boolean empty) {
-						super.updateItem(item, empty);
-						if (empty) {
-							setText(null);
-							setGraphic(null);
-						} else {
-							Platform.runLater(() -> {setText(StringUtils.substring(item, 0, 30) + "...");});
-						}
-					}
-				};
-			}
-		});
+		documentsLeft.setCellFactory(cellFactory);
+		documentsRight.setCellFactory(cellFactory);
 		// start loading the nlp cruft
 		NLPUtil.getInstance();
 		WordNetUtils.getInstance();
@@ -81,24 +98,33 @@ public class GUIFacade extends Application {
 		fieldOutput.setEditable(false);
 		fieldOutput.setMaxHeight(Double.MAX_VALUE);
 		fieldInput.setMaxHeight(Double.MAX_VALUE);
-		Button btnProcess = new Button("Process docs!");
-		Button btnAddDoc = new Button("Add document #1");
-		btnAddDoc.setOnAction(e -> {
-			String input = fieldInput.getText() != null ? fieldInput.getText() : "";
-			input = input.trim();
-			if (StringUtils.isWhitespace(input)) {
-				fieldOutput.setText("Need text to make document!");
-				fldeVectorOutput.setText("Need text to make document!");
-			} else {
-				documents.getItems().add(input);
-				btnAddDoc.setText("Add document #" + (documents.getItems().size() + 1));
-			}
-		});
-		Button btnClearDocs = new Button("Clear Q");
-		btnClearDocs.setOnAction(e -> {
-			documents.getItems().clear();
-			btnAddDoc.setText("Add document #1");
-		});
+		//------------------BUTTONS LEFT------------------------//
+		Button btnAddDocLeft = new Button("Add document Left");
+		Button btnClearDocsLeft = new Button("Clear Q Left");
+		{
+			EventHandler<ActionEvent> addButtonHandler = makeAddButtonHandler(fieldInput,
+					fieldOutput,
+					fldeVectorOutput, 
+					documentsLeft);
+			btnAddDocLeft.setOnAction(addButtonHandler);
+			EventHandler<ActionEvent> clearQButtonHandler = makeClearQButtonHandler(documentsLeft);
+			btnClearDocsLeft.setOnAction(clearQButtonHandler);
+		}
+		
+		//------------------BUTTONS RIGHT------------------------//
+		Button btnAddDocRight = new Button("Add document Right");
+		Button btnClearDocsRight = new Button("Clear Q Right");
+		{
+			EventHandler<ActionEvent> addButtonHandler = makeAddButtonHandler(fieldInput,
+					fieldOutput,
+					fldeVectorOutput, 
+					documentsRight);
+			btnAddDocRight.setOnAction(addButtonHandler);
+			EventHandler<ActionEvent> clearQButtonHandler = makeClearQButtonHandler(documentsRight);
+			btnClearDocsRight.setOnAction(clearQButtonHandler);
+		}
+		//---------------------------------------------------------//		
+		
 		btnProcess.setOnAction(e -> {
 			btnProcess.setDisable(true);
 			selectedAlgorithmBox.setDisable(true);
@@ -106,7 +132,8 @@ public class GUIFacade extends Application {
 			selectedApproximator.setDisable(true);
 			fieldOutput.setText("");
 			fldeVectorOutput.setText("");
-			if (documents.getItems().isEmpty()) {
+			if (documentsLeft.getItems().isEmpty()
+					|| documentsRight.getItems().isEmpty()) {
 				fieldOutput.setText("Input Q was empty! Try again!");
 				fldeVectorOutput.setText("Input Q was empty! Try again!");
 				btnProcess.setDisable(false);
@@ -116,47 +143,31 @@ public class GUIFacade extends Application {
 			} else {
 				try {
 					//CVECTOR LAUNCH
-					new Thread(new CVectorProcessor(documents.getItems(),
-							text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
-
-						@Override
-						public void runFinished() {
-							Platform.runLater(() -> {
-								
-//								EVECTOR LAUNCH
-								new Thread(new EVectorProcessor(documents.getItems(),
-										text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
-
-									@Override
-									public void runFinished() {
-										Platform.runLater(() -> {
-											btnProcess.setDisable(false);
-											selectedAlgorithmBox.setDisable(false);
-											selectedDampeningFactor.setDisable(false);
-											selectedApproximator.setDisable(false);
-										});
-									}
-									
-								}).start();
-								
-							});
-						}
-
-					}).start();
+					launchDocumentsListProcessing(fieldOutput, fldeVectorOutput);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
 			}
 		});
-		HBox buttonsBox = new HBox(btnAddDoc, btnClearDocs);
-		btnAddDoc.setMaxWidth(Double.MAX_VALUE);
-		btnClearDocs.setMaxWidth(Double.MAX_VALUE);
-		HBox.setHgrow(btnAddDoc, Priority.ALWAYS);
-		HBox.setHgrow(btnClearDocs, Priority.ALWAYS);
+		//---------------BUTTONS BOX LEFT-------------------------------//
+		HBox buttonsBoxLeft = new HBox(btnAddDocLeft, btnAddDocRight);
+		btnAddDocLeft.setMaxWidth(Double.MAX_VALUE);
+		btnAddDocRight.setMaxWidth(Double.MAX_VALUE);
+		HBox.setHgrow(btnAddDocLeft, Priority.ALWAYS);
+		HBox.setHgrow(btnAddDocRight, Priority.ALWAYS);
+		
+		//---------------BUTTONS BOX RIGHT-------------------------------//
+		HBox buttonsBoxRight = new HBox(btnClearDocsLeft, btnClearDocsRight);
+		btnClearDocsLeft.setMaxWidth(Double.MAX_VALUE);
+		btnClearDocsRight.setMaxWidth(Double.MAX_VALUE);
+		HBox.setHgrow(btnClearDocsLeft, Priority.ALWAYS);
+		HBox.setHgrow(btnClearDocsRight, Priority.ALWAYS);
+		
 		VBox cVectorBox = new VBox(
 				lblInput
 				, fieldInput
-				, buttonsBox
+				, buttonsBoxLeft
+				, buttonsBoxRight
 				, btnProcess
 				, lblOutput
 				, fieldOutput
@@ -165,7 +176,8 @@ public class GUIFacade extends Application {
 		btnProcess.setMaxHeight(Double.MAX_VALUE);
 		cVectorBox.setSpacing(5.0);
 		VBox.setMargin(btnProcess, new Insets(5, 10, 5, 10));
-		VBox.setMargin(buttonsBox, new Insets(5, 10, 5, 10));
+		VBox.setMargin(buttonsBoxLeft, new Insets(5, 10, 5, 10));
+		VBox.setMargin(buttonsBoxRight, new Insets(5, 10, 5, 10));
 		VBox.setMargin(lblInput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(fieldInput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(lblOutput, new Insets(5, 10, 5, 10));
@@ -193,14 +205,111 @@ public class GUIFacade extends Application {
 		primaryStage.show();
 	}
 
+	private void launchDocumentsListProcessing(
+			TextArea fieldOutput
+			, TextArea fldeVectorOutput) throws InvalidFormatException, IOException {
+		new Thread(new CVectorProcessor(documentsLeft.getItems(),
+				text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
+
+			@Override
+			public void runFinished(List<SentenceInfo> sentences) {
+				cVectorLeft = sentences;
+				Platform.runLater(() -> {
+					
+//								EVECTOR LAUNCH
+					new Thread(new EVectorProcessor(documentsLeft.getItems(),
+							text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
+
+						@Override
+						public void runFinished(List<Double> sentiments) {
+							try {
+								eVectorLeft = sentiments;
+								new Thread(new CVectorProcessor(documentsRight.getItems(),
+										text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
+	
+									@Override
+									public void runFinished(List<SentenceInfo> sentences) {
+										cVectorRight = sentences;
+										Platform.runLater(() -> {
+											
+	//													EVECTOR LAUNCH
+											new Thread(new EVectorProcessor(documentsRight.getItems(),
+													text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
+	
+												@Override
+												public void runFinished(List<Double> sentiments) {
+													eVectorRight = sentiments;
+													Platform.runLater(() -> {
+														btnProcess.setDisable(false);
+														selectedAlgorithmBox.setDisable(false);
+														selectedDampeningFactor.setDisable(false);
+														selectedApproximator.setDisable(false);
+													});
+												}			
+											}).start();
+										});
+									}
+								}).start();
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+						}			
+					}).start();
+				});
+			}
+		}).start();
+	}
+
+	private EventHandler<ActionEvent> makeClearQButtonHandler(final ListView<String> documents) {
+		EventHandler<ActionEvent> clearQButtonHandler = e -> {
+			documents.getItems().clear();
+		};
+		return clearQButtonHandler;
+	}
+
+	private EventHandler<ActionEvent> makeAddButtonHandler(TextArea fieldInput,
+			TextArea fieldOutput, TextArea fldeVectorOutput, ListView<String> documents) {
+		EventHandler<ActionEvent> addButtonHandler = e -> {
+			String input = fieldInput.getText() != null ? fieldInput.getText() : "";
+			input = input.trim();
+			if (StringUtils.isWhitespace(input)) {
+				fieldOutput.setText("Need text to make document!");
+				fldeVectorOutput.setText("Need text to make document!");
+			} else {
+				documents.getItems().add(input);
+			}
+		};
+		return addButtonHandler;
+	}
+
 	private Node getListPane() {
-		Label title = new Label("Documents: ");
+		Label titleLeft = new Label("Documents A: ");
+		Label titleRight = new Label("Documents B: ");
+		
+		documentsLeft.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+		VBox.setVgrow(documentsLeft, Priority.ALWAYS);
+		VBox.setMargin(documentsLeft, new Insets(5, 15, 5, 5));
+		VBox.setMargin(titleLeft, new Insets(5, 15, 5, 5));
+		documentsRight.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+		VBox.setVgrow(documentsRight, Priority.ALWAYS);
+		VBox.setMargin(documentsRight, new Insets(5, 15, 5, 5));
+		VBox.setMargin(titleRight, new Insets(5, 15, 5, 5));
+
+		
 		Label lblOptions = new Label("Options: ");
-		documents.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-		VBox.setVgrow(documents, Priority.ALWAYS);
-		VBox.setMargin(documents, new Insets(5, 15, 5, 5));
-		VBox.setMargin(title, new Insets(5, 15, 5, 5));
 		VBox.setMargin(lblOptions, new Insets(5, 15, 5, 5));
+		VBox optionsBox = getOptionsPane();
+		
+		HBox documentsBox = new HBox(
+				new VBox(titleLeft, documentsLeft)
+				, new VBox(titleRight, documentsRight)
+		);
+		
+		VBox box = new VBox(lblOptions, optionsBox, documentsBox);
+		return box;
+	}
+
+	private VBox getOptionsPane() {
 		CheckBox checkboxCVectorLogs = new CheckBox();
 		CheckBox checkboxEVectorLogs = new CheckBox();
 		checkboxCVectorLogs.selectedProperty().addListener((obsValue, oldVal, newVal) -> {
@@ -241,9 +350,7 @@ public class GUIFacade extends Application {
 		selectedAlgorithmBox.setValue(Algorithm.FRONT_TO_BACK);
 		selectedDampeningFactor.setValue(0);
 		selectedApproximator.setValue(Approximators.ROUND);
-		
-		VBox box = new VBox(lblOptions, optionsBox, title, documents);
-		return box;
+		return optionsBox;
 	}
 	
 	private void demonstrateAsymmetricRelationshipOperation(IndexWord start, IndexWord end) throws JWNLException {
