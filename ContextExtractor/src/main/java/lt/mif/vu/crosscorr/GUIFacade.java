@@ -3,6 +3,7 @@ package lt.mif.vu.crosscorr;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -16,6 +17,10 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart.Data;
+import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -73,10 +78,22 @@ public class GUIFacade extends Application {
 	};
 	private Button btnProcess = new Button("Process docs!");
 	
+	Series<Number, Number> eVectorLeftSeries = new Series<>();
+	Series<Number, Number> eVectorRightSeries = new Series<>();
+	{
+		eVectorLeftSeries.setName("eVector Left");
+		eVectorLeftSeries.getData().clear();
+		eVectorRightSeries.setName("eVector Right");
+		eVectorRightSeries.getData().clear();
+	}
 	
 	//----------------DATA---------------//
 	private List<SentenceInfo> cVectorLeft, cVectorRight;
 	private List<Double> eVectorLeft, eVectorRight;
+	private final AreaChart<Number, Number> chart = new AreaChart<>(
+			new NumberAxis()
+			, new NumberAxis(0, 5.0, 0.05)
+	);
 	
 	
 
@@ -93,18 +110,18 @@ public class GUIFacade extends Application {
 		TextArea fieldInput = new TextArea();
 		fieldInput.setWrapText(true);
 		Label lblOutput = new Label("cVector output: ");
-		TextArea fieldOutput = new TextArea("Click button to begin...");
-		TextArea fldeVectorOutput = new TextArea("Click button to begin...");
-		fieldOutput.setEditable(false);
-		fieldOutput.setMaxHeight(Double.MAX_VALUE);
+		TextArea fieldcVectorOutput = new TextArea("Click button to begin...");
+		TextArea fieldeVectorOutput = new TextArea("Click button to begin...");
+		fieldcVectorOutput.setEditable(false);
+		fieldcVectorOutput.setMaxHeight(Double.MAX_VALUE);
 		fieldInput.setMaxHeight(Double.MAX_VALUE);
 		//------------------BUTTONS LEFT------------------------//
 		Button btnAddDocLeft = new Button("Add document Left");
 		Button btnClearDocsLeft = new Button("Clear Q Left");
 		{
 			EventHandler<ActionEvent> addButtonHandler = makeAddButtonHandler(fieldInput,
-					fieldOutput,
-					fldeVectorOutput, 
+					fieldcVectorOutput,
+					fieldeVectorOutput, 
 					documentsLeft);
 			btnAddDocLeft.setOnAction(addButtonHandler);
 			EventHandler<ActionEvent> clearQButtonHandler = makeClearQButtonHandler(documentsLeft);
@@ -116,8 +133,8 @@ public class GUIFacade extends Application {
 		Button btnClearDocsRight = new Button("Clear Q Right");
 		{
 			EventHandler<ActionEvent> addButtonHandler = makeAddButtonHandler(fieldInput,
-					fieldOutput,
-					fldeVectorOutput, 
+					fieldcVectorOutput,
+					fieldeVectorOutput, 
 					documentsRight);
 			btnAddDocRight.setOnAction(addButtonHandler);
 			EventHandler<ActionEvent> clearQButtonHandler = makeClearQButtonHandler(documentsRight);
@@ -130,12 +147,12 @@ public class GUIFacade extends Application {
 			selectedAlgorithmBox.setDisable(true);
 			selectedDampeningFactor.setDisable(true);
 			selectedApproximator.setDisable(true);
-			fieldOutput.setText("");
-			fldeVectorOutput.setText("");
+			fieldcVectorOutput.setText("");
+			fieldeVectorOutput.setText("");
 			if (documentsLeft.getItems().isEmpty()
 					|| documentsRight.getItems().isEmpty()) {
-				fieldOutput.setText("Input Q was empty! Try again!");
-				fldeVectorOutput.setText("Input Q was empty! Try again!");
+				fieldcVectorOutput.setText("Input Q was empty! Try again!");
+				fieldeVectorOutput.setText("Input Q was empty! Try again!");
 				btnProcess.setDisable(false);
 				selectedAlgorithmBox.setDisable(false);
 				selectedDampeningFactor.setDisable(false);
@@ -143,7 +160,7 @@ public class GUIFacade extends Application {
 			} else {
 				try {
 					//CVECTOR LAUNCH
-					launchDocumentsListProcessing(fieldOutput, fldeVectorOutput);
+					launchDocumentsListProcessing(fieldcVectorOutput, fieldeVectorOutput);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -163,46 +180,57 @@ public class GUIFacade extends Application {
 		HBox.setHgrow(btnClearDocsLeft, Priority.ALWAYS);
 		HBox.setHgrow(btnClearDocsRight, Priority.ALWAYS);
 		
-		VBox cVectorBox = new VBox(
+		VBox centralInputBox = new VBox(
 				lblInput
 				, fieldInput
 				, buttonsBoxLeft
 				, buttonsBoxRight
 				, btnProcess
 				, lblOutput
-				, fieldOutput
+				, fieldcVectorOutput
 		);
 		btnProcess.setMaxWidth(Double.MAX_VALUE);
 		btnProcess.setMaxHeight(Double.MAX_VALUE);
-		cVectorBox.setSpacing(5.0);
+		centralInputBox.setSpacing(5.0);
 		VBox.setMargin(btnProcess, new Insets(5, 10, 5, 10));
 		VBox.setMargin(buttonsBoxLeft, new Insets(5, 10, 5, 10));
 		VBox.setMargin(buttonsBoxRight, new Insets(5, 10, 5, 10));
 		VBox.setMargin(lblInput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(fieldInput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(lblOutput, new Insets(5, 10, 5, 10));
-		VBox.setMargin(fieldOutput, new Insets(5, 10, 5, 10));
-		VBox.setVgrow(fieldOutput, Priority.ALWAYS);
-		fieldOutput.setPrefWidth(500.0);
+		VBox.setMargin(fieldcVectorOutput, new Insets(5, 10, 5, 10));
+		VBox.setVgrow(fieldcVectorOutput, Priority.ALWAYS);
+		fieldcVectorOutput.setPrefWidth(500.0);
 		VBox.setVgrow(fieldInput, Priority.ALWAYS);
 		VBox.setVgrow(btnProcess, Priority.SOMETIMES);
 		
 		//EVECTOR BOX
 		Label lbleVOutput = new Label("eVector Output:");
-		VBox eVectorBox = new VBox(lbleVOutput, fldeVectorOutput);
-		eVectorBox.setAlignment(Pos.BOTTOM_LEFT);
-		fldeVectorOutput.setPrefHeight(250.0);
-		fldeVectorOutput.setPrefWidth(500.0);
+		VBox rightSideBox = new VBox(getCorrelationPane(), lbleVOutput, fieldeVectorOutput);
+		rightSideBox.setAlignment(Pos.BOTTOM_LEFT);
+		fieldeVectorOutput.setPrefHeight(250.0);
+		fieldeVectorOutput.setPrefWidth(500.0);
 		VBox.setMargin(lbleVOutput, new Insets(5, 10, 5, 10));
-		VBox.setMargin(fldeVectorOutput, new Insets(5, 10, 5, 10));
+		VBox.setMargin(fieldeVectorOutput, new Insets(5, 10, 5, 10));
 		
-		HBox listBox = new HBox(getListPane(), cVectorBox, eVectorBox);
-		HBox.setHgrow(cVectorBox, Priority.ALWAYS);
+		HBox listBox = new HBox(getListPane(), centralInputBox, rightSideBox);
+		HBox.setHgrow(centralInputBox, Priority.ALWAYS);
 		primaryStage.setTitle("cVector processing");
 		primaryStage.setWidth(1200);
 		primaryStage.setHeight(750);
-		primaryStage.setScene(new Scene(listBox));
+		Scene scene = new Scene(listBox);
+		scene.getStylesheets().add("charts.css");
+		primaryStage.setScene(scene);
 		primaryStage.show();
+	}
+
+	@SuppressWarnings("unchecked")
+	private Node getCorrelationPane() {
+		Label lblCorr = new Label("Correlation: ");
+		VBox.setVgrow(chart, Priority.ALWAYS);
+		chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries);
+		VBox mainBox = new VBox(lblCorr, chart);
+		return mainBox;
 	}
 
 	private void launchDocumentsListProcessing(
@@ -215,15 +243,26 @@ public class GUIFacade extends Application {
 			public void runFinished(List<SentenceInfo> sentences) {
 				cVectorLeft = sentences;
 				Platform.runLater(() -> {
-					
+					fieldOutput.appendText("\n\n\n\n\n");
 //								EVECTOR LAUNCH
 					new Thread(new EVectorProcessor(documentsLeft.getItems(),
 							text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
 
 						@Override
 						public void runFinished(List<Double> sentiments) {
+							fldeVectorOutput.appendText("\n\n\n\n\n");
 							try {
 								eVectorLeft = sentiments;
+								Platform.runLater(() -> {
+									eVectorLeftSeries.getData().clear();
+									eVectorLeftSeries.getData().addAll(
+										IntStream
+										.range(0, eVectorLeft.size())
+										.mapToObj(i -> new Data<Number, Number>(i, eVectorLeft.get(i)))
+										.collect(Collectors.toList())
+									);
+								});
+								
 								new Thread(new CVectorProcessor(documentsRight.getItems(),
 										text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
 	
@@ -240,10 +279,21 @@ public class GUIFacade extends Application {
 												public void runFinished(List<Double> sentiments) {
 													eVectorRight = sentiments;
 													Platform.runLater(() -> {
+														eVectorRightSeries.getData().clear();
+														eVectorRightSeries.getData().addAll(
+															IntStream
+															.range(0, eVectorRight.size())
+															.mapToObj(i -> new Data<Number, Number>(i, eVectorRight.get(i)))
+															.collect(Collectors.toList())
+														);
 														btnProcess.setDisable(false);
 														selectedAlgorithmBox.setDisable(false);
 														selectedDampeningFactor.setDisable(false);
 														selectedApproximator.setDisable(false);
+														
+														
+//														chart.getData().clear();
+//														chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries);
 													});
 												}			
 											}).start();
@@ -258,6 +308,7 @@ public class GUIFacade extends Application {
 				});
 			}
 		}).start();
+		
 	}
 
 	private EventHandler<ActionEvent> makeClearQButtonHandler(final ListView<String> documents) {

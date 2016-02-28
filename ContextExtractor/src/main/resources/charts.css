@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.chart {
+    -fx-padding: 10px;
+}
+.chart-content {
+    -fx-padding: 30px;
+}
+
+.default-color0.chart-area-symbol { -fx-background-color: #0700fc, #7cfc00; }
+.default-color1.chart-area-symbol { -fx-background-color: #db302e, #ffffff; }
+ 
+.default-color0.chart-series-area-line { -fx-stroke: #0700fc; }
+.default-color1.chart-series-area-line { -fx-stroke: #db302e; }
+
+.default-color0.chart-series-area-fill { -fx-fill: #0700fc88; }
+.default-color1.chart-series-area-fill { -fx-fill: #db302e77; }
