@@ -16,6 +16,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.NumberAxis;
@@ -95,7 +96,11 @@ public class GUIFacade extends Application {
 			, new NumberAxis(0, 5.0, 0.05)
 	);
 	
-	
+	private Stage graphStage = new Stage();
+	{
+		graphStage.setScene(new Scene((Parent) getCorrelationPane()));
+		graphStage.getScene().getStylesheets().add("charts.css");
+	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -206,7 +211,7 @@ public class GUIFacade extends Application {
 		
 		//EVECTOR BOX
 		Label lbleVOutput = new Label("eVector Output:");
-		VBox rightSideBox = new VBox(getCorrelationPane(), lbleVOutput, fieldeVectorOutput);
+		VBox rightSideBox = new VBox(lbleVOutput, fieldeVectorOutput);
 		rightSideBox.setAlignment(Pos.BOTTOM_LEFT);
 		fieldeVectorOutput.setPrefHeight(250.0);
 		fieldeVectorOutput.setPrefWidth(500.0);
@@ -219,7 +224,6 @@ public class GUIFacade extends Application {
 		primaryStage.setWidth(1200);
 		primaryStage.setHeight(750);
 		Scene scene = new Scene(listBox);
-		scene.getStylesheets().add("charts.css");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -286,6 +290,7 @@ public class GUIFacade extends Application {
 															.mapToObj(i -> new Data<Number, Number>(i, eVectorRight.get(i)))
 															.collect(Collectors.toList())
 														);
+														graphStage.show();
 														btnProcess.setDisable(false);
 														selectedAlgorithmBox.setDisable(false);
 														selectedDampeningFactor.setDisable(false);

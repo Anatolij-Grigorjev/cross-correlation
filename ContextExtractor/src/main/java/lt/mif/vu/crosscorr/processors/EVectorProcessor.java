@@ -90,8 +90,18 @@ public abstract class EVectorProcessor implements Runnable {
 					+ graphSentiment 
 					+ "\n\n");
 		}
+		//even if the sentiment was not recovered, 
+		//the signal need to be padded to sentence count
 		if (graphSentiment > 0.0 ) {
 			sentimentsSignal.add(graphSentiment);
+		} else {
+			if (sentimentsSignal.isEmpty()) {
+				//neutral sentiment class
+				sentimentsSignal.add(0.0 + StanfordNLPUtils.sentimentClassIndex("Neutral"));
+			} else {
+				//add last recorded sentiment again
+				sentimentsSignal.add(sentimentsSignal.get(sentimentsSignal.size() - 1));
+			}
 		}
 	}
 
