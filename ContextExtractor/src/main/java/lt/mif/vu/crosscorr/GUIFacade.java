@@ -36,6 +36,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
+import lt.mif.vu.crosscorr.processors.CrossCorrelationProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
 import lt.mif.vu.crosscorr.utils.Algorithm;
@@ -81,11 +82,14 @@ public class GUIFacade extends Application {
 	
 	Series<Number, Number> eVectorLeftSeries = new Series<>();
 	Series<Number, Number> eVectorRightSeries = new Series<>();
+	Series<Number, Number> crossCorrSeries = new Series<>();
 	{
 		eVectorLeftSeries.setName("eVector Left");
 		eVectorLeftSeries.getData().clear();
 		eVectorRightSeries.setName("eVector Right");
 		eVectorRightSeries.getData().clear();
+		crossCorrSeries.setName("Cross-correlation");
+		crossCorrSeries.getData().clear();
 	}
 	
 	//----------------DATA---------------//
@@ -93,7 +97,7 @@ public class GUIFacade extends Application {
 	private List<Double> eVectorLeft, eVectorRight;
 	private final AreaChart<Number, Number> chart = new AreaChart<>(
 			new NumberAxis()
-			, new NumberAxis(0, 5.0, 0.05)
+			, new NumberAxis(-1.0, 1.0, 0.01)
 	);
 	
 	private Stage graphStage = new Stage();
@@ -232,7 +236,7 @@ public class GUIFacade extends Application {
 	private Node getCorrelationPane() {
 		Label lblCorr = new Label("Correlation: ");
 		VBox.setVgrow(chart, Priority.ALWAYS);
-		chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries);
+//		chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries, crossCorrSeries);
 		VBox mainBox = new VBox(lblCorr, chart);
 		return mainBox;
 	}
@@ -290,15 +294,35 @@ public class GUIFacade extends Application {
 															.mapToObj(i -> new Data<Number, Number>(i, eVectorRight.get(i)))
 															.collect(Collectors.toList())
 														);
-														graphStage.show();
+														
 														btnProcess.setDisable(false);
 														selectedAlgorithmBox.setDisable(false);
 														selectedDampeningFactor.setDisable(false);
 														selectedApproximator.setDisable(false);
 														
-														
+//														graphStage.show();
 //														chart.getData().clear();
 //														chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries);
+														
+														new Thread(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
+															
+															@Override
+															public void runFinished(double[] resultCorr) {
+																Platform.runLater(() -> {
+																	chart.getData().clear();
+																	crossCorrSeries.getData().clear();
+																	crossCorrSeries.getData().addAll(
+																		IntStream
+																		.range(0, resultCorr.length)
+																		.mapToObj(i -> new Data<Number, Number>(i, resultCorr[i]))
+																		.collect(Collectors.toList())
+																	);
+																	graphStage.show();
+																	chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries, crossCorrSeries);
+																});
+															}
+														}).start();
+														
 													});
 												}			
 											}).start();
