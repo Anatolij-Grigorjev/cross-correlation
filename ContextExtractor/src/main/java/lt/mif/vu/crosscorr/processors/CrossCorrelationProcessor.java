@@ -3,14 +3,17 @@ package lt.mif.vu.crosscorr.processors;
 import static lt.mif.vu.crosscorr.utils.SignalUtils.createSignalFromSeq;
 import static lt.mif.vu.crosscorr.utils.SignalUtils.timeReverse;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import edu.emory.mathcs.jtransforms.fft.DoubleFFT_1D;
+import lombok.extern.log4j.Log4j;
 import lt.mif.vu.crosscorr.utils.HomogenousPair;
 import lt.mif.vu.crosscorr.utils.SentenceInfo;
 
+@Log4j
 public abstract class CrossCorrelationProcessor implements Runnable {
 
 	private HomogenousPair<List<SentenceInfo>> cVectors;
@@ -34,8 +37,10 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 		int signalLength = eVectors.pairSize();
 		// create 2 signal length evector sequences for DFT
 		List<Double> eVectorLSignal = createSignalFromSeq(eVectors.getLeft(), signalLength);
-		List<Double> eVectorRSignal = timeReverse(
-				createSignalFromSeq(eVectors.getRight(), signalLength));
+		List<Double> eVectorRSignal = 
+				createSignalFromSeq(eVectors.getRight(), signalLength);
+		System.out.println("Left: " + Arrays.toString(eVectorLSignal.toArray()));
+		System.out.println("Right: " + Arrays.toString(eVectorRSignal.toArray()));
 		HomogenousPair<List<Double>> signalPair = new HomogenousPair<List<Double>>(eVectorLSignal,
 				eVectorRSignal);
 
@@ -44,7 +49,9 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 		// perform multiply
 		double[] left = transformedSpectra.getLeft();
 		double[] right = transformedSpectra.getRight();
-
+		System.out.println("Left: " + Arrays.toString(left));
+		System.out.println("Right: " + Arrays.toString(right));
+		
 		double[] multiple = new double[left.length];
 		for (int i = 0; i < left.length; i++) {
 			multiple[i] = left[i] * right[i];
@@ -52,6 +59,7 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 
 		// inverse is the cross-correlation graph
 		transformer.complexInverse(multiple, true);
+		System.out.println("Result: " + Arrays.toString(multiple));
 		runFinished(multiple);
 	}
 

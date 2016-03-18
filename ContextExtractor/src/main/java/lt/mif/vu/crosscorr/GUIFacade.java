@@ -1,9 +1,11 @@
 package lt.mif.vu.crosscorr;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -16,12 +18,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.AreaChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart.Data;
-import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -54,12 +51,15 @@ import net.didion.jwnl.data.relationship.RelationshipList;
 import opennlp.tools.util.InvalidFormatException;
 
 public class GUIFacade extends Application {
-
+	
 	ListView<String> documentsLeft = new ListView<String>();
 	ListView<String> documentsRight = new ListView<String>();
 	private ComboBox<Algorithm> selectedAlgorithmBox = new ComboBox<>();
 	private ComboBox<Integer> selectedDampeningFactor = new ComboBox<>();
 	private ComboBox<Approximators> selectedApproximator = new ComboBox<>();
+	
+	ExecutorService processorExecutor = Executors.newSingleThreadExecutor();
+	
 	private Callback<ListView<String>, ListCell<String>> cellFactory = new Callback<ListView<String>, ListCell<String>>() {
 
 		@Override
@@ -80,31 +80,11 @@ public class GUIFacade extends Application {
 	};
 	private Button btnProcess = new Button("Process docs!");
 	
-	Series<Number, Number> eVectorLeftSeries = new Series<>();
-	Series<Number, Number> eVectorRightSeries = new Series<>();
-	Series<Number, Number> crossCorrSeries = new Series<>();
-	{
-		eVectorLeftSeries.setName("eVector Left");
-		eVectorLeftSeries.getData().clear();
-		eVectorRightSeries.setName("eVector Right");
-		eVectorRightSeries.getData().clear();
-		crossCorrSeries.setName("Cross-correlation");
-		crossCorrSeries.getData().clear();
-	}
+	
 	
 	//----------------DATA---------------//
 	private List<SentenceInfo> cVectorLeft, cVectorRight;
 	private List<Double> eVectorLeft, eVectorRight;
-	private final AreaChart<Number, Number> chart = new AreaChart<>(
-			new NumberAxis()
-			, new NumberAxis(-1.0, 1.0, 0.01)
-	);
-	
-	private Stage graphStage = new Stage();
-	{
-		graphStage.setScene(new Scene((Parent) getCorrelationPane()));
-		graphStage.getScene().getStylesheets().add("charts.css");
-	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -232,111 +212,79 @@ public class GUIFacade extends Application {
 		primaryStage.show();
 	}
 
-	@SuppressWarnings("unchecked")
-	private Node getCorrelationPane() {
-		Label lblCorr = new Label("Correlation: ");
-		VBox.setVgrow(chart, Priority.ALWAYS);
-//		chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries, crossCorrSeries);
-		VBox mainBox = new VBox(lblCorr, chart);
-		return mainBox;
-	}
-
 	private void launchDocumentsListProcessing(
 			TextArea fieldOutput
 			, TextArea fldeVectorOutput) throws InvalidFormatException, IOException {
-		new Thread(new CVectorProcessor(documentsLeft.getItems(),
-				text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
+		
+		Runnable[] initialProcessors = {
+				
+			new CVectorProcessor(documentsLeft.getItems(),
+					text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
+	
+				@Override
+				public void runFinished(List<SentenceInfo> sentences) {
+					cVectorLeft = sentences;
+					Platform.runLater(() -> {
+						fieldOutput.appendText("\n\n\n\n\n");
+					});
+				}
+			}, 
+			new EVectorProcessor(documentsLeft.getItems(),
+					text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
 
+				@Override
+				public void runFinished(List<Double> sentiments) {
+					Platform.runLater(() -> { 
+						fldeVectorOutput.appendText("\n\n\n\n\n");
+					});
+					eVectorLeft = sentiments;
+				}
+			},
+			new CVectorProcessor(documentsRight.getItems(),
+					text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
+
+				@Override
+				public void runFinished(List<SentenceInfo> sentences) {
+					cVectorRight = sentences;
+				}
+			},
+			new EVectorProcessor(documentsRight.getItems(),
+					text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
+
+				@Override
+				public void runFinished(List<Double> sentiments) {
+					eVectorRight = sentiments;
+					Platform.runLater(() -> {
+						btnProcess.setDisable(false);
+						selectedAlgorithmBox.setDisable(false);
+						selectedDampeningFactor.setDisable(false);
+						selectedApproximator.setDisable(false);
+						
+						//CREATE GRAPH SHOWING THEM CHARTS
+//						ChartWindow chartWindow = new ChartWindow("EVectors Comparison: "
+//								, new Number);
+					});
+				}
+			}
+		};
+		Stream.of(initialProcessors)
+		.forEach(task -> {
+			try {
+				processorExecutor.submit(task).get();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		});
+		
+													
+		processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
 			@Override
-			public void runFinished(List<SentenceInfo> sentences) {
-				cVectorLeft = sentences;
+			public void runFinished(double[] resultCorr) {
 				Platform.runLater(() -> {
-					fieldOutput.appendText("\n\n\n\n\n");
-//								EVECTOR LAUNCH
-					new Thread(new EVectorProcessor(documentsLeft.getItems(),
-							text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
-
-						@Override
-						public void runFinished(List<Double> sentiments) {
-							fldeVectorOutput.appendText("\n\n\n\n\n");
-							try {
-								eVectorLeft = sentiments;
-								Platform.runLater(() -> {
-									eVectorLeftSeries.getData().clear();
-									eVectorLeftSeries.getData().addAll(
-										IntStream
-										.range(0, eVectorLeft.size())
-										.mapToObj(i -> new Data<Number, Number>(i, eVectorLeft.get(i)))
-										.collect(Collectors.toList())
-									);
-								});
-								
-								new Thread(new CVectorProcessor(documentsRight.getItems(),
-										text -> Platform.runLater(() -> fieldOutput.appendText(text))) {
-	
-									@Override
-									public void runFinished(List<SentenceInfo> sentences) {
-										cVectorRight = sentences;
-										Platform.runLater(() -> {
-											
-	//													EVECTOR LAUNCH
-											new Thread(new EVectorProcessor(documentsRight.getItems(),
-													text -> Platform.runLater(() -> fldeVectorOutput.appendText(text))) {
-	
-												@Override
-												public void runFinished(List<Double> sentiments) {
-													eVectorRight = sentiments;
-													Platform.runLater(() -> {
-														eVectorRightSeries.getData().clear();
-														eVectorRightSeries.getData().addAll(
-															IntStream
-															.range(0, eVectorRight.size())
-															.mapToObj(i -> new Data<Number, Number>(i, eVectorRight.get(i)))
-															.collect(Collectors.toList())
-														);
-														
-														btnProcess.setDisable(false);
-														selectedAlgorithmBox.setDisable(false);
-														selectedDampeningFactor.setDisable(false);
-														selectedApproximator.setDisable(false);
-														
-//														graphStage.show();
-//														chart.getData().clear();
-//														chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries);
-														
-														new Thread(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
-															
-															@Override
-															public void runFinished(double[] resultCorr) {
-																Platform.runLater(() -> {
-																	chart.getData().clear();
-																	crossCorrSeries.getData().clear();
-																	crossCorrSeries.getData().addAll(
-																		IntStream
-																		.range(0, resultCorr.length)
-																		.mapToObj(i -> new Data<Number, Number>(i, resultCorr[i]))
-																		.collect(Collectors.toList())
-																	);
-																	graphStage.show();
-																	chart.getData().addAll(eVectorLeftSeries, eVectorRightSeries, crossCorrSeries);
-																});
-															}
-														}).start();
-														
-													});
-												}			
-											}).start();
-										});
-									}
-								}).start();
-							} catch (Exception e) {
-								e.printStackTrace();
-							}
-						}			
-					}).start();
+					fldeVectorOutput.appendText("CORRELATION: " + Arrays.toString(resultCorr));
 				});
 			}
-		}).start();
+		});
 		
 	}
 
