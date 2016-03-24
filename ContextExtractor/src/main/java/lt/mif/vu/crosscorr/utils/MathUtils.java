@@ -1,7 +1,9 @@
 package lt.mif.vu.crosscorr.utils;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.IntStream;
 
 public class MathUtils {
 
@@ -46,5 +48,49 @@ public class MathUtils {
 		
 		return dampened;
 	}
+	
+	
+	 public static long gcd(long a, long b)
+	 {
+	     while (b > 0)
+	     {
+	         long temp = b;
+	         b = a % b; // % is remainder
+	         a = temp;
+	     }
+	     return a;
+	 }
+	 
+	 public static long lcm(long a, long b)
+	 {
+	     return a * (b / gcd(a, b));
+	 }
+	 
+	 private static double getSignalSliceAvg(List<Double> sig, int N, int delay, boolean offset) {
+		 double multiple = 1.0 / (double)(N - delay + 1);
+		 int substart = offset? delay : 0;
+		 double sum = sig.subList(substart, N - delay).stream().mapToDouble(Double::doubleValue).sum();
+		 return sum * multiple;
+	 }
+	 
+	 public static double getCrossCorrelationAt(List<Double> sig1, List<Double> sig2, int N, int delay) {
+		 double sig1Slice = getSignalSliceAvg(sig1, N, delay, false);
+		 double sig2Slice = getSignalSliceAvg(sig2, N, delay, true);
+		 
+		 double numerator = IntStream.rangeClosed(0, N - delay).mapToDouble(j -> 
+			 (sig1.get(j) - sig1Slice) * (sig2.get(j + delay) - sig2Slice)
+		 ).sum();
+		 
+		 double denom1 = IntStream.rangeClosed(0,  N - delay).mapToDouble(j ->
+		 	(sig1.get(j) - sig1Slice) * (sig1.get(j) - sig1Slice)
+		 ).sum();
+		 double denom2 = IntStream.rangeClosed(0,  N - delay).mapToDouble(j ->
+		 	(sig2.get(delay + j) - sig2Slice) * (sig2.get(delay + j) - sig2Slice)
+		 ).sum();
+		 
+		 double denominator = Math.sqrt(denom1 * denom2);
+		 
+		 return numerator / denominator;
+	 }
 	
 }
