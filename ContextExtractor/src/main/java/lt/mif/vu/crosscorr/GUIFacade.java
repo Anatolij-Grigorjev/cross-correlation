@@ -1,7 +1,6 @@
 package lt.mif.vu.crosscorr;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -61,6 +60,7 @@ public class GUIFacade extends Application {
 	ListView<String> documentsRight = new ListView<String>();
 	private ComboBox<Algorithm> selectedAlgorithmBox = new ComboBox<>();
 	private ComboBox<Integer> selectedDampeningFactor = new ComboBox<>();
+	private ComboBox<Integer> selectedContextResonance = new ComboBox<>();
 	private ComboBox<Approximators> selectedApproximator = new ComboBox<>();
 	
 	ExecutorService processorExecutor = Executors.newSingleThreadExecutor();
@@ -270,9 +270,6 @@ public class GUIFacade extends Application {
 						selectedDampeningFactor.setDisable(false);
 						selectedApproximator.setDisable(false);
 						
-						//CREATE GRAPH SHOWING THEM CHARTS
-//						ChartWindow chartWindow = new ChartWindow("EVectors Comparison: "
-//								, new Number);
 					});
 				}
 			}
@@ -291,11 +288,10 @@ public class GUIFacade extends Application {
 				processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
 					@Override
 					public void runFinished(double[] resultCorr) {
-						fldeVectorOutput.appendText("CROSS-CORR: " + Arrays.toString(resultCorr));
 						Series<Number, Number> corrResults = new Series<>();
 						int halfLength = resultCorr.length / 2;
 						List<Data<Number, Number>> seriesData = IntStream.range(-1 * halfLength, halfLength)
-						.mapToObj(d -> new Data<Number, Number>(halfLength + d, resultCorr[halfLength + d]))
+						.mapToObj(d -> new Data<Number, Number>(d, resultCorr[halfLength + d]))
 						.collect(Collectors.toList());
 						corrResults.getData().addAll(seriesData);
 						Platform.runLater(() -> {
@@ -374,6 +370,7 @@ public class GUIFacade extends Application {
 		VBox.setMargin(checkboxPanel, new Insets(5, 5, 5, 5));
 		VBox.setMargin(eVcheckboxPanel, new Insets(5, 20, 5, 5));
 		IntStream.range(0, 10).forEach(num -> selectedDampeningFactor.getItems().add(num));
+		IntStream.range(0, 10).forEach(num -> selectedContextResonance.getItems().add(num));
 		Stream.of(Algorithm.values()).forEach(algo -> selectedAlgorithmBox.getItems().add(algo));
 		Stream.of(Approximators.values()).forEach(approx -> selectedApproximator.getItems().add(approx));
 		selectedAlgorithmBox.valueProperty().addListener((obsValue, from, to) -> {
@@ -382,25 +379,32 @@ public class GUIFacade extends Application {
 		selectedDampeningFactor.valueProperty().addListener((obsValue, from, to) -> {
 			GlobalConfig.DAMPENING_FACTOR = to;
 		});
+		selectedContextResonance.valueProperty().addListener((obsValue, from, to) -> {
+			GlobalConfig.CONTEXT_RESONANCE = to;
+		});
 		selectedApproximator.valueProperty().addListener((obsValue, from, to) -> {
 			GlobalConfig.APPROXIMATOR = to;
 		});
 		HBox selectedAlgorithmBoxPanel = new HBox(new Label("Bias algorithm: "), selectedAlgorithmBox);
 		HBox selectedDampeningFactorPanel = new HBox(new Label("Dampening factor: "), selectedDampeningFactor);
 		HBox selectedApproximatorPanel = new HBox(new Label("Approximator: "), selectedApproximator);
+		HBox selectedContextResonancePanel = new HBox(new Label("C-Resonance: "), selectedContextResonance);
 		VBox.setMargin(selectedAlgorithmBoxPanel, new Insets(5, 50, 5, 5));
 		VBox.setMargin(selectedDampeningFactorPanel, new Insets(5, 50, 5, 5));
 		VBox.setMargin(selectedApproximatorPanel, new Insets(5, 50, 5, 5));
+		VBox.setMargin(selectedContextResonancePanel, new Insets(5, 50, 5, 5));
 		VBox optionsBox = new VBox(
 				checkboxPanel
 				, eVcheckboxPanel
 				, selectedAlgorithmBoxPanel
 				, selectedDampeningFactorPanel
 				, selectedApproximatorPanel
+				, selectedContextResonancePanel
 		);
-		selectedAlgorithmBox.setValue(Algorithm.FRONT_TO_BACK);
-		selectedDampeningFactor.setValue(0);
-		selectedApproximator.setValue(Approximators.ROUND);
+		selectedAlgorithmBox.setValue(GlobalConfig.SELECTED_ALGORITHM);
+		selectedDampeningFactor.setValue(GlobalConfig.DAMPENING_FACTOR);
+		selectedContextResonance.setValue(GlobalConfig.CONTEXT_RESONANCE);
+		selectedApproximator.setValue(GlobalConfig.APPROXIMATOR);
 		return optionsBox;
 	}
 	
