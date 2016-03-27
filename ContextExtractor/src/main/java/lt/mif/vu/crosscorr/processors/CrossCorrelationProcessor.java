@@ -29,7 +29,7 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 		int delayBound = sizeBound / 2;
 		//first with signals swapped
 		double[] crossCorr1 = IntStream.range(-1* delayBound, 0)
-		.mapToDouble(d -> MathUtils.getCrossCorrelationAt(eVectors.getRight(), eVectors.getLeft(), sizeBound, d))
+		.mapToDouble(d -> MathUtils.getCrossCorrelationAt(eVectors.getRight(), eVectors.getLeft(), sizeBound, Math.abs(d)))
 		.toArray();
 		double[] crossCorr2 = IntStream.rangeClosed(0, delayBound)
 		.mapToDouble(d -> MathUtils.getCrossCorrelationAt(eVectors.getLeft(), eVectors.getRight(), sizeBound, d))

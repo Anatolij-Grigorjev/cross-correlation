@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -19,6 +20,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart.Data;
+import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -40,6 +44,7 @@ import lt.mif.vu.crosscorr.utils.Algorithm;
 import lt.mif.vu.crosscorr.utils.Approximators;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.utils.SentenceInfo;
+import lt.mif.vu.crosscorr.windows.ChartWindow;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
 import net.didion.jwnl.JWNLException;
 import net.didion.jwnl.data.IndexWord;
@@ -79,6 +84,11 @@ public class GUIFacade extends Application {
 		}
 	};
 	private Button btnProcess = new Button("Process docs!");
+	
+	
+	ChartWindow crossCorrWindow = new ChartWindow("Cross correlation: "
+			, new NumberAxis()
+			, new NumberAxis(-1.0, 1.0, 0.05));
 	
 	
 	
@@ -267,24 +277,37 @@ public class GUIFacade extends Application {
 				}
 			}
 		};
-		Stream.of(initialProcessors)
-		.forEach(task -> {
+		
+		new Thread(() -> {
+			Stream.of(initialProcessors)
+			.forEach(task -> {
+				try {
+					processorExecutor.submit(task).get();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			});		
 			try {
-				processorExecutor.submit(task).get();
+				processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
+					@Override
+					public void runFinished(double[] resultCorr) {
+						fldeVectorOutput.appendText("CROSS-CORR: " + Arrays.toString(resultCorr));
+						Series<Number, Number> corrResults = new Series<>();
+						int halfLength = resultCorr.length / 2;
+						List<Data<Number, Number>> seriesData = IntStream.range(-1 * halfLength, halfLength)
+						.mapToObj(d -> new Data<Number, Number>(halfLength + d, resultCorr[halfLength + d]))
+						.collect(Collectors.toList());
+						corrResults.getData().addAll(seriesData);
+						Platform.runLater(() -> {
+							crossCorrWindow.addSeries(corrResults);
+							crossCorrWindow.show();
+						});
+					}
+				}).get();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		});
-		
-													
-		processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
-			@Override
-			public void runFinished(double[] resultCorr) {
-				Platform.runLater(() -> {
-					fldeVectorOutput.appendText("CORRELATION: " + Arrays.toString(resultCorr));
-				});
-			}
-		});
+		}).start();
 		
 	}
 

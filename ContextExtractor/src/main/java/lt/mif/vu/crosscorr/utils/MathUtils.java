@@ -77,14 +77,14 @@ public class MathUtils {
 		 double sig1Slice = getSignalSliceAvg(sig1, N, delay, false);
 		 double sig2Slice = getSignalSliceAvg(sig2, N, delay, true);
 		 
-		 double numerator = IntStream.rangeClosed(0, N - delay).mapToDouble(j -> 
+		 double numerator = IntStream.range(0, N - delay).mapToDouble(j -> 
 			 (sig1.get(j) - sig1Slice) * (sig2.get(j + delay) - sig2Slice)
 		 ).sum();
 		 
-		 double denom1 = IntStream.rangeClosed(0,  N - delay).mapToDouble(j ->
+		 double denom1 = IntStream.range(0,  N - delay).mapToDouble(j ->
 		 	(sig1.get(j) - sig1Slice) * (sig1.get(j) - sig1Slice)
 		 ).sum();
-		 double denom2 = IntStream.rangeClosed(0,  N - delay).mapToDouble(j ->
+		 double denom2 = IntStream.range(0,  N - delay).mapToDouble(j ->
 		 	(sig2.get(delay + j) - sig2Slice) * (sig2.get(delay + j) - sig2Slice)
 		 ).sum();
 		 

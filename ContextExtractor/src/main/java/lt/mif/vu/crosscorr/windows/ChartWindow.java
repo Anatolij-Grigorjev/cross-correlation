@@ -11,6 +11,7 @@ import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lombok.Getter;
 
@@ -29,8 +30,11 @@ public class ChartWindow {
 		this.chartLabel = new Label(chartlabel);
 		this.chart = new AreaChart<>(xAxis, yAxis);
 		this.graphStage = new Stage();
+		this.graphStage.initModality(Modality.APPLICATION_MODAL);
+		this.graphStage.setMinWidth(400);
+		this.graphStage.setMinHeight(400);
 		this.graphStage.setScene(new Scene(getCorrelationPane()));
-		this.graphStage.getScene().getStylesheets().add("charts.css");
+		this.graphStage.getScene().getStylesheets().add("cross_corr_charts.css");
 	}
 	
 	private Parent getCorrelationPane() {
