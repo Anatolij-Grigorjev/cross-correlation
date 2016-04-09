@@ -36,6 +36,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.processors.CVectorProcessor;
+import lt.mif.vu.crosscorr.processors.CrossCorrResults;
 import lt.mif.vu.crosscorr.processors.CrossCorrelationProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
@@ -287,7 +288,8 @@ public class GUIFacade extends Application {
 			try {
 				processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
 					@Override
-					public void runFinished(double[] resultCorr) {
+					public void runFinished(CrossCorrResults results) {
+						double[] resultCorr = results.getEVectorCrossCorr();
 						Series<Number, Number> corrResults = new Series<>();
 						int halfLength = resultCorr.length / 2;
 						List<Data<Number, Number>> seriesData = IntStream.range(-1 * halfLength, halfLength)
