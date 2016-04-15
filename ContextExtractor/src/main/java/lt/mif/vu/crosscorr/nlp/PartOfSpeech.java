@@ -133,6 +133,15 @@ public enum PartOfSpeech {
 			  );
 			  
   }
+  
+  
+  public boolean isMajorTag() {
+	  return this.tag.startsWith(ADJECTIVE.tag)
+			  || this.tag.startsWith(NOUN.tag)
+			  || this.tag.startsWith(VERB.tag)
+			  || this.tag.startsWith(ADVERB.tag)
+			  || this == PartOfSpeech.ADVERB_WH; //WH puts specific code before generic adverb code
+  }
 
   public static PartOfSpeech get( String value ) {
     for( PartOfSpeech v : values() ) {

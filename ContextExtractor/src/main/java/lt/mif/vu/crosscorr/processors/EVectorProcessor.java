@@ -249,7 +249,7 @@ public abstract class EVectorProcessor implements Runnable {
 			try {
 				pos = PartOfSpeech.get(StringUtils.strip(posTags[i], " -*^&%#?!.,:[]\\|<>"));
 			} catch (Exception e) {
-				e.printStackTrace();
+//				e.printStackTrace();
 			}
 			if (StringUtils.isAlpha(wordTokens[i]) && (pos == null
 					|| (!pos.isPreposition() && WordNetUtils.getInstance().isParsablePOS(pos)))) {

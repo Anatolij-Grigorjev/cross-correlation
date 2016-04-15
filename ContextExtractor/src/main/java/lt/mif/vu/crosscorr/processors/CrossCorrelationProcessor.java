@@ -1,14 +1,28 @@
 package lt.mif.vu.crosscorr.processors;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.IntStream;
 
-import org.apache.commons.lang.ArrayUtils;
+import javax.xml.ws.Holder;
 
+import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
+
+import lt.mif.vu.crosscorr.nlp.NLPUtil;
+import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
+import lt.mif.vu.crosscorr.utils.GlobalIdfCalculator;
 import lt.mif.vu.crosscorr.utils.HomogenousPair;
 import lt.mif.vu.crosscorr.utils.MathUtils;
 import lt.mif.vu.crosscorr.utils.SentenceInfo;
+import lt.mif.vu.crosscorr.utils.WordCorrelationHelper;
+import opennlp.tools.postag.POSTaggerME;
+import opennlp.tools.tokenize.TokenizerME;
 
 public abstract class CrossCorrelationProcessor implements Runnable {
 
@@ -35,9 +49,20 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 	}
 
 	private double[] performCVectorCorrelation() {
-		
+		Map<HomogenousPair<SentenceInfo>, Double> sentencePairScores = new HashMap<>();
 		cVectors.getLeft().forEach(sentenceInfoLeft -> {
-			cVectors.getRight().forEach(sentenceScoreRight -> {
+			cVectors.getRight().forEach(sentenceInfoRight -> {
+				
+				double similarity = 0.5 * (
+						simToIdfRelation(sentenceInfoLeft.getSentence(), sentenceInfoRight.getSentence())
+						+
+						simToIdfRelation(sentenceInfoRight.getSentence(), sentenceInfoLeft.getSentence())
+						);
+				
+				HomogenousPair<SentenceInfo> key = new HomogenousPair<>(sentenceInfoLeft, sentenceInfoRight);
+				sentencePairScores.put(key, similarity);
+				
+				
 				
 //				sim(T_1, T_2) = \frac{1}{2}
 //				\big(
@@ -51,8 +76,82 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 			});
 		});
 		
-		// TODO Auto-generated method stub
-		return null;
+		List<Double> maxValues = new ArrayList<>();
+		Holder<Double> currMax = new Holder<Double>(0.0);
+		Holder<SentenceInfo> noteablePairing = new Holder<>();
+		Set<SentenceInfo> noTouchy = new HashSet<>();
+		cVectors.getLeft().forEach(sentenceInfoLeft -> {
+			currMax.value = 0.0;
+			noteablePairing.value = null;
+			cVectors.getRight().forEach(sentenceInfoRight -> {
+				if (!noTouchy.contains(sentenceInfoRight)) {
+					HomogenousPair<SentenceInfo> pair = new HomogenousPair<>(sentenceInfoLeft, sentenceInfoRight);
+					Double value = sentencePairScores.get(pair);
+					if (value > currMax.value) {
+						currMax.value = value;
+						noteablePairing.value = sentenceInfoRight;
+					}
+				}
+			});
+			maxValues.add(currMax.value);
+			noTouchy.add(noteablePairing.value);
+		});
+		
+		return maxValues.stream().mapToDouble(Double::doubleValue).toArray();
+	}
+
+	private double simToIdfRelation(String block1, String block2) {
+		TokenizerME tokenizer = NLPUtil.getInstance().getTokenizer();
+		String[] block1Tokens = tokenizer.tokenize(block1);
+		IntStream block1Filter = getMajorPOSFilter(block1Tokens);
+		
+		double globalIdfSum = block1Filter.mapToDouble(index -> 
+			GlobalIdfCalculator.getGlobalIdf(block1Tokens[index])
+		).sum();
+		
+		//refresh the start of stream
+		block1Filter = getMajorPOSFilter(block1Tokens);
+		double idfMaxSimSum = block1Filter.mapToDouble(index -> {
+			double idf = GlobalIdfCalculator.getGlobalIdf(block1Tokens[index]);
+			double maxSim = getMaxSimilarity(block1Tokens[index], block2);
+			
+			return idf * maxSim;
+		}).sum();
+		
+		return idfMaxSimSum / globalIdfSum;
+	}
+
+	private double getMaxSimilarity(String word1, String block2) {
+		TokenizerME tokenizer = NLPUtil.getInstance().getTokenizer();
+		String[] blockTokens = tokenizer.tokenize(block2);
+		IntStream majorPOSFilter = getMajorPOSFilter(blockTokens);
+		WordCorrelationHelper corr = WordCorrelationHelper.getInstance();
+		
+		return majorPOSFilter
+				.mapToDouble(index -> corr.getWordsCorr(word1, blockTokens[index]))
+				.max()
+				.orElse(0.0);
+	}
+
+	private IntStream getMajorPOSFilter(String[] tokens) {
+		POSTaggerME posTagger = NLPUtil.getInstance().getPosTagger();
+		
+		String[] textPOS = posTagger.tag(tokens);
+		
+		return IntStream.range(0, tokens.length).filter(index -> {
+			PartOfSpeech pos = null;
+			try {
+				pos = PartOfSpeech.get(
+						StringUtils.strip(textPOS[index], " -$*|,./\\")
+				);
+				//only using similarity measures on "major" tag words, such as 
+				//nouns, verbs, adjectives and adverbs
+				return pos != null && pos.isMajorTag();
+			} catch (Exception e) {
+//				e.printStackTrace();
+				return false;
+			}
+		});
 	}
 
 	private double[] performEVectorCorrelation() {

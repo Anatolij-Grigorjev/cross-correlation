@@ -235,6 +235,7 @@ public abstract class CVectorProcessor implements Runnable {
 		appender.appendOut("Got " + docParagraphs.length + " paragraphs in doc!\n");
 		StringBuilder newDocBuilder = new StringBuilder();
 		Long tokensSum = 0l;
+		
 		for (int j = 0; j < docParagraphs.length; j++) {
 			String[] docTokens = nlpUtils.getTokenizer().tokenize(docParagraphs[j]);
 			tokensSum += docTokens.length;
@@ -334,9 +335,9 @@ public abstract class CVectorProcessor implements Runnable {
 			try {
 				pos = PartOfSpeech.get(tag);
 			} catch (Exception e) {
-				e.printStackTrace();
+//				e.printStackTrace();
 			}
-			if (StringUtils.isAlpha(token) && (pos == null || !pos.isPreposition())) {
+			if (StringUtils.isAlpha(token) && (pos == null || pos.isMajorTag())) {
 				// this is a word! lets see if it should be replaced
 				if (replaceables.containsKey(token) 
 						&& !replaceables.get(token).equalsIgnoreCase(token)) {

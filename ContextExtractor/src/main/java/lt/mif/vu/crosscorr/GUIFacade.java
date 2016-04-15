@@ -43,6 +43,7 @@ import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
 import lt.mif.vu.crosscorr.utils.Algorithm;
 import lt.mif.vu.crosscorr.utils.Approximators;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
+import lt.mif.vu.crosscorr.utils.GlobalIdfCalculator;
 import lt.mif.vu.crosscorr.utils.SentenceInfo;
 import lt.mif.vu.crosscorr.windows.ChartWindow;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
@@ -87,9 +88,12 @@ public class GUIFacade extends Application {
 	private Button btnProcess = new Button("Process docs!");
 	
 	
-	ChartWindow crossCorrWindow = new ChartWindow("Cross correlation: "
+	ChartWindow sentimentCorrWindow = new ChartWindow("Cross correlation (sentiment): "
 			, new NumberAxis()
 			, new NumberAxis(-1.0, 1.0, 0.05));
+	ChartWindow topicCorrWindow = new ChartWindow("Cross correlation (topic): "
+			, new NumberAxis()
+			, new NumberAxis(0.0, 1.0, 0.05));
 	
 	
 	
@@ -227,6 +231,8 @@ public class GUIFacade extends Application {
 			TextArea fieldOutput
 			, TextArea fldeVectorOutput) throws InvalidFormatException, IOException {
 		
+		GlobalIdfCalculator.init(flatten(documentsLeft.getItems()), flatten(documentsRight.getItems()));
+		
 		Runnable[] initialProcessors = {
 				
 			new CVectorProcessor(documentsLeft.getItems(),
@@ -289,17 +295,26 @@ public class GUIFacade extends Application {
 				processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
 					@Override
 					public void runFinished(CrossCorrResults results) {
-						double[] resultCorr = results.getEVectorCrossCorr();
-						Series<Number, Number> corrResults = new Series<>();
-						int halfLength = resultCorr.length / 2;
-						List<Data<Number, Number>> seriesData = IntStream.range(-1 * halfLength, halfLength)
-						.mapToObj(d -> new Data<Number, Number>(d, resultCorr[halfLength + d]))
+						double[] evectorCorr = results.getEVectorCrossCorr();
+						double[] cvectorCorr = results.getCVectorCrossCorr();
+						Series<Number, Number> sentimentCorrResults = new Series<>();
+						Series<Number, Number> topicCorrResults = new Series<>();
+						int halfLength = evectorCorr.length / 2;
+						List<Data<Number, Number>> sentimentSeriesData = IntStream.range(-1 * halfLength, halfLength)
+						.mapToObj(d -> new Data<Number, Number>(d, evectorCorr[halfLength + d]))
 						.collect(Collectors.toList());
-						corrResults.getData().addAll(seriesData);
+						List<Data<Number, Number>> topiceSeriesData = IntStream.rangeClosed(1, cvectorCorr.length)
+						.mapToObj(index -> new Data<Number, Number>(index, cvectorCorr[index - 1]))
+						.collect(Collectors.toList());
+						sentimentCorrResults.getData().addAll(sentimentSeriesData);
+						topicCorrResults.getData().addAll(topiceSeriesData);
 						Platform.runLater(() -> {
-							crossCorrWindow.addSeries(corrResults);
-							crossCorrWindow.show();
+							sentimentCorrWindow.addSeries(sentimentCorrResults);
+							sentimentCorrWindow.show();
+							topicCorrWindow.addSeries(topicCorrResults);
+							topicCorrWindow.show();
 						});
+						
 					}
 				}).get();
 			} catch (Exception e) {
@@ -309,9 +324,14 @@ public class GUIFacade extends Application {
 		
 	}
 
+	private String flatten(List<String> strings) {
+		return strings.stream().collect(Collectors.joining());
+	}
+
 	private EventHandler<ActionEvent> makeClearQButtonHandler(final ListView<String> documents) {
 		EventHandler<ActionEvent> clearQButtonHandler = e -> {
 			documents.getItems().clear();
+			GlobalIdfCalculator.clear();
 		};
 		return clearQButtonHandler;
 	}

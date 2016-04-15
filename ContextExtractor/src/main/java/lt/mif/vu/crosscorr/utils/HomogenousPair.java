@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.List;
 
 import org.apache.commons.lang.NotImplementedException;
+import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -61,6 +62,17 @@ public class HomogenousPair<T> extends Pair<T, T> {
 		} else {
 			return 0;
 		}
+	}
+	
+	/**
+	 * <code>true</code> if one of the elements in this pair is the one provided
+	 * 
+	 * @param value
+	 * @return
+	 */
+	public boolean contains(T value) {
+		return ObjectUtils.equals(pair.left, value) 
+				|| ObjectUtils.equals(pair.right, value);
 	}
 
 }
