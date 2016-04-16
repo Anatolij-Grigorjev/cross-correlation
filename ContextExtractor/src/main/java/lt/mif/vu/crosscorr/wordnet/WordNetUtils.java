@@ -56,7 +56,7 @@ public class WordNetUtils {
 			PartOfSpeech partOfSpeech = PartOfSpeech.get(pos);
 			return getIndexWord(word, partOfSpeech);
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 			return null;
 		}
 	}

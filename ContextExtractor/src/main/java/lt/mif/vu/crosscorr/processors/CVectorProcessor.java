@@ -121,46 +121,52 @@ public abstract class CVectorProcessor implements Runnable {
 				String[] paragraphs = document.split(PARAGRAPH_SEPARATOR);
 				allParagraphs.addAll(Arrays.asList(paragraphs));
 			}
+			appender.appendOut("Total paragraphs: " + allParagraphs.size());
+			List<String> allSentences = allParagraphs.stream()
+			.map(nlpUtils.getSentenceDetector()::sentDetect)
+			.flatMap(Arrays::stream)
+			.collect(Collectors.toList());
+			appender.appendOut("Total sentences: " + allSentences.size());
 			// calculate per-document TF*IDF. same process for paragraphs,
 			// just different separator
-			Map<String, List<Double>> docsTermsTFIDF = getChunksTFIDFMap(newDocs,
-					allTermsDictionary);
 			Map<String, List<Double>> parsTermsTFIDF = getChunksTFIDFMap(allParagraphs,
 					allTermsDictionary);
+			Map<String, List<Double>> sentTermsTFIDF = getChunksTFIDFMap(allSentences,
+					allTermsDictionary);
 			if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
-				appender.appendOut("DOCS TF*IDF:\n" + PrintUtils.printMapLines(docsTermsTFIDF) + "\n");
-				appender.appendOut("PARS TF*IDF:\n" + PrintUtils.printMapLines(parsTermsTFIDF) + "\n");
+				appender.appendOut("DOCS TF*IDF:\n" + PrintUtils.printMapLines(parsTermsTFIDF) + "\n");
+				appender.appendOut("PARS TF*IDF:\n" + PrintUtils.printMapLines(sentTermsTFIDF) + "\n");
 			}
 			// count up the major topic detection
 			// deviation and dispersion equations
 			// these influence the conditions, by which the majoring topics are
 			// selected in text
-			Map<String, Double> docsTermsDisp = getTFIDFDisp(docsTermsTFIDF);
-			Map<String, List<Double>> docsTermsDev = getTFIDFDev(docsTermsTFIDF, docsTermsDisp);
 			Map<String, Double> parsTermsDisp = getTFIDFDisp(parsTermsTFIDF);
 			Map<String, List<Double>> parsTermsDev = getTFIDFDev(parsTermsTFIDF, parsTermsDisp);
+			Map<String, Double> sentTermsDisp = getTFIDFDisp(sentTermsTFIDF);
+			Map<String, List<Double>> sentTermsDev = getTFIDFDev(sentTermsTFIDF, sentTermsDisp);
 			//modified map to print the entries nice n pretty
 			Map<String, Double> wordRelevanceScores = new HashMap<String, Double>();
 			
 			appender.appendOut("Pre-score reduction factors: \n" + PrintUtils.printMapLines(termWieghtReductionFactorMap));
 			
 			if (GlobalConfig.LOG_CVECTOR_VERBOSE) {
-				appender.appendOut("Document z-values: " + PrintUtils.printMapLines(docsTermsDev));
 				appender.appendOut("Paragraph z-values: " + PrintUtils.printMapLines(parsTermsDev));
+				appender.appendOut("Sentence z-values: " + PrintUtils.printMapLines(sentTermsDev));
 			}
 			
 			// doesn't matter which of the 2 maps to run since only the shared
 			// tokens are explored
-			for (Entry<String, List<Double>> docToken : docsTermsDev.entrySet()) {
+			for (Entry<String, List<Double>> docToken : parsTermsDev.entrySet()) {
 				String token = docToken.getKey();
 				List<Double> scores = docToken.getValue();
 				// only if the tokens intersect
-				if (parsTermsDev.containsKey(token)) {
-					List<Double> parsScores = parsTermsDev.get(token);
+				if (sentTermsDev.containsKey(token)) {
+					List<Double> sentScores = sentTermsDev.get(token);
 					double docsSum = scores.stream().mapToDouble(Math::abs).max().orElse(0);
-					double parsSum = parsScores.stream().mapToDouble(Math::abs).max().orElse(0);
+					double parsSum = sentScores.stream().mapToDouble(Math::abs).max().orElse(0);
 					// total amount of term scores
-					int size = scores.size() + parsScores.size();
+					int size = scores.size() + sentScores.size();
 					double scoreReduceSum = termWieghtReductionFactorMap.containsKey(token) ?
 							termWieghtReductionFactorMap.get(token).stream().mapToDouble(Number::doubleValue).sum() 
 							: 0;

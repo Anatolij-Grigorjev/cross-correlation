@@ -13,6 +13,7 @@ import javax.xml.ws.Holder;
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
+import lt.mif.vu.crosscorr.OutputAppender;
 import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
@@ -28,14 +29,16 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 
 	private HomogenousPair<List<SentenceInfo>> cVectors;
 	private HomogenousPair<List<Double>> eVectors;
+	private OutputAppender appender;
 
 	
 
 	public CrossCorrelationProcessor(List<Double> evector1, List<Double> evector2,
-			List<SentenceInfo> cVector1, List<SentenceInfo> cVector2) {
+			List<SentenceInfo> cVector1, List<SentenceInfo> cVector2
+			, OutputAppender appender) {
 		cVectors = new HomogenousPair<List<SentenceInfo>>(cVector1, cVector2);
 		eVectors = new HomogenousPair<List<Double>>(evector1, evector2);
-		
+		this.appender = appender;
 	}
 
 	@Override
@@ -49,6 +52,7 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 	}
 
 	private double[] performCVectorCorrelation() {
+		appender.appendOut("Fetching cVector correlation...\n");
 		Map<HomogenousPair<SentenceInfo>, Double> sentencePairScores = new HashMap<>();
 		cVectors.getLeft().forEach(sentenceInfoLeft -> {
 			cVectors.getRight().forEach(sentenceInfoRight -> {
@@ -155,6 +159,7 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 	}
 
 	private double[] performEVectorCorrelation() {
+		appender.appendOut("Fetching eVector correlation...\n");
 		inflateEViaC(eVectors.getLeft(), cVectors.getLeft());
 		inflateEViaC(eVectors.getRight(), cVectors.getRight());
 		int sizeBound = Math.min(eVectors.getLeft().size(), eVectors.getRight().size());

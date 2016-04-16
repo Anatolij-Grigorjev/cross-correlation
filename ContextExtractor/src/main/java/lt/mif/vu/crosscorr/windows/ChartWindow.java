@@ -30,7 +30,7 @@ public class ChartWindow {
 		this.chartLabel = new Label(chartlabel);
 		this.chart = new AreaChart<>(xAxis, yAxis);
 		this.graphStage = new Stage();
-		this.graphStage.initModality(Modality.APPLICATION_MODAL);
+		this.graphStage.initModality(Modality.NONE);
 		this.graphStage.setMinWidth(400);
 		this.graphStage.setMinHeight(400);
 		this.graphStage.setScene(new Scene(getCorrelationPane()));

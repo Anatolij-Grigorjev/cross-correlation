@@ -116,6 +116,7 @@ public class GUIFacade extends Application {
 		Label lblOutput = new Label("cVector output: ");
 		TextArea fieldcVectorOutput = new TextArea("Click button to begin...");
 		TextArea fieldeVectorOutput = new TextArea("Click button to begin...");
+		TextArea fieldccOutput = new TextArea("Click button to begin...");
 		fieldcVectorOutput.setEditable(false);
 		fieldcVectorOutput.setMaxHeight(Double.MAX_VALUE);
 		fieldInput.setMaxHeight(Double.MAX_VALUE);
@@ -153,10 +154,12 @@ public class GUIFacade extends Application {
 			selectedApproximator.setDisable(true);
 			fieldcVectorOutput.setText("");
 			fieldeVectorOutput.setText("");
+			fieldccOutput.setText("");
 			if (documentsLeft.getItems().isEmpty()
 					|| documentsRight.getItems().isEmpty()) {
 				fieldcVectorOutput.setText("Input Q was empty! Try again!");
 				fieldeVectorOutput.setText("Input Q was empty! Try again!");
+				fieldccOutput.setText("Input Q was empty! Try again!");
 				btnProcess.setDisable(false);
 				selectedAlgorithmBox.setDisable(false);
 				selectedDampeningFactor.setDisable(false);
@@ -164,7 +167,7 @@ public class GUIFacade extends Application {
 			} else {
 				try {
 					//CVECTOR LAUNCH
-					launchDocumentsListProcessing(fieldcVectorOutput, fieldeVectorOutput);
+					launchDocumentsListProcessing(fieldcVectorOutput, fieldeVectorOutput, fieldccOutput);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -210,10 +213,20 @@ public class GUIFacade extends Application {
 		
 		//EVECTOR BOX
 		Label lbleVOutput = new Label("eVector Output:");
-		VBox rightSideBox = new VBox(lbleVOutput, fieldeVectorOutput);
+		Label lblccOutput = new Label("CrossCorr Output:");
+		VBox rightSideBox = new VBox(
+				lblccOutput
+				, fieldccOutput
+				, lbleVOutput
+				, fieldeVectorOutput
+		);
 		rightSideBox.setAlignment(Pos.BOTTOM_LEFT);
+		fieldccOutput.setPrefHeight(375.0);
+		fieldccOutput.setPrefWidth(500.0);
 		fieldeVectorOutput.setPrefHeight(250.0);
 		fieldeVectorOutput.setPrefWidth(500.0);
+		VBox.setMargin(lblccOutput, new Insets(5, 10, 5, 10));
+		VBox.setMargin(fieldccOutput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(lbleVOutput, new Insets(5, 10, 5, 10));
 		VBox.setMargin(fieldeVectorOutput, new Insets(5, 10, 5, 10));
 		
@@ -229,7 +242,8 @@ public class GUIFacade extends Application {
 
 	private void launchDocumentsListProcessing(
 			TextArea fieldOutput
-			, TextArea fldeVectorOutput) throws InvalidFormatException, IOException {
+			, TextArea fldeVectorOutput
+			, TextArea fieldccOutput) throws InvalidFormatException, IOException {
 		
 		GlobalIdfCalculator.init(flatten(documentsLeft.getItems()), flatten(documentsRight.getItems()));
 		
@@ -292,7 +306,8 @@ public class GUIFacade extends Application {
 				}
 			});		
 			try {
-				processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight) {
+				processorExecutor.submit(new CrossCorrelationProcessor(eVectorLeft, eVectorRight, cVectorLeft, cVectorRight,
+						text -> Platform.runLater(() -> fieldccOutput.appendText(text))) {
 					@Override
 					public void runFinished(CrossCorrResults results) {
 						double[] evectorCorr = results.getEVectorCrossCorr();
