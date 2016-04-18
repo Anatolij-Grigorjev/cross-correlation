@@ -1,5 +1,8 @@
 package lt.mif.vu.crosscorr.utils;
 
+import lt.mif.vu.crosscorr.utils.enums.Algorithm;
+import lt.mif.vu.crosscorr.utils.enums.Approximators;
+
 /**
  * System configuration access
  */

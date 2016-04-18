@@ -1,4 +1,4 @@
-package lt.mif.vu.crosscorr.utils;
+package lt.mif.vu.crosscorr.utils.model;
 
 import java.util.Collection;
 import java.util.List;

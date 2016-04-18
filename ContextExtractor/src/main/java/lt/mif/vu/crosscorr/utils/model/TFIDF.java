@@ -1,4 +1,4 @@
-package lt.mif.vu.crosscorr.utils;
+package lt.mif.vu.crosscorr.utils.model;
 
 /**
  * Wrapper object that consists all necessary information for calculating tfidf value for each term.

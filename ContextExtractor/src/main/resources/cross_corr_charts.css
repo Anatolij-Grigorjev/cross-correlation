@@ -6,6 +6,9 @@
 .chart-content {
     -fx-padding: 30px;
 }
+.onHover{
+    -fx-background-color: ORANGE;
+}
 
 .default-color0.chart-area-symbol { -fx-background-color: #0700fc, #7cfc00; }
 .default-color1.chart-area-symbol { -fx-background-color: #db302e, #ffffff; }

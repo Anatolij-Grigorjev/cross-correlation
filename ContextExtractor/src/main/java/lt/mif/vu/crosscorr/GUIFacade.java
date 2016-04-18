@@ -29,6 +29,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -40,11 +41,12 @@ import lt.mif.vu.crosscorr.processors.CrossCorrResults;
 import lt.mif.vu.crosscorr.processors.CrossCorrelationProcessor;
 import lt.mif.vu.crosscorr.processors.EVectorProcessor;
 import lt.mif.vu.crosscorr.stanfordnlp.StanfordNLPUtils;
-import lt.mif.vu.crosscorr.utils.Algorithm;
-import lt.mif.vu.crosscorr.utils.Approximators;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.utils.GlobalIdfCalculator;
-import lt.mif.vu.crosscorr.utils.SentenceInfo;
+import lt.mif.vu.crosscorr.utils.enums.Algorithm;
+import lt.mif.vu.crosscorr.utils.enums.Approximators;
+import lt.mif.vu.crosscorr.utils.model.SentenceInfo;
+import lt.mif.vu.crosscorr.utils.model.SentencesDataPoint;
 import lt.mif.vu.crosscorr.windows.ChartWindow;
 import lt.mif.vu.crosscorr.wordnet.WordNetUtils;
 import net.didion.jwnl.JWNLException;
@@ -311,15 +313,18 @@ public class GUIFacade extends Application {
 					@Override
 					public void runFinished(CrossCorrResults results) {
 						double[] evectorCorr = results.getEVectorCrossCorr();
-						double[] cvectorCorr = results.getCVectorCrossCorr();
+						List<SentencesDataPoint> cvectorCorr = results.getCVectorCrossCorr();
 						Series<Number, Number> sentimentCorrResults = new Series<>();
 						Series<Number, Number> topicCorrResults = new Series<>();
 						int halfLength = evectorCorr.length / 2;
 						List<Data<Number, Number>> sentimentSeriesData = IntStream.range(-1 * halfLength, halfLength)
 						.mapToObj(d -> new Data<Number, Number>(d, evectorCorr[halfLength + d]))
 						.collect(Collectors.toList());
-						List<Data<Number, Number>> topiceSeriesData = IntStream.rangeClosed(1, cvectorCorr.length)
-						.mapToObj(index -> new Data<Number, Number>(index, cvectorCorr[index - 1]))
+						List<Data<Number, Number>> topiceSeriesData = IntStream.rangeClosed(1, cvectorCorr.size())
+						.mapToObj(index -> {
+							SentencesDataPoint point = cvectorCorr.get(index - 1);
+							return new Data<Number, Number>(index, point.getRelatednessScore(), point);
+						})
 						.collect(Collectors.toList());
 						sentimentCorrResults.getData().addAll(sentimentSeriesData);
 						topicCorrResults.getData().addAll(topiceSeriesData);
@@ -328,8 +333,25 @@ public class GUIFacade extends Application {
 							sentimentCorrWindow.show();
 							topicCorrWindow.addSeries(topicCorrResults);
 							topicCorrWindow.show();
+							addCVectorTooltips(topicCorrResults);
 						});
 						
+					}
+
+					private void addCVectorTooltips(Series<Number, Number> cVectorSeries) {
+						cVectorSeries.getData().forEach(point -> {
+							SentencesDataPoint relation = (SentencesDataPoint) point.getExtraValue();
+							Node node = point.getNode();
+							Tooltip.install(node
+									, new Tooltip(
+											"Relatedness: " + relation.getRelatednessScore()
+											+ "\nSentence #1: " + relation.getSentence1()
+											+ "\nSentence #2: " + relation.getSentence2()
+											));
+							
+							node.setOnMouseEntered(e -> node.getStyleClass().add("onHover"));
+							node.setOnMouseExited(e -> node.getStyleClass().remove("onHover"));
+						});
 					}
 				}).get();
 			} catch (Exception e) {

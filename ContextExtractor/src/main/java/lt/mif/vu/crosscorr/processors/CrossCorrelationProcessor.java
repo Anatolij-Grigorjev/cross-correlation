@@ -18,10 +18,11 @@ import lt.mif.vu.crosscorr.nlp.NLPUtil;
 import lt.mif.vu.crosscorr.nlp.PartOfSpeech;
 import lt.mif.vu.crosscorr.utils.GlobalConfig;
 import lt.mif.vu.crosscorr.utils.GlobalIdfCalculator;
-import lt.mif.vu.crosscorr.utils.HomogenousPair;
 import lt.mif.vu.crosscorr.utils.MathUtils;
-import lt.mif.vu.crosscorr.utils.SentenceInfo;
 import lt.mif.vu.crosscorr.utils.WordCorrelationHelper;
+import lt.mif.vu.crosscorr.utils.model.HomogenousPair;
+import lt.mif.vu.crosscorr.utils.model.SentenceInfo;
+import lt.mif.vu.crosscorr.utils.model.SentencesDataPoint;
 import opennlp.tools.postag.POSTaggerME;
 import opennlp.tools.tokenize.TokenizerME;
 
@@ -44,14 +45,17 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 	@Override
 	public void run() {
 		double[] crossCorr = performEVectorCorrelation();
-		double[] cvectorCross = performCVectorCorrelation();
+		appender.appendOut("Done with eVector!\n");
+		List<SentencesDataPoint> cvectorCross = performCVectorCorrelation();
+		appender.appendOut("Done with cVector!\n");
 		CrossCorrResults corrResults = new CrossCorrResults();
 		corrResults.setEVectorCrossCorr(crossCorr);
 		corrResults.setCVectorCrossCorr(cvectorCross);
+		appender.appendOut("Done!\nBuilding graphs...");
 		runFinished(corrResults);
 	}
 
-	private double[] performCVectorCorrelation() {
+	private List<SentencesDataPoint> performCVectorCorrelation() {
 		appender.appendOut("Fetching cVector correlation...\n");
 		Map<HomogenousPair<SentenceInfo>, Double> sentencePairScores = new HashMap<>();
 		cVectors.getLeft().forEach(sentenceInfoLeft -> {
@@ -79,8 +83,8 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 //				http://stackoverflow.com/questions/17750234/ws4j-returns-infinity-for-similarity-measures-that-should-return-1
 			});
 		});
-		
-		List<Double> maxValues = new ArrayList<>();
+		appender.appendOut("Got Wu-Palmer scores for " + sentencePairScores.size() + " sentence pairs!\n");
+		List<SentencesDataPoint> maxValues = new ArrayList<>();
 		Holder<Double> currMax = new Holder<Double>(0.0);
 		Holder<SentenceInfo> noteablePairing = new Holder<>();
 		Set<SentenceInfo> noTouchy = new HashSet<>();
@@ -97,11 +101,20 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 					}
 				}
 			});
-			maxValues.add(currMax.value);
+			if (currMax.value > 0.0 && noteablePairing.value != null) {
+				maxValues.add(
+						new SentencesDataPoint(
+								sentenceInfoLeft.getSentence()
+								, noteablePairing.value.getSentence()
+								, currMax.value
+						)
+				);
+			}
+			//already used up pairing
 			noTouchy.add(noteablePairing.value);
 		});
 		
-		return maxValues.stream().mapToDouble(Double::doubleValue).toArray();
+		return maxValues;
 	}
 
 	private double simToIdfRelation(String block1, String block2) {
@@ -160,14 +173,23 @@ public abstract class CrossCorrelationProcessor implements Runnable {
 
 	private double[] performEVectorCorrelation() {
 		appender.appendOut("Fetching eVector correlation...\n");
+		appender.appendOut("Inflating " + eVectors.getLeft().size()
+				+ " sentiments with " + cVectors.getLeft().size() 
+				+ " topical sentences\n");
 		inflateEViaC(eVectors.getLeft(), cVectors.getLeft());
+		appender.appendOut("Inflating " + eVectors.getRight().size()
+				+ " sentiments with " + cVectors.getRight().size() 
+				+ " topical sentences\n");
 		inflateEViaC(eVectors.getRight(), cVectors.getRight());
 		int sizeBound = Math.min(eVectors.getLeft().size(), eVectors.getRight().size());
+		appender.appendOut("Sentiments size bound: " + sizeBound + "\n");
 		int delayBound = sizeBound / 2;
 		//first with signals swapped
+		appender.appendOut("Correlating negative delay...\n");
 		double[] crossCorr1 = IntStream.range(-1* delayBound, 0)
 		.mapToDouble(d -> MathUtils.getCrossCorrelationAt(eVectors.getRight(), eVectors.getLeft(), sizeBound, Math.abs(d)))
 		.toArray();
+		appender.appendOut("Correlating positive delay...\n");
 		double[] crossCorr2 = IntStream.rangeClosed(0, delayBound)
 		.mapToDouble(d -> MathUtils.getCrossCorrelationAt(eVectors.getLeft(), eVectors.getRight(), sizeBound, d))
 		.toArray();
